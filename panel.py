@@ -56,6 +56,64 @@ async def api_progress(request):
         return web.json_response({"error": str(e)}, status=502)
 
 
+# ========== Forge 模型 / VAE ==========
+
+FORGE_URL = lambda: core.CFG["webui"]["base_url"].rstrip("/")
+
+
+async def api_forge_models(request):
+    """Forge 当前模型/VAE + 可选列表（模型=sd-models；VAE=forge附加模块目录）"""
+    try:
+        async with httpx.AsyncClient(timeout=15) as cli:
+            opts = (await cli.get(f"{FORGE_URL()}/sdapi/v1/options")).json()
+            models = (await cli.get(f"{FORGE_URL()}/sdapi/v1/sd-models")).json()
+        preset = opts.get("forge_preset", "")
+        checkpoint = opts.get(f"forge_checkpoint_{preset}") or opts.get("sd_model_checkpoint", "")
+        modules = opts.get(f"forge_additional_modules_{preset}") or []
+        vae_dir = ""
+        if modules:
+            vae_dir = str(Path(modules[0]).parent)
+        vaes = []
+        if vae_dir and Path(vae_dir).is_dir():
+            vaes = sorted(p.name for p in Path(vae_dir).iterdir()
+                          if p.suffix.lower() in (".safetensors", ".ckpt", ".pt"))
+        return web.json_response({
+            "preset": preset,
+            "checkpoint": checkpoint,
+            "checkpoints": [{"name": m.get("model_name", ""), "title": m.get("title", "")}
+                            for m in models],
+            "vae_dir": vae_dir,
+            "vae_current": [Path(m).name for m in modules],
+            "vaes": vaes,
+        })
+    except Exception as e:
+        return web.json_response({"error": str(e)}, status=502)
+
+
+async def api_forge_models_set(request):
+    """切换 Forge 当前预设的 checkpoint / VAE"""
+    body = await request.json()
+    try:
+        async with httpx.AsyncClient(timeout=30) as cli:
+            opts = (await cli.get(f"{FORGE_URL()}/sdapi/v1/options")).json()
+            preset = opts.get("forge_preset", "")
+            payload = {}
+            ckpt = (body.get("checkpoint") or "").strip()
+            if ckpt:
+                payload[f"forge_checkpoint_{preset}"] = ckpt
+            vae = (body.get("vae") or "").strip()
+            if vae and body.get("vae_dir"):
+                payload[f"forge_additional_modules_{preset}"] = [str(Path(body["vae_dir"]) / vae)]
+            if not payload:
+                return web.json_response({"ok": False, "msg": "没有要修改的项"})
+            r = await cli.post(f"{FORGE_URL()}/sdapi/v1/options", json=payload)
+            if r.status_code != 200:
+                return web.json_response({"ok": False, "msg": f"Forge 返回 {r.status_code}"})
+        return web.json_response({"ok": True, "applied": payload})
+    except Exception as e:
+        return web.json_response({"ok": False, "msg": str(e)})
+
+
 # ========== QQ 账号（代理 NapCat WebUI） ==========
 
 async def _nc_post(ep, payload):
@@ -274,6 +332,8 @@ def make_app():
     app.router.add_get("/api/qq/accounts", api_qq_accounts)
     app.router.add_post("/api/qq/switch", api_qq_switch)
     app.router.add_post("/api/qq/autologin", api_qq_autologin)
+    app.router.add_get("/api/forge_models", api_forge_models)
+    app.router.add_post("/api/forge_models", api_forge_models_set)
     app.router.add_get("/api/presets", api_get_presets)
     app.router.add_post("/api/presets/save", api_save_preset)
     app.router.add_post("/api/presets/delete", api_delete_preset)

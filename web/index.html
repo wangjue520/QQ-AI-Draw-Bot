@@ -182,6 +182,11 @@ th{color:var(--dim);font-weight:normal;font-size:12px}
     </div>
   </div>
   <div class="card">
+    <h3>模型 / VAE <span class="muted">（Forge 当前预设，切换后立即生效）</span>
+      <button class="btn sec" style="float:right;font-size:12px" onclick="loadForgeModels()">刷新</button></h3>
+    <div id="forgeModelBox" class="muted">加载中…</div>
+  </div>
+  <div class="card">
     <h3>WebUI / 生成参数</h3>
     <div class="row">
       <div><label>WebUI 地址</label><input id="sWebui"></div>
@@ -261,11 +266,10 @@ document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
   if(b.dataset.tab==="lora")loadLoras();
   if(b.dataset.tab==="dict")loadDict();
   if(b.dataset.tab==="prompt")loadPrompt();
-  if(b.dataset.tab==="settings")loadSettings();
+  if(b.dataset.tab==="settings"){loadSettings();loadForgeModels();}
   if(b.dataset.tab==="forge")openForge();
   if(b.dataset.tab==="qq")loadQQ();
 });
-
 // ---- 跑图/队列 ----
 async function submitDraw(){
   const content=$("dContent").value.trim();
@@ -340,6 +344,33 @@ async function loadQQ(){
 async function saveAutoLogin(){
   const r = await api("/api/qq/autologin",{uin:$("qqAutoLogin").value});
   $("autoMsg").textContent = r.ok ? "已保存，下次一键启动自动登录该账号" : ("保存失败："+(r.msg||""));
+}
+
+// ---- Forge 模型 / VAE ----
+let forgeModelCache = {};
+async function loadForgeModels(){
+  let d;
+  try{ d = await api("/api/forge_models"); }
+  catch(e){ $("forgeModelBox").innerHTML='<span class="bad">Forge 未连接</span>'; return; }
+  if(d.error){ $("forgeModelBox").innerHTML='<span class="bad">Forge 未连接</span>'; return; }
+  forgeModelCache = d;
+  const opts = d.checkpoints.map(c=>`<option value="${esc(c.title)}" ${c.title===d.checkpoint?"selected":""}>${esc(c.name)}</option>`).join("");
+  const vaeOpts = '<option value="">（保持当前）</option>' +
+    d.vaes.map(v=>`<option value="${esc(v)}" ${(d.vae_current||[]).includes(v)?"selected":""}>${esc(v)}</option>`).join("");
+  $("forgeModelBox").innerHTML = `
+    <div class="row">
+      <div><label>架构预设</label><input value="${esc(d.preset)}" disabled></div>
+      <div><label>模型（checkpoint）</label><select id="fmCkpt">${opts}</select></div>
+      <div><label>VAE</label><select id="fmVae">${vaeOpts}</select></div>
+    </div>
+    <div class="muted" style="margin-top:6px">文本编码器随模型内置，Forge 不提供单独切换；VAE 目录：${esc(d.vae_dir||"-")}</div>
+    <div style="margin-top:10px"><button class="btn" onclick="saveForgeModels()">应用切换</button>
+    <span class="muted" id="fmMsg"></span></div>`;
+}
+async function saveForgeModels(){
+  const r = await api("/api/forge_models",{checkpoint:$("fmCkpt").value, vae:$("fmVae").value, vae_dir:forgeModelCache.vae_dir});
+  $("fmMsg").textContent = r.ok ? "已切换（Forge 加载新模型需几秒）" : ("失败："+(r.msg||""));
+  setTimeout(loadForgeModels, 4000);
 }
 async function switchQQ(uin){
   if(!confirm("把机器人切换到 QQ "+uin+" ？"))return;

@@ -1,3817 +1,4577 @@
 {
-  "entries": [
-    {
-      "tag": "aether_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "空",
-        "旅行者(男)"
-      ]
-    },
-    {
-      "tag": "lumine_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "荧",
-        "旅行者(女)"
-      ]
-    },
-    {
-      "tag": "paimon_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "派蒙"
-      ]
-    },
-    {
-      "tag": "venti_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "温迪"
-      ]
-    },
-    {
-      "tag": "zhongli_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "钟离",
-        "岩王帝君"
-      ]
-    },
-    {
-      "tag": "raiden_shogun_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "雷电将军",
-        "雷神",
-        "影"
-      ]
-    },
-    {
-      "tag": "nahida_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "纳西妲",
-        "草神",
-        "小吉祥草王"
-      ]
-    },
-    {
-      "tag": "furina_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "芙宁娜",
-        "芙芙",
-        "水神"
-      ]
-    },
-    {
-      "tag": "mavuika_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "玛薇卡",
-        "火神"
-      ]
-    },
-    {
-      "tag": "neuvillette_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "那维莱特",
-        "水龙王"
-      ]
-    },
-    {
-      "tag": "wriothesley_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "莱欧斯利"
-      ]
-    },
-    {
-      "tag": "arlecchino_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "仆人",
-        "阿蕾奇诺"
-      ]
-    },
-    {
-      "tag": "hu_tao_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "胡桃",
-        "堂主"
-      ]
-    },
-    {
-      "tag": "ganyu_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "甘雨"
-      ]
-    },
-    {
-      "tag": "keqing_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "刻晴"
-      ]
-    },
-    {
-      "tag": "shenhe_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "申鹤"
-      ]
-    },
-    {
-      "tag": "yelan_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "夜兰"
-      ]
-    },
-    {
-      "tag": "xiao_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "魈",
-        "降魔大圣"
-      ]
-    },
-    {
-      "tag": "kaedehara_kazuha_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "枫原万叶",
-        "万叶"
-      ]
-    },
-    {
-      "tag": "tartaglia_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "达达利亚",
-        "公子"
-      ]
-    },
-    {
-      "tag": "wanderer_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "散兵",
-        "流浪者"
-      ]
-    },
-    {
-      "tag": "kamisato_ayaka_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "神里绫华",
-        "绫华"
-      ]
-    },
-    {
-      "tag": "kamisato_ayato_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "神里绫人",
-        "绫人"
-      ]
-    },
-    {
-      "tag": "yoimiya_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "宵宫"
-      ]
-    },
-    {
-      "tag": "yae_miko_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "八重神子"
-      ]
-    },
-    {
-      "tag": "sangonomiya_kokomi_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "珊瑚宫心海",
-        "心海"
-      ]
-    },
-    {
-      "tag": "eula_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "优菈"
-      ]
-    },
-    {
-      "tag": "nilou_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "妮露"
-      ]
-    },
-    {
-      "tag": "cyno_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "赛诺"
-      ]
-    },
-    {
-      "tag": "alhaitham_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "艾尔海森"
-      ]
-    },
-    {
-      "tag": "lyney_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "林尼"
-      ]
-    },
-    {
-      "tag": "lynette_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "琳妮特"
-      ]
-    },
-    {
-      "tag": "navia_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "娜维娅"
-      ]
-    },
-    {
-      "tag": "clorinde_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "克洛琳德"
-      ]
-    },
-    {
-      "tag": "sigewinne_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "希格雯"
-      ]
-    },
-    {
-      "tag": "chiori_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "千织"
-      ]
-    },
-    {
-      "tag": "mualani_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "玛拉妮"
-      ]
-    },
-    {
-      "tag": "kinich_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "基尼奇"
-      ]
-    },
-    {
-      "tag": "xilonen_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "希诺宁"
-      ]
-    },
-    {
-      "tag": "chasca_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "恰斯卡"
-      ]
-    },
-    {
-      "tag": "citlali_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "茜特菈莉"
-      ]
-    },
-    {
-      "tag": "skirk_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "丝柯克"
-      ]
-    },
-    {
-      "tag": "yumemizuki_mizuki_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "梦见月瑞希"
-      ]
-    },
-    {
-      "tag": "escoffier_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "爱可菲"
-      ]
-    },
-    {
-      "tag": "klee_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "可莉"
-      ]
-    },
-    {
-      "tag": "mona_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "莫娜"
-      ]
-    },
-    {
-      "tag": "fischl_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "菲谢尔",
-        "皇女"
-      ]
-    },
-    {
-      "tag": "barbara_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "芭芭拉"
-      ]
-    },
-    {
-      "tag": "noelle_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "诺艾尔"
-      ]
-    },
-    {
-      "tag": "sucrose_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "砂糖"
-      ]
-    },
-    {
-      "tag": "diluc_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "迪卢克"
-      ]
-    },
-    {
-      "tag": "jean_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "琴",
-        "琴团长"
-      ]
-    },
-    {
-      "tag": "kaeya_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "凯亚"
-      ]
-    },
-    {
-      "tag": "amber_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "安柏"
-      ]
-    },
-    {
-      "tag": "lisa_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "丽莎"
-      ]
-    },
-    {
-      "tag": "rosaria_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "罗莎莉亚"
-      ]
-    },
-    {
-      "tag": "albedo_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "阿贝多"
-      ]
-    },
-    {
-      "tag": "ningguang_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "凝光"
-      ]
-    },
-    {
-      "tag": "beidou_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "北斗"
-      ]
-    },
-    {
-      "tag": "xiangling_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "香菱"
-      ]
-    },
-    {
-      "tag": "xingqiu_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "行秋"
-      ]
-    },
-    {
-      "tag": "chongyun_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "重云"
-      ]
-    },
-    {
-      "tag": "qiqi_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "七七"
-      ]
-    },
-    {
-      "tag": "yanfei_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "烟绯"
-      ]
-    },
-    {
-      "tag": "yun_jin_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "云堇"
-      ]
-    },
-    {
-      "tag": "kujou_sara_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "九条裟罗"
-      ]
-    },
-    {
-      "tag": "arataki_itto_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "荒泷一斗"
-      ]
-    },
-    {
-      "tag": "kuki_shinobu_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "久岐忍"
-      ]
-    },
-    {
-      "tag": "gorou_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "五郎"
-      ]
-    },
-    {
-      "tag": "collei_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "柯莱"
-      ]
-    },
-    {
-      "tag": "layla_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "莱依拉"
-      ]
-    },
-    {
-      "tag": "faruzan_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "珐露珊"
-      ]
-    },
-    {
-      "tag": "yaoyao_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "瑶瑶"
-      ]
-    },
-    {
-      "tag": "baizhu_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "白术"
-      ]
-    },
-    {
-      "tag": "kirara_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "绮良良"
-      ]
-    },
-    {
-      "tag": "chevreuse_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "夏沃蕾"
-      ]
-    },
-    {
-      "tag": "gaming_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "嘉明"
-      ]
-    },
-    {
-      "tag": "xianyun_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "闲云",
-        "留云借风真君"
-      ]
-    },
-    {
-      "tag": "emilie_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "艾梅莉埃"
-      ]
-    },
-    {
-      "tag": "kachina_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "卡齐娜"
-      ]
-    },
-    {
-      "tag": "ororon_(genshin_impact)",
-      "series": "原神",
-      "names": [
-        "欧洛伦"
-      ]
-    },
-    {
-      "tag": "stelle_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "星",
-        "开拓者(女)"
-      ]
-    },
-    {
-      "tag": "caelus_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "穹",
-        "开拓者(男)"
-      ]
-    },
-    {
-      "tag": "march_7th_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "三月七"
-      ]
-    },
-    {
-      "tag": "dan_heng_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "丹恒"
-      ]
-    },
-    {
-      "tag": "himeko_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "姬子",
-        "姬子(星铁)"
-      ]
-    },
-    {
-      "tag": "welt_yang_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "瓦尔特",
-        "老杨"
-      ]
-    },
-    {
-      "tag": "kafka_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "卡芙卡"
-      ]
-    },
-    {
-      "tag": "silver_wolf_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "银狼"
-      ]
-    },
-    {
-      "tag": "blade_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "刃"
-      ]
-    },
-    {
-      "tag": "jing_yuan_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "景元"
-      ]
-    },
-    {
-      "tag": "fu_xuan_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "符玄"
-      ]
-    },
-    {
-      "tag": "jingliu_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "镜流"
-      ]
-    },
-    {
-      "tag": "bailu_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "白露"
-      ]
-    },
-    {
-      "tag": "tingyun_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "停云"
-      ]
-    },
-    {
-      "tag": "luocha_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "罗刹"
-      ]
-    },
-    {
-      "tag": "qingque_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "青雀"
-      ]
-    },
-    {
-      "tag": "huohuo_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "藿藿"
-      ]
-    },
-    {
-      "tag": "ruan_mei_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "阮梅"
-      ]
-    },
-    {
-      "tag": "dr._ratio_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "真理医生"
-      ]
-    },
-    {
-      "tag": "sparkle_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "花火"
-      ]
-    },
-    {
-      "tag": "black_swan_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "黑天鹅"
-      ]
-    },
-    {
-      "tag": "acheron_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "黄泉"
-      ]
-    },
-    {
-      "tag": "aventurine_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "砂金"
-      ]
-    },
-    {
-      "tag": "robin_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "知更鸟"
-      ]
-    },
-    {
-      "tag": "boothill_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "波提欧"
-      ]
-    },
-    {
-      "tag": "firefly_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "流萤"
-      ]
-    },
-    {
-      "tag": "jade_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "翡翠"
-      ]
-    },
-    {
-      "tag": "yunli_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "云璃"
-      ]
-    },
-    {
-      "tag": "jiaoqiu_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "椒丘"
-      ]
-    },
-    {
-      "tag": "feixiao_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "飞霄"
-      ]
-    },
-    {
-      "tag": "lingsha_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "灵砂"
-      ]
-    },
-    {
-      "tag": "sunday_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "星期日"
-      ]
-    },
-    {
-      "tag": "fugue_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "忘归人"
-      ]
-    },
-    {
-      "tag": "the_herta_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "大黑塔"
-      ]
-    },
-    {
-      "tag": "aglaea_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "阿格莱雅"
-      ]
-    },
-    {
-      "tag": "tribbie_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "缇宝"
-      ]
-    },
-    {
-      "tag": "mydei_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "万敌"
-      ]
-    },
-    {
-      "tag": "castorice_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "遐蝶"
-      ]
-    },
-    {
-      "tag": "anaxa_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "那刻夏"
-      ]
-    },
-    {
-      "tag": "hyacine_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "风堇"
-      ]
-    },
-    {
-      "tag": "cipher_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "赛飞儿"
-      ]
-    },
-    {
-      "tag": "phainon_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "白厄"
-      ]
-    },
-    {
-      "tag": "cyrene_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "昔涟"
-      ]
-    },
-    {
-      "tag": "hysilens_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "海瑟音"
-      ]
-    },
-    {
-      "tag": "cerydra_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "刻律德菈"
-      ]
-    },
-    {
-      "tag": "evernight_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "长夜月"
-      ]
-    },
-    {
-      "tag": "seele_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "希儿",
-        "希儿(星铁)"
-      ]
-    },
-    {
-      "tag": "bronya_rand_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "布洛妮娅",
-        "布洛妮娅(星铁)"
-      ]
-    },
-    {
-      "tag": "clara_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "克拉拉"
-      ]
-    },
-    {
-      "tag": "gepard_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "杰帕德"
-      ]
-    },
-    {
-      "tag": "sampo_koski_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "桑博"
-      ]
-    },
-    {
-      "tag": "pela_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "佩拉"
-      ]
-    },
-    {
-      "tag": "serval_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "希露瓦"
-      ]
-    },
-    {
-      "tag": "lynx_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "玲可"
-      ]
-    },
-    {
-      "tag": "topaz_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "托帕"
-      ]
-    },
-    {
-      "tag": "guinaifen_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "桂乃芬"
-      ]
-    },
-    {
-      "tag": "hook_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "虎克"
-      ]
-    },
-    {
-      "tag": "herta_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "黑塔"
-      ]
-    },
-    {
-      "tag": "asta_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "艾丝妲"
-      ]
-    },
-    {
-      "tag": "gallagher_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "加拉赫"
-      ]
-    },
-    {
-      "tag": "misha_(honkai:_star_rail)",
-      "series": "崩坏:星穹铁道",
-      "names": [
-        "米沙"
-      ]
-    },
-    {
-      "tag": "anby_demara_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "安比",
-        "安比·德玛拉"
-      ]
-    },
-    {
-      "tag": "billy_kid_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "比利",
-        "比利·奇德"
-      ]
-    },
-    {
-      "tag": "nicole_demara_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "妮可",
-        "妮可·德玛拉"
-      ]
-    },
-    {
-      "tag": "nekomiya_mana_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "猫又",
-        "猫宫又奈"
-      ]
-    },
-    {
-      "tag": "corin_wickes_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "可琳"
-      ]
-    },
-    {
-      "tag": "von_lycaon_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "莱卡恩",
-        "狼哥"
-      ]
-    },
-    {
-      "tag": "soukaku_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "苍角"
-      ]
-    },
-    {
-      "tag": "ellen_joe_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "艾莲",
-        "鲨鱼妹"
-      ]
-    },
-    {
-      "tag": "grace_howard_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "格莉丝"
-      ]
-    },
-    {
-      "tag": "koleda_belobog_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "珂蕾妲"
-      ]
-    },
-    {
-      "tag": "alexandrina_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "丽娜",
-        "亚历山德丽娜"
-      ]
-    },
-    {
-      "tag": "zhu_yuan_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "朱鸢"
-      ]
-    },
-    {
-      "tag": "qingyi_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "青衣"
-      ]
-    },
-    {
-      "tag": "jane_doe_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "简",
-        "简·杜"
-      ]
-    },
-    {
-      "tag": "seth_lowell_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "赛斯"
-      ]
-    },
-    {
-      "tag": "caesar_king_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "凯撒",
-        "凯撒·金"
-      ]
-    },
-    {
-      "tag": "burnice_white_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "柏妮思"
-      ]
-    },
-    {
-      "tag": "luciana_de_montefio_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "露西",
-        "露西(zzz)"
-      ]
-    },
-    {
-      "tag": "piper_wheel_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "派派"
-      ]
-    },
-    {
-      "tag": "lighter_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "莱特"
-      ]
-    },
-    {
-      "tag": "tsukishiro_yanagi_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "月城柳",
-        "柳"
-      ]
-    },
-    {
-      "tag": "asaba_harumasa_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "浅羽悠真",
-        "悠真"
-      ]
-    },
-    {
-      "tag": "hoshimi_miyabi_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "星见雅",
-        "雅"
-      ]
-    },
-    {
-      "tag": "astra_yao_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "耀嘉音"
-      ]
-    },
-    {
-      "tag": "evelyn_chevalier_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "伊芙琳"
-      ]
-    },
-    {
-      "tag": "pulchra_fellini_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "波可娜"
-      ]
-    },
-    {
-      "tag": "trigger_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "扳机"
-      ]
-    },
-    {
-      "tag": "vivian_banshee_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "薇薇安"
-      ]
-    },
-    {
-      "tag": "hugo_vlad_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "雨果"
-      ]
-    },
-    {
-      "tag": "yixuan_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "仪玄"
-      ]
-    },
-    {
-      "tag": "ju_fufu_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "橘福福"
-      ]
-    },
-    {
-      "tag": "pan_yinhu_(zenless_zone_zero)",
-      "series": "绝区零",
-      "names": [
-        "潘引壶"
-      ]
-    },
-    {
-      "tag": "amiya_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "阿米娅",
-        "驴子"
-      ]
-    },
-    {
-      "tag": "kal'tsit_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "凯尔希"
-      ]
-    },
-    {
-      "tag": "ch'en_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "陈",
-        "陈sir"
-      ]
-    },
-    {
-      "tag": "hoshiguma_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "星熊"
-      ]
-    },
-    {
-      "tag": "exusiai_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "能天使"
-      ]
-    },
-    {
-      "tag": "texas_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "德克萨斯"
-      ]
-    },
-    {
-      "tag": "lappland_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "拉普兰德"
-      ]
-    },
-    {
-      "tag": "silverash_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "银灰"
-      ]
-    },
-    {
-      "tag": "siege_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "推进之王",
-        "推王"
-      ]
-    },
-    {
-      "tag": "skadi_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "斯卡蒂"
-      ]
-    },
-    {
-      "tag": "specter_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "幽灵鲨"
-      ]
-    },
-    {
-      "tag": "gladiia_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "歌蕾蒂娅"
-      ]
-    },
-    {
-      "tag": "saria_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "塞雷娅"
-      ]
-    },
-    {
-      "tag": "ifrit_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "伊芙利特",
-        "小火龙"
-      ]
-    },
-    {
-      "tag": "eyjafjalla_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "艾雅法拉",
-        "小羊"
-      ]
-    },
-    {
-      "tag": "shining_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "闪灵"
-      ]
-    },
-    {
-      "tag": "nightingale_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "夜莺"
-      ]
-    },
-    {
-      "tag": "angelina_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "安洁莉娜"
-      ]
-    },
-    {
-      "tag": "suzuran_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "铃兰"
-      ]
-    },
-    {
-      "tag": "mudrock_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "泥岩"
-      ]
-    },
-    {
-      "tag": "nearl_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "临光"
-      ]
-    },
-    {
-      "tag": "blemishine_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "瑕光"
-      ]
-    },
-    {
-      "tag": "mlynar_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "玛恩纳"
-      ]
-    },
-    {
-      "tag": "surtr_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "史尔特尔",
-        "42"
-      ]
-    },
-    {
-      "tag": "thorns_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "棘刺"
-      ]
-    },
-    {
-      "tag": "mizuki_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "水月"
-      ]
-    },
-    {
-      "tag": "la_pluma_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "羽毛笔"
-      ]
-    },
-    {
-      "tag": "tequila_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "龙舌兰"
-      ]
-    },
-    {
-      "tag": "bagpipe_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "风笛"
-      ]
-    },
-    {
-      "tag": "saileach_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "琴柳"
-      ]
-    },
-    {
-      "tag": "horn_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "号角"
-      ]
-    },
-    {
-      "tag": "fiammetta_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "菲亚梅塔"
-      ]
-    },
-    {
-      "tag": "goldenglow_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "澄闪"
-      ]
-    },
-    {
-      "tag": "pozëmka_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "鸿雪"
-      ]
-    },
-    {
-      "tag": "dorothy_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "多萝西"
-      ]
-    },
-    {
-      "tag": "mountain_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "山"
-      ]
-    },
-    {
-      "tag": "gnosis_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "灵知"
-      ]
-    },
-    {
-      "tag": "ebenholz_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "黑键"
-      ]
-    },
-    {
-      "tag": "flametail_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "焰尾"
-      ]
-    },
-    {
-      "tag": "archetto_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "空弦"
-      ]
-    },
-    {
-      "tag": "nian_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "年"
-      ]
-    },
-    {
-      "tag": "dusk_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "夕"
-      ]
-    },
-    {
-      "tag": "ling_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "令"
-      ]
-    },
-    {
-      "tag": "chongyue_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "重岳"
-      ]
-    },
-    {
-      "tag": "shu_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "黍"
-      ]
-    },
-    {
-      "tag": "zuo_le_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "左乐"
-      ]
-    },
-    {
-      "tag": "lee_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "老鲤"
-      ]
-    },
-    {
-      "tag": "aak_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "阿"
-      ]
-    },
-    {
-      "tag": "elysium_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "极境"
-      ]
-    },
-    {
-      "tag": "ceobe_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "刻俄柏"
-      ]
-    },
-    {
-      "tag": "rosa_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "早露"
-      ]
-    },
-    {
-      "tag": "w_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "W",
-        "w"
-      ]
-    },
-    {
-      "tag": "ines_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "伊内丝"
-      ]
-    },
-    {
-      "tag": "muelsyse_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "缪尔赛思"
-      ]
-    },
-    {
-      "tag": "typhon_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "提丰"
-      ]
-    },
-    {
-      "tag": "virtuosa_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "阿尔图罗",
-        "塑心"
-      ]
-    },
-    {
-      "tag": "viviana_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "薇薇安娜"
-      ]
-    },
-    {
-      "tag": "degenbrecher_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "锏"
-      ]
-    },
-    {
-      "tag": "qiubai_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "仇白"
-      ]
-    },
-    {
-      "tag": "ray_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "莱伊"
-      ]
-    },
-    {
-      "tag": "perlica_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "佩丽卡"
-      ]
-    },
-    {
-      "tag": "female_endministrator_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "管理员",
-        "女管理员",
-        "终末地管理员"
-      ]
-    },
-    {
-      "tag": "chen_qianyu_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "陈千羽"
-      ]
-    },
-    {
-      "tag": "laevatain_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "莱万汀"
-      ]
-    },
-    {
-      "tag": "lifeng_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "黎风"
-      ]
-    },
-    {
-      "tag": "yvonne_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "伊冯"
-      ]
-    },
-    {
-      "tag": "snowshine_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "昼雪"
-      ]
-    },
-    {
-      "tag": "wulfgard_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "狼卫"
-      ]
-    },
-    {
-      "tag": "ember_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "余烬"
-      ]
-    },
-    {
-      "tag": "ardelia_(arknights)",
-      "series": "明日方舟",
-      "names": [
-        "阿德莉娅"
-      ]
-    },
-    {
-      "tag": "shiroko_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "白子",
-        "砂狼白子"
-      ]
-    },
-    {
-      "tag": "hoshino_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "星野",
-        "小鸟游星野"
-      ]
-    },
-    {
-      "tag": "serika_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "芹香",
-        "黑见芹香"
-      ]
-    },
-    {
-      "tag": "nonomi_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "野宫",
-        "十六夜野宫"
-      ]
-    },
-    {
-      "tag": "ayane_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "绫音",
-        "奥空绫音"
-      ]
-    },
-    {
-      "tag": "aru_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "阿露",
-        "陆八魔阿露"
-      ]
-    },
-    {
-      "tag": "mutsuki_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "睦月",
-        "浅黄睦月"
-      ]
-    },
-    {
-      "tag": "kayoko_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "佳代子",
-        "鬼方佳代子"
-      ]
-    },
-    {
-      "tag": "haruka_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "遥香",
-        "伊草遥香"
-      ]
-    },
-    {
-      "tag": "hina_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "日奈",
-        "空崎日奈"
-      ]
-    },
-    {
-      "tag": "ako_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "亚子",
-        "天雨亚子"
-      ]
-    },
-    {
-      "tag": "iori_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "伊织",
-        "银镜伊织"
-      ]
-    },
-    {
-      "tag": "alice_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "爱丽丝",
-        "天童爱丽丝"
-      ]
-    },
-    {
-      "tag": "momoi_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "桃井"
-      ]
-    },
-    {
-      "tag": "midori_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "绿",
-        "才羽绿"
-      ]
-    },
-    {
-      "tag": "yuzu_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "柚子",
-        "花冈柚子"
-      ]
-    },
-    {
-      "tag": "koharu_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "小春",
-        "下江小春"
-      ]
-    },
-    {
-      "tag": "hifumi_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "日富美",
-        "阿慈谷日富美"
-      ]
-    },
-    {
-      "tag": "azusa_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "梓",
-        "白洲梓"
-      ]
-    },
-    {
-      "tag": "hanako_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "花子",
-        "浦和花子"
-      ]
-    },
-    {
-      "tag": "mika_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "未花",
-        "圣园未花"
-      ]
-    },
-    {
-      "tag": "nagisa_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "渚",
-        "桐藤渚"
-      ]
-    },
-    {
-      "tag": "seia_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "圣娅",
-        "百合园圣娅"
-      ]
-    },
-    {
-      "tag": "yuuka_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "优香",
-        "早濑优香"
-      ]
-    },
-    {
-      "tag": "noa_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "诺亚",
-        "生盐诺亚"
-      ]
-    },
-    {
-      "tag": "koyuki_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "小雪",
-        "黑崎小雪"
-      ]
-    },
-    {
-      "tag": "karin_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "花凛",
-        "角楯花凛"
-      ]
-    },
-    {
-      "tag": "asuna_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "明日奈",
-        "一之濑明日奈"
-      ]
-    },
-    {
-      "tag": "neru_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "妮露",
-        "美甘妮露"
-      ]
-    },
-    {
-      "tag": "toki_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "时",
-        "飞鸟马时"
-      ]
-    },
-    {
-      "tag": "rio_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "莉音",
-        "调月莉音"
-      ]
-    },
-    {
-      "tag": "miyako_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "宫子",
-        "月雪宫子"
-      ]
-    },
-    {
-      "tag": "miyu_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "美游",
-        "霞泽美游"
-      ]
-    },
-    {
-      "tag": "iroha_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "伊吕波",
-        "枣伊吕波"
-      ]
-    },
-    {
-      "tag": "ibuki_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "伊吹",
-        "丹花伊吹"
-      ]
-    },
-    {
-      "tag": "makoto_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "真琴",
-        "羽沼真琴"
-      ]
-    },
-    {
-      "tag": "kisaki_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "妃咲",
-        "龙华妃咲"
-      ]
-    },
-    {
-      "tag": "kokona_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "心奈",
-        "春原心奈"
-      ]
-    },
-    {
-      "tag": "shun_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "瞬",
-        "春原瞬"
-      ]
-    },
-    {
-      "tag": "mari_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "玛丽",
-        "伊落玛丽"
-      ]
-    },
-    {
-      "tag": "hinata_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "日向",
-        "若叶日向"
-      ]
-    },
-    {
-      "tag": "sakurako_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "樱子",
-        "歌住樱子"
-      ]
-    },
-    {
-      "tag": "kazusa_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "和纱",
-        "杏山和纱"
-      ]
-    },
-    {
-      "tag": "airi_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "爱莉",
-        "栗村爱莉"
-      ]
-    },
-    {
-      "tag": "saya_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "纱绫",
-        "药子纱绫"
-      ]
-    },
-    {
-      "tag": "arona_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "阿罗娜"
-      ]
-    },
-    {
-      "tag": "plana_(blue_archive)",
-      "series": "蔚蓝档案",
-      "names": [
-        "普拉娜"
-      ]
-    },
-    {
-      "tag": "yangyang_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "秧秧"
-      ]
-    },
-    {
-      "tag": "chixia_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "炽霞",
-        "小芳"
-      ]
-    },
-    {
-      "tag": "baizhi_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "白芷"
-      ]
-    },
-    {
-      "tag": "sanhua_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "散华"
-      ]
-    },
-    {
-      "tag": "jiyan_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "忌炎"
-      ]
-    },
-    {
-      "tag": "yinlin_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "吟霖"
-      ]
-    },
-    {
-      "tag": "encore_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "安可",
-        "安可(鸣潮)"
-      ]
-    },
-    {
-      "tag": "verina_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "维里奈"
-      ]
-    },
-    {
-      "tag": "calcharo_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "卡卡罗"
-      ]
-    },
-    {
-      "tag": "lingyang_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "凌阳"
-      ]
-    },
-    {
-      "tag": "jinhsi_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "今汐"
-      ]
-    },
-    {
-      "tag": "changli_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "长离"
-      ]
-    },
-    {
-      "tag": "zhezhi_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "折枝"
-      ]
-    },
-    {
-      "tag": "xiangli_yao_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "相里要"
-      ]
-    },
-    {
-      "tag": "shorekeeper_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "守岸人"
-      ]
-    },
-    {
-      "tag": "camellya_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "椿"
-      ]
-    },
-    {
-      "tag": "carlotta_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "珂莱塔"
-      ]
-    },
-    {
-      "tag": "roccia_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "洛可可"
-      ]
-    },
-    {
-      "tag": "phoebe_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "菲比"
-      ]
-    },
-    {
-      "tag": "brant_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "布兰特"
-      ]
-    },
-    {
-      "tag": "cantarella_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "坎特蕾拉"
-      ]
-    },
-    {
-      "tag": "zani_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "赞妮"
-      ]
-    },
-    {
-      "tag": "ciaccona_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "夏空"
-      ]
-    },
-    {
-      "tag": "cartethyia_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "卡提希娅"
-      ]
-    },
-    {
-      "tag": "lupa_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "露帕"
-      ]
-    },
-    {
-      "tag": "phrolova_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "弗洛洛"
-      ]
-    },
-    {
-      "tag": "augusta_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "奥古斯塔"
-      ]
-    },
-    {
-      "tag": "iuno_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "尤诺"
-      ]
-    },
-    {
-      "tag": "galbrena_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "嘉贝丽娜"
-      ]
-    },
-    {
-      "tag": "qiuyuan_(wuthering_waves)",
-      "series": "鸣潮",
-      "names": [
-        "仇远"
-      ]
-    },
-    {
-      "tag": "kiana_kaslana_(honkai_impact_3rd)",
-      "series": "崩坏3",
-      "names": [
-        "琪亚娜"
-      ]
-    },
-    {
-      "tag": "raiden_mei_(honkai_impact_3rd)",
-      "series": "崩坏3",
-      "names": [
-        "芽衣",
-        "雷电芽衣"
-      ]
-    },
-    {
-      "tag": "bronya_zaychik_(honkai_impact_3rd)",
-      "series": "崩坏3",
-      "names": [
-        "布洛妮娅(崩3)",
-        "板鸭"
-      ]
-    },
-    {
-      "tag": "elysia_(honkai_impact_3rd)",
-      "series": "崩坏3",
-      "names": [
-        "爱莉希雅"
-      ]
-    },
-    {
-      "tag": "fu_hua_(honkai_impact_3rd)",
-      "series": "崩坏3",
-      "names": [
-        "符华"
-      ]
-    },
-    {
-      "tag": "theresa_apocalypse_(honkai_impact_3rd)",
-      "series": "崩坏3",
-      "names": [
-        "德丽莎"
-      ]
-    },
-    {
-      "tag": "yae_sakura_(honkai_impact_3rd)",
-      "series": "崩坏3",
-      "names": [
-        "八重樱"
-      ]
-    },
-    {
-      "tag": "rita_rossweisse_(honkai_impact_3rd)",
-      "series": "崩坏3",
-      "names": [
-        "丽塔"
-      ]
-    },
-    {
-      "tag": "durandal_(honkai_impact_3rd)",
-      "series": "崩坏3",
-      "names": [
-        "幽兰黛尔"
-      ]
-    },
-    {
-      "tag": "seele_vollerei_(honkai_impact_3rd)",
-      "series": "崩坏3",
-      "names": [
-        "希儿(崩3)"
-      ]
-    },
-    {
-      "tag": "griseo_(honkai_impact_3rd)",
-      "series": "崩坏3",
-      "names": [
-        "格蕾修"
-      ]
-    },
-    {
-      "tag": "artoria_pendragon_(fate)",
-      "series": "FGO",
-      "names": [
-        "阿尔托莉雅",
-        "saber",
-        "呆毛王"
-      ]
-    },
-    {
-      "tag": "mash_kyrielight_(fate)",
-      "series": "FGO",
-      "names": [
-        "玛修"
-      ]
-    },
-    {
-      "tag": "jeanne_d'arc_(fate)",
-      "series": "FGO",
-      "names": [
-        "贞德"
-      ]
-    },
-    {
-      "tag": "okita_souji_(fate)",
-      "series": "FGO",
-      "names": [
-        "冲田总司"
-      ]
-    },
-    {
-      "tag": "scáthach_(fate)",
-      "series": "FGO",
-      "names": [
-        "斯卡哈"
-      ]
-    },
-    {
-      "tag": "tamamo_no_mae_(fate)",
-      "series": "FGO",
-      "names": [
-        "玉藻前"
-      ]
-    },
-    {
-      "tag": "nero_claudius_(fate)",
-      "series": "FGO",
-      "names": [
-        "尼禄"
-      ]
-    },
-    {
-      "tag": "gilgamesh_(fate)",
-      "series": "FGO",
-      "names": [
-        "吉尔伽美什",
-        "金闪闪"
-      ]
-    },
-    {
-      "tag": "morgan_(fate)",
-      "series": "FGO",
-      "names": [
-        "摩根"
-      ]
-    },
-    {
-      "tag": "melusine_(fate)",
-      "series": "FGO",
-      "names": [
-        "梅柳齐娜",
-        "妖兰"
-      ]
-    },
-    {
-      "tag": "baobhan_sith_(fate)",
-      "series": "FGO",
-      "names": [
-        "芭万希",
-        "妖精骑士崔斯坦"
-      ]
-    },
-    {
-      "tag": "kama_(fate)",
-      "series": "FGO",
-      "names": [
-        "迦摩"
-      ]
-    },
-    {
-      "tag": "bb_(fate)",
-      "series": "FGO",
-      "names": [
-        "BB",
-        "bb"
-      ]
-    },
-    {
-      "tag": "ereshkigal_(fate)",
-      "series": "FGO",
-      "names": [
-        "埃列什基伽勒",
-        "枪凛"
-      ]
-    },
-    {
-      "tag": "ishtar_(fate)",
-      "series": "FGO",
-      "names": [
-        "伊什塔尔",
-        "弓凛"
-      ]
-    },
-    {
-      "tag": "enterprise_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "企业"
-      ]
-    },
-    {
-      "tag": "belfast_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "贝尔法斯特",
-        "贝法"
-      ]
-    },
-    {
-      "tag": "unicorn_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "独角兽"
-      ]
-    },
-    {
-      "tag": "laffey_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "拉菲"
-      ]
-    },
-    {
-      "tag": "javelin_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "标枪"
-      ]
-    },
-    {
-      "tag": "ayanami_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "绫波"
-      ]
-    },
-    {
-      "tag": "prinz_eugen_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "欧根亲王"
-      ]
-    },
-    {
-      "tag": "hood_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "胡德"
-      ]
-    },
-    {
-      "tag": "akagi_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "赤城"
-      ]
-    },
-    {
-      "tag": "kaga_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "加贺"
-      ]
-    },
-    {
-      "tag": "amagi_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "天城"
-      ]
-    },
-    {
-      "tag": "shinano_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "信浓"
-      ]
-    },
-    {
-      "tag": "new_jersey_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "新泽西",
-        "花园"
-      ]
-    },
-    {
-      "tag": "cheshire_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "柴郡"
-      ]
-    },
-    {
-      "tag": "formidable_(azur_lane)",
-      "series": "碧蓝航线",
-      "names": [
-        "可畏"
-      ]
-    },
-    {
-      "tag": "rapi_(goddess_of_victory:_nikke)",
-      "series": "NIKKE",
-      "names": [
-        "拉毗"
-      ]
-    },
-    {
-      "tag": "anis_(goddess_of_victory:_nikke)",
-      "series": "NIKKE",
-      "names": [
-        "阿妮斯"
-      ]
-    },
-    {
-      "tag": "neon_(goddess_of_victory:_nikke)",
-      "series": "NIKKE",
-      "names": [
-        "尼恩"
-      ]
-    },
-    {
-      "tag": "marian_(goddess_of_victory:_nikke)",
-      "series": "NIKKE",
-      "names": [
-        "玛丽安"
-      ]
-    },
-    {
-      "tag": "snow_white_(goddess_of_victory:_nikke)",
-      "series": "NIKKE",
-      "names": [
-        "白雪公主(nikke)"
-      ]
-    },
-    {
-      "tag": "scarlet_(goddess_of_victory:_nikke)",
-      "series": "NIKKE",
-      "names": [
-        "红莲"
-      ]
-    },
-    {
-      "tag": "dorothy_(goddess_of_victory:_nikke)",
-      "series": "NIKKE",
-      "names": [
-        "桃乐丝"
-      ]
-    },
-    {
-      "tag": "modernia_(goddess_of_victory:_nikke)",
-      "series": "NIKKE",
-      "names": [
-        "神罚",
-        "现代亚"
-      ]
-    },
-    {
-      "tag": "red_hood_(goddess_of_victory:_nikke)",
-      "series": "NIKKE",
-      "names": [
-        "小红帽"
-      ]
-    },
-    {
-      "tag": "hk416_(girls'_frontline)",
-      "series": "少女前线",
-      "names": [
-        "HK416",
-        "416"
-      ]
-    },
-    {
-      "tag": "ump45_(girls'_frontline)",
-      "series": "少女前线",
-      "names": [
-        "UMP45",
-        "45姐"
-      ]
-    },
-    {
-      "tag": "m4a1_(girls'_frontline)",
-      "series": "少女前线",
-      "names": [
-        "M4A1"
-      ]
-    },
-    {
-      "tag": "wa2000_(girls'_frontline)",
-      "series": "少女前线",
-      "names": [
-        "WA2000",
-        "wa酱"
-      ]
-    },
-    {
-      "tag": "springfield_(girls'_frontline)",
-      "series": "少女前线",
-      "names": [
-        "春田"
-      ]
-    },
-    {
-      "tag": "lucia_(punishing:_gray_raven)",
-      "series": "战双帕弥什",
-      "names": [
-        "露西亚",
-        "露西亚(战双)"
-      ]
-    },
-    {
-      "tag": "liv_(punishing:_gray_raven)",
-      "series": "战双帕弥什",
-      "names": [
-        "丽芙"
-      ]
-    },
-    {
-      "tag": "nanami_(punishing:_gray_raven)",
-      "series": "战双帕弥什",
-      "names": [
-        "七实"
-      ]
-    },
-    {
-      "tag": "karenina_(punishing:_gray_raven)",
-      "series": "战双帕弥什",
-      "names": [
-        "卡列尼娜"
-      ]
-    },
-    {
-      "tag": "bianca_(punishing:_gray_raven)",
-      "series": "战双帕弥什",
-      "names": [
-        "比安卡",
-        "比安卡(战双)"
-      ]
-    },
-    {
-      "tag": "vera_(punishing:_gray_raven)",
-      "series": "战双帕弥什",
-      "names": [
-        "薇拉"
-      ]
-    },
-    {
-      "tag": "no._21_(punishing:_gray_raven)",
-      "series": "战双帕弥什",
-      "names": [
-        "21号"
-      ]
-    },
-    {
-      "tag": "qu_(punishing:_gray_raven)",
-      "series": "战双帕弥什",
-      "names": [
-        "曲"
-      ]
-    },
-    {
-      "tag": "vertin_(reverse:1999)",
-      "series": "重返未来:1999",
-      "names": [
-        "维尔汀"
-      ]
-    },
-    {
-      "tag": "sonetto_(reverse:1999)",
-      "series": "重返未来:1999",
-      "names": [
-        "十四行诗"
-      ]
-    },
-    {
-      "tag": "regulus_(reverse:1999)",
-      "series": "重返未来:1999",
-      "names": [
-        "星锑"
-      ]
-    },
-    {
-      "tag": "druvis_iii_(reverse:1999)",
-      "series": "重返未来:1999",
-      "names": [
-        "槲寄生"
-      ]
-    },
-    {
-      "tag": "sotheby_(reverse:1999)",
-      "series": "重返未来:1999",
-      "names": [
-        "苏芙比"
-      ]
-    },
-    {
-      "tag": "an-an_lee_(reverse:1999)",
-      "series": "重返未来:1999",
-      "names": [
-        "泥鯭的士",
-        "安安"
-      ]
-    },
-    {
-      "tag": "37_(reverse:1999)",
-      "series": "重返未来:1999",
-      "names": [
-        "37"
-      ]
-    },
-    {
-      "tag": "jiu_niangzi_(reverse:1999)",
-      "series": "重返未来:1999",
-      "names": [
-        "曲娘"
-      ]
-    },
-    {
-      "tag": "tooth_fairy_(reverse:1999)",
-      "series": "重返未来:1999",
-      "names": [
-        "牙仙"
-      ]
-    },
-    {
-      "tag": "special_week_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "特别周"
-      ]
-    },
-    {
-      "tag": "silence_suzuka_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "无声铃鹿"
-      ]
-    },
-    {
-      "tag": "tokai_teio_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "东海帝皇",
-        "帝宝"
-      ]
-    },
-    {
-      "tag": "mejiro_mcqueen_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "目白麦昆"
-      ]
-    },
-    {
-      "tag": "gold_ship_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "黄金船"
-      ]
-    },
-    {
-      "tag": "rice_shower_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "米浴"
-      ]
-    },
-    {
-      "tag": "mihono_bourbon_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "美浦波旁"
-      ]
-    },
-    {
-      "tag": "kitasan_black_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "北部玄驹"
-      ]
-    },
-    {
-      "tag": "satono_diamond_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "里见光钻"
-      ]
-    },
-    {
-      "tag": "nice_nature_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "优秀素质",
-        "内恰"
-      ]
-    },
-    {
-      "tag": "oguri_cap_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "小栗帽"
-      ]
-    },
-    {
-      "tag": "tamamo_cross_(umamusume)",
-      "series": "赛马娘",
-      "names": [
-        "玉藻十字"
-      ]
-    },
-    {
-      "tag": "kyaru_(princess_connect!)",
-      "series": "公主连结",
-      "names": [
-        "凯露",
-        "臭鼬"
-      ]
-    },
-    {
-      "tag": "pecorine_(princess_connect!)",
-      "series": "公主连结",
-      "names": [
-        "佩可莉姆",
-        "吃货"
-      ]
-    },
-    {
-      "tag": "kokkoro_(princess_connect!)",
-      "series": "公主连结",
-      "names": [
-        "可可萝",
-        "妈"
-      ]
-    },
-    {
-      "tag": "frieren",
-      "series": "葬送的芙莉莲",
-      "names": [
-        "芙莉莲"
-      ]
-    },
-    {
-      "tag": "fern_(sousou_no_frieren)",
-      "series": "葬送的芙莉莲",
-      "names": [
-        "菲伦"
-      ]
-    },
-    {
-      "tag": "stark_(sousou_no_frieren)",
-      "series": "葬送的芙莉莲",
-      "names": [
-        "休塔尔克"
-      ]
-    },
-    {
-      "tag": "himmel_(sousou_no_frieren)",
-      "series": "葬送的芙莉莲",
-      "names": [
-        "辛美尔"
-      ]
-    },
-    {
-      "tag": "aura_(sousou_no_frieren)",
-      "series": "葬送的芙莉莲",
-      "names": [
-        "阿乌拉"
-      ]
-    },
-    {
-      "tag": "übel_(sousou_no_frieren)",
-      "series": "葬送的芙莉莲",
-      "names": [
-        "尤贝尔"
-      ]
-    },
-    {
-      "tag": "gotoh_hitori",
-      "series": "孤独摇滚",
-      "names": [
-        "后藤一里",
-        "波奇"
-      ]
-    },
-    {
-      "tag": "yamada_ryo",
-      "series": "孤独摇滚",
-      "names": [
-        "山田凉"
-      ]
-    },
-    {
-      "tag": "ijichi_nijika",
-      "series": "孤独摇滚",
-      "names": [
-        "伊地知虹夏"
-      ]
-    },
-    {
-      "tag": "kita_ikuyo",
-      "series": "孤独摇滚",
-      "names": [
-        "喜多郁代"
-      ]
-    },
-    {
-      "tag": "takamatsu_tomori",
-      "series": "BanG Dream!",
-      "names": [
-        "高松灯",
-        "灯"
-      ]
-    },
-    {
-      "tag": "chihaya_anon",
-      "series": "BanG Dream!",
-      "names": [
-        "千早爱音",
-        "爱音"
-      ]
-    },
-    {
-      "tag": "kaname_rana",
-      "series": "BanG Dream!",
-      "names": [
-        "要乐奈",
-        "乐奈"
-      ]
-    },
-    {
-      "tag": "nagasaki_soyo",
-      "series": "BanG Dream!",
-      "names": [
-        "长崎素世",
-        "素世"
-      ]
-    },
-    {
-      "tag": "shiina_taki",
-      "series": "BanG Dream!",
-      "names": [
-        "椎名立希",
-        "立希"
-      ]
-    },
-    {
-      "tag": "togawa_sakiko",
-      "series": "BanG Dream!",
-      "names": [
-        "丰川祥子",
-        "祥子"
-      ]
-    },
-    {
-      "tag": "wakaba_mutsumi",
-      "series": "BanG Dream!",
-      "names": [
-        "若叶睦",
-        "睦"
-      ]
-    },
-    {
-      "tag": "misumi_uika",
-      "series": "BanG Dream!",
-      "names": [
-        "三角初华",
-        "初华"
-      ]
-    },
-    {
-      "tag": "yahata_umiri",
-      "series": "BanG Dream!",
-      "names": [
-        "八幡海铃",
-        "海铃"
-      ]
-    },
-    {
-      "tag": "yutenji_nyamu",
-      "series": "BanG Dream!",
-      "names": [
-        "祐天寺若麦",
-        "若麦",
-        "喵梦"
-      ]
-    },
-    {
-      "tag": "anya_(spy_x_family)",
-      "series": "间谍过家家",
-      "names": [
-        "阿尼亚"
-      ]
-    },
-    {
-      "tag": "yor_briar",
-      "series": "间谍过家家",
-      "names": [
-        "约尔",
-        "荆棘公主"
-      ]
-    },
-    {
-      "tag": "loid_forger",
-      "series": "间谍过家家",
-      "names": [
-        "劳埃德",
-        "黄昏"
-      ]
-    },
-    {
-      "tag": "gojou_satoru",
-      "series": "咒术回战",
-      "names": [
-        "五条悟"
-      ]
-    },
-    {
-      "tag": "itadori_yuuji",
-      "series": "咒术回战",
-      "names": [
-        "虎杖悠仁"
-      ]
-    },
-    {
-      "tag": "fushiguro_megumi",
-      "series": "咒术回战",
-      "names": [
-        "伏黑惠"
-      ]
-    },
-    {
-      "tag": "kugisaki_nobara",
-      "series": "咒术回战",
-      "names": [
-        "钉崎野蔷薇"
-      ]
-    },
-    {
-      "tag": "getou_suguru",
-      "series": "咒术回战",
-      "names": [
-        "夏油杰"
-      ]
-    },
-    {
-      "tag": "okkotsu_yuuta",
-      "series": "咒术回战",
-      "names": [
-        "乙骨忧太"
-      ]
-    },
-    {
-      "tag": "kamado_tanjirou",
-      "series": "鬼灭之刃",
-      "names": [
-        "灶门炭治郎",
-        "炭治郎"
-      ]
-    },
-    {
-      "tag": "kamado_nezuko",
-      "series": "鬼灭之刃",
-      "names": [
-        "灶门祢豆子",
-        "祢豆子"
-      ]
-    },
-    {
-      "tag": "agatsuma_zenitsu",
-      "series": "鬼灭之刃",
-      "names": [
-        "我妻善逸",
-        "善逸"
-      ]
-    },
-    {
-      "tag": "hashibira_inosuke",
-      "series": "鬼灭之刃",
-      "names": [
-        "嘴平伊之助",
-        "伊之助"
-      ]
-    },
-    {
-      "tag": "tomioka_giyuu",
-      "series": "鬼灭之刃",
-      "names": [
-        "富冈义勇"
-      ]
-    },
-    {
-      "tag": "kochou_shinobu",
-      "series": "鬼灭之刃",
-      "names": [
-        "蝴蝶忍"
-      ]
-    },
-    {
-      "tag": "rengoku_kyoujurou",
-      "series": "鬼灭之刃",
-      "names": [
-        "炼狱杏寿郎"
-      ]
-    },
-    {
-      "tag": "kanroji_mitsuri",
-      "series": "鬼灭之刃",
-      "names": [
-        "甘露寺蜜璃"
-      ]
-    },
-    {
-      "tag": "tokitou_muichirou",
-      "series": "鬼灭之刃",
-      "names": [
-        "时透无一郎"
-      ]
-    },
-    {
-      "tag": "ayanami_rei",
-      "series": "EVA",
-      "names": [
-        "绫波丽"
-      ]
-    },
-    {
-      "tag": "souryuu_asuka_langley",
-      "series": "EVA",
-      "names": [
-        "明日香"
-      ]
-    },
-    {
-      "tag": "ikari_shinji",
-      "series": "EVA",
-      "names": [
-        "碇真嗣"
-      ]
-    },
-    {
-      "tag": "nagisa_kaworu",
-      "series": "EVA",
-      "names": [
-        "渚薰"
-      ]
-    },
-    {
-      "tag": "makinami_mari_illustrious",
-      "series": "EVA",
-      "names": [
-        "真希波"
-      ]
-    },
-    {
-      "tag": "nishikigi_chisato",
-      "series": "莉可丽丝",
-      "names": [
-        "锦木千束",
-        "千束"
-      ]
-    },
-    {
-      "tag": "inoue_takina",
-      "series": "莉可丽丝",
-      "names": [
-        "井上泷奈",
-        "泷奈"
-      ]
-    },
-    {
-      "tag": "kitagawa_marin",
-      "series": "更衣人偶坠入爱河",
-      "names": [
-        "喜多川海梦",
-        "海梦"
-      ]
-    },
-    {
-      "tag": "hoshino_ai_(oshi_no_ko)",
-      "series": "我推的孩子",
-      "names": [
-        "星野爱"
-      ]
-    },
-    {
-      "tag": "hoshino_ruby",
-      "series": "我推的孩子",
-      "names": [
-        "星野露比",
-        "露比"
-      ]
-    },
-    {
-      "tag": "hoshino_aquamarine",
-      "series": "我推的孩子",
-      "names": [
-        "星野阿库亚",
-        "阿库亚"
-      ]
-    },
-    {
-      "tag": "arima_kana",
-      "series": "我推的孩子",
-      "names": [
-        "有马加奈"
-      ]
-    },
-    {
-      "tag": "kurokawa_akane",
-      "series": "我推的孩子",
-      "names": [
-        "黑川茜",
-        "黑川赤音"
-      ]
-    },
-    {
-      "tag": "makima_(chainsaw_man)",
-      "series": "链锯人",
-      "names": [
-        "玛奇玛"
-      ]
-    },
-    {
-      "tag": "power_(chainsaw_man)",
-      "series": "链锯人",
-      "names": [
-        "帕瓦"
-      ]
-    },
-    {
-      "tag": "denji_(chainsaw_man)",
-      "series": "链锯人",
-      "names": [
-        "电次"
-      ]
-    },
-    {
-      "tag": "reze_(chainsaw_man)",
-      "series": "链锯人",
-      "names": [
-        "蕾塞"
-      ]
-    },
-    {
-      "tag": "higashiyama_kobeni",
-      "series": "链锯人",
-      "names": [
-        "东山小红"
-      ]
-    },
-    {
-      "tag": "makise_kurisu",
-      "series": "命运石之门",
-      "names": [
-        "牧濑红莉栖",
-        "助手"
-      ]
-    },
-    {
-      "tag": "okabe_rintarou",
-      "series": "命运石之门",
-      "names": [
-        "冈部伦太郎",
-        "凶真"
-      ]
-    },
-    {
-      "tag": "shiina_mayuri",
-      "series": "命运石之门",
-      "names": [
-        "椎名真由理",
-        "嘟嘟噜"
-      ]
-    },
-    {
-      "tag": "kaname_madoka",
-      "series": "魔法少女小圆",
-      "names": [
-        "鹿目圆",
-        "小圆"
-      ]
-    },
-    {
-      "tag": "akemi_homura",
-      "series": "魔法少女小圆",
-      "names": [
-        "晓美焰"
-      ]
-    },
-    {
-      "tag": "tomoe_mami",
-      "series": "魔法少女小圆",
-      "names": [
-        "巴麻美"
-      ]
-    },
-    {
-      "tag": "miki_sayaka",
-      "series": "魔法少女小圆",
-      "names": [
-        "美树沙耶香"
-      ]
-    },
-    {
-      "tag": "sakura_kyouko",
-      "series": "魔法少女小圆",
-      "names": [
-        "佐仓杏子"
-      ]
-    },
-    {
-      "tag": "hirasawa_yui",
-      "series": "轻音少女",
-      "names": [
-        "平泽唯"
-      ]
-    },
-    {
-      "tag": "akiyama_mio",
-      "series": "轻音少女",
-      "names": [
-        "秋山澪"
-      ]
-    },
-    {
-      "tag": "nakano_azusa",
-      "series": "轻音少女",
-      "names": [
-        "中野梓",
-        "梓喵"
-      ]
-    },
-    {
-      "tag": "tainaka_ritsu",
-      "series": "轻音少女",
-      "names": [
-        "田井中律"
-      ]
-    },
-    {
-      "tag": "kotobuki_tsumugi",
-      "series": "轻音少女",
-      "names": [
-        "琴吹䌷"
-      ]
-    },
-    {
-      "tag": "yukinoshita_yukino",
-      "series": "我的青春恋爱物语",
-      "names": [
-        "雪之下雪乃",
-        "雪乃"
-      ]
-    },
-    {
-      "tag": "yuigahama_yui",
-      "series": "我的青春恋爱物语",
-      "names": [
-        "由比滨结衣",
-        "团子"
-      ]
-    },
-    {
-      "tag": "isshiki_iroha",
-      "series": "我的青春恋爱物语",
-      "names": [
-        "一色彩羽"
-      ]
-    },
-    {
-      "tag": "asuna_(sword_art_online)",
-      "series": "刀剑神域",
-      "names": [
-        "亚丝娜"
-      ]
-    },
-    {
-      "tag": "kirito",
-      "series": "刀剑神域",
-      "names": [
-        "桐人"
-      ]
-    },
-    {
-      "tag": "sinon_(sword_art_online)",
-      "series": "刀剑神域",
-      "names": [
-        "诗乃"
-      ]
-    },
-    {
-      "tag": "alice_zuberg",
-      "series": "刀剑神域",
-      "names": [
-        "爱丽丝(刀剑神域)"
-      ]
-    },
-    {
-      "tag": "rem_(re:zero)",
-      "series": "Re:0",
-      "names": [
-        "雷姆"
-      ]
-    },
-    {
-      "tag": "ram_(re:zero)",
-      "series": "Re:0",
-      "names": [
-        "拉姆"
-      ]
-    },
-    {
-      "tag": "emilia_(re:zero)",
-      "series": "Re:0",
-      "names": [
-        "爱蜜莉雅",
-        "EMT"
-      ]
-    },
-    {
-      "tag": "beatrice_(re:zero)",
-      "series": "Re:0",
-      "names": [
-        "碧翠丝"
-      ]
-    },
-    {
-      "tag": "violet_evergarden",
-      "series": "紫罗兰永恒花园",
-      "names": [
-        "薇尔莉特"
-      ]
-    },
-    {
-      "tag": "maomao_(kusuriya_no_hitorigoto)",
-      "series": "药屋少女的呢喃",
-      "names": [
-        "猫猫",
-        "猫猫(药屋)"
-      ]
-    },
-    {
-      "tag": "jinshi_(kusuriya_no_hitorigoto)",
-      "series": "药屋少女的呢喃",
-      "names": [
-        "壬氏"
-      ]
-    },
-    {
-      "tag": "ayase_momo",
-      "series": "胆大党",
-      "names": [
-        "绫濑桃",
-        "小桃"
-      ]
-    },
-    {
-      "tag": "takakura_ken_(dandadan)",
-      "series": "胆大党",
-      "names": [
-        "高仓健",
-        "厄卡伦"
-      ]
-    },
-    {
-      "tag": "shiratori_aira",
-      "series": "胆大党",
-      "names": [
-        "白鸟爱罗"
-      ]
-    },
-    {
-      "tag": "marcille_donato",
-      "series": "迷宫饭",
-      "names": [
-        "玛露西尔"
-      ]
-    },
-    {
-      "tag": "falin_touden",
-      "series": "迷宫饭",
-      "names": [
-        "法琳"
-      ]
-    },
-    {
-      "tag": "laios_touden",
-      "series": "迷宫饭",
-      "names": [
-        "莱欧斯"
-      ]
-    },
-    {
-      "tag": "chilchuck_tims",
-      "series": "迷宫饭",
-      "names": [
-        "齐尔查克"
-      ]
-    },
-    {
-      "tag": "senshi_(dungeon_meshi)",
-      "series": "迷宫饭",
-      "names": [
-        "森西"
-      ]
-    },
-    {
-      "tag": "vladilena_milize",
-      "series": "86",
-      "names": [
-        "蕾娜"
-      ]
-    },
-    {
-      "tag": "shinei_nouzen",
-      "series": "86",
-      "names": [
-        "辛耶",
-        "辛"
-      ]
-    },
-    {
-      "tag": "rimuru_tempest",
-      "series": "转生史莱姆",
-      "names": [
-        "利姆鲁",
-        "萌王"
-      ]
-    },
-    {
-      "tag": "yanami_anna",
-      "series": "败犬女主太多了",
-      "names": [
-        "八奈见杏菜"
-      ]
-    },
-    {
-      "tag": "nukumizu_kazuhiko",
-      "series": "败犬女主太多了",
-      "names": [
-        "温水和彦"
-      ]
-    },
-    {
-      "tag": "hakurei_reimu",
-      "series": "东方Project",
-      "names": [
-        "博丽灵梦",
-        "灵梦"
-      ]
-    },
-    {
-      "tag": "kirisame_marisa",
-      "series": "东方Project",
-      "names": [
-        "雾雨魔理沙",
-        "魔理沙"
-      ]
-    },
-    {
-      "tag": "izayoi_sakuya",
-      "series": "东方Project",
-      "names": [
-        "十六夜咲夜",
-        "咲夜"
-      ]
-    },
-    {
-      "tag": "remilia_scarlet",
-      "series": "东方Project",
-      "names": [
-        "蕾米莉亚"
-      ]
-    },
-    {
-      "tag": "flandre_scarlet",
-      "series": "东方Project",
-      "names": [
-        "芙兰朵露",
-        "二小姐"
-      ]
-    },
-    {
-      "tag": "konpaku_youmu",
-      "series": "东方Project",
-      "names": [
-        "魂魄妖梦",
-        "妖梦"
-      ]
-    },
-    {
-      "tag": "cirno",
-      "series": "东方Project",
-      "names": [
-        "琪露诺",
-        "⑨"
-      ]
-    },
-    {
-      "tag": "komeiji_koishi",
-      "series": "东方Project",
-      "names": [
-        "古明地恋",
-        "恋恋"
-      ]
-    },
-    {
-      "tag": "shameimaru_aya",
-      "series": "东方Project",
-      "names": [
-        "射命丸文"
-      ]
-    },
-    {
-      "tag": "kochiya_sanae",
-      "series": "东方Project",
-      "names": [
-        "东风谷早苗",
-        "早苗"
-      ]
-    },
-    {
-      "tag": "hatsune_miku",
-      "series": "Vocaloid",
-      "names": [
-        "初音未来",
-        "初音",
-        "miku"
-      ]
-    },
-    {
-      "tag": "kagamine_rin",
-      "series": "Vocaloid",
-      "names": [
-        "镜音铃",
-        "镜音リン"
-      ]
-    },
-    {
-      "tag": "kagamine_len",
-      "series": "Vocaloid",
-      "names": [
-        "镜音连"
-      ]
-    },
-    {
-      "tag": "megurine_luka",
-      "series": "Vocaloid",
-      "names": [
-        "巡音流歌",
-        "巡音"
-      ]
-    },
-    {
-      "tag": "kasane_teto",
-      "series": "Vocaloid",
-      "names": [
-        "重音teto",
-        "重音テト"
-      ]
-    },
-    {
-      "tag": "gumi",
-      "series": "Vocaloid",
-      "names": [
-        "GUMI",
-        "gumi"
-      ]
-    }
-  ]
+ "entries": [
+  {
+   "tag": "aether_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "空",
+    "旅行者(男)"
+   ]
+  },
+  {
+   "tag": "lumine_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "荧",
+    "旅行者(女)"
+   ]
+  },
+  {
+   "tag": "paimon_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "派蒙"
+   ]
+  },
+  {
+   "tag": "venti_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "温迪"
+   ]
+  },
+  {
+   "tag": "zhongli_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "钟离",
+    "岩王帝君"
+   ]
+  },
+  {
+   "tag": "raiden_shogun_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "雷电将军",
+    "雷神",
+    "影"
+   ]
+  },
+  {
+   "tag": "nahida_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "纳西妲",
+    "草神",
+    "小吉祥草王"
+   ]
+  },
+  {
+   "tag": "furina_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "芙宁娜",
+    "芙芙",
+    "水神"
+   ]
+  },
+  {
+   "tag": "mavuika_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "玛薇卡",
+    "火神"
+   ]
+  },
+  {
+   "tag": "neuvillette_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "那维莱特",
+    "水龙王"
+   ]
+  },
+  {
+   "tag": "wriothesley_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "莱欧斯利"
+   ]
+  },
+  {
+   "tag": "arlecchino_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "仆人",
+    "阿蕾奇诺"
+   ]
+  },
+  {
+   "tag": "hu_tao_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "胡桃",
+    "堂主"
+   ]
+  },
+  {
+   "tag": "ganyu_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "甘雨"
+   ]
+  },
+  {
+   "tag": "keqing_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "刻晴"
+   ]
+  },
+  {
+   "tag": "shenhe_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "申鹤"
+   ]
+  },
+  {
+   "tag": "yelan_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "夜兰"
+   ]
+  },
+  {
+   "tag": "xiao_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "魈",
+    "降魔大圣"
+   ]
+  },
+  {
+   "tag": "kaedehara_kazuha_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "枫原万叶",
+    "万叶"
+   ]
+  },
+  {
+   "tag": "tartaglia_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "达达利亚",
+    "公子"
+   ]
+  },
+  {
+   "tag": "wanderer_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "散兵",
+    "流浪者"
+   ]
+  },
+  {
+   "tag": "kamisato_ayaka_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "神里绫华",
+    "绫华"
+   ]
+  },
+  {
+   "tag": "kamisato_ayato_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "神里绫人",
+    "绫人"
+   ]
+  },
+  {
+   "tag": "yoimiya_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "宵宫"
+   ]
+  },
+  {
+   "tag": "yae_miko_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "八重神子"
+   ]
+  },
+  {
+   "tag": "sangonomiya_kokomi_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "珊瑚宫心海",
+    "心海"
+   ]
+  },
+  {
+   "tag": "eula_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "优菈"
+   ]
+  },
+  {
+   "tag": "nilou_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "妮露"
+   ]
+  },
+  {
+   "tag": "cyno_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "赛诺"
+   ]
+  },
+  {
+   "tag": "alhaitham_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "艾尔海森"
+   ]
+  },
+  {
+   "tag": "lyney_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "林尼"
+   ]
+  },
+  {
+   "tag": "lynette_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "琳妮特"
+   ]
+  },
+  {
+   "tag": "navia_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "娜维娅"
+   ]
+  },
+  {
+   "tag": "clorinde_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "克洛琳德"
+   ]
+  },
+  {
+   "tag": "sigewinne_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "希格雯"
+   ]
+  },
+  {
+   "tag": "chiori_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "千织"
+   ]
+  },
+  {
+   "tag": "mualani_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "玛拉妮"
+   ]
+  },
+  {
+   "tag": "kinich_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "基尼奇"
+   ]
+  },
+  {
+   "tag": "xilonen_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "希诺宁"
+   ]
+  },
+  {
+   "tag": "chasca_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "恰斯卡"
+   ]
+  },
+  {
+   "tag": "citlali_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "茜特菈莉"
+   ]
+  },
+  {
+   "tag": "skirk_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "丝柯克"
+   ]
+  },
+  {
+   "tag": "yumemizuki_mizuki_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "梦见月瑞希"
+   ]
+  },
+  {
+   "tag": "escoffier_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "爱可菲"
+   ]
+  },
+  {
+   "tag": "klee_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "可莉"
+   ]
+  },
+  {
+   "tag": "mona_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "莫娜"
+   ]
+  },
+  {
+   "tag": "fischl_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "菲谢尔",
+    "皇女"
+   ]
+  },
+  {
+   "tag": "barbara_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "芭芭拉"
+   ]
+  },
+  {
+   "tag": "noelle_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "诺艾尔"
+   ]
+  },
+  {
+   "tag": "sucrose_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "砂糖"
+   ]
+  },
+  {
+   "tag": "diluc_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "迪卢克"
+   ]
+  },
+  {
+   "tag": "jean_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "琴",
+    "琴团长"
+   ]
+  },
+  {
+   "tag": "kaeya_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "凯亚"
+   ]
+  },
+  {
+   "tag": "amber_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "安柏"
+   ]
+  },
+  {
+   "tag": "lisa_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "丽莎"
+   ]
+  },
+  {
+   "tag": "rosaria_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "罗莎莉亚"
+   ]
+  },
+  {
+   "tag": "albedo_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "阿贝多"
+   ]
+  },
+  {
+   "tag": "ningguang_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "凝光"
+   ]
+  },
+  {
+   "tag": "beidou_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "北斗"
+   ]
+  },
+  {
+   "tag": "xiangling_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "香菱"
+   ]
+  },
+  {
+   "tag": "xingqiu_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "行秋"
+   ]
+  },
+  {
+   "tag": "chongyun_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "重云"
+   ]
+  },
+  {
+   "tag": "qiqi_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "七七"
+   ]
+  },
+  {
+   "tag": "yanfei_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "烟绯"
+   ]
+  },
+  {
+   "tag": "yun_jin_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "云堇"
+   ]
+  },
+  {
+   "tag": "kujou_sara_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "九条裟罗"
+   ]
+  },
+  {
+   "tag": "arataki_itto_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "荒泷一斗"
+   ]
+  },
+  {
+   "tag": "kuki_shinobu_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "久岐忍"
+   ]
+  },
+  {
+   "tag": "gorou_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "五郎"
+   ]
+  },
+  {
+   "tag": "collei_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "柯莱"
+   ]
+  },
+  {
+   "tag": "layla_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "莱依拉"
+   ]
+  },
+  {
+   "tag": "faruzan_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "珐露珊"
+   ]
+  },
+  {
+   "tag": "yaoyao_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "瑶瑶"
+   ]
+  },
+  {
+   "tag": "baizhu_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "白术"
+   ]
+  },
+  {
+   "tag": "kirara_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "绮良良"
+   ]
+  },
+  {
+   "tag": "chevreuse_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "夏沃蕾"
+   ]
+  },
+  {
+   "tag": "gaming_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "嘉明"
+   ]
+  },
+  {
+   "tag": "xianyun_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "闲云",
+    "留云借风真君"
+   ]
+  },
+  {
+   "tag": "emilie_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "艾梅莉埃"
+   ]
+  },
+  {
+   "tag": "kachina_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "卡齐娜"
+   ]
+  },
+  {
+   "tag": "ororon_(genshin_impact)",
+   "series": "原神",
+   "names": [
+    "欧洛伦"
+   ]
+  },
+  {
+   "tag": "stelle_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "星",
+    "开拓者(女)"
+   ]
+  },
+  {
+   "tag": "caelus_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "穹",
+    "开拓者(男)"
+   ]
+  },
+  {
+   "tag": "march_7th_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "三月七"
+   ]
+  },
+  {
+   "tag": "dan_heng_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "丹恒"
+   ]
+  },
+  {
+   "tag": "himeko_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "姬子",
+    "姬子(星铁)"
+   ]
+  },
+  {
+   "tag": "welt_yang_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "瓦尔特",
+    "老杨"
+   ]
+  },
+  {
+   "tag": "kafka_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "卡芙卡"
+   ]
+  },
+  {
+   "tag": "silver_wolf_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "银狼"
+   ]
+  },
+  {
+   "tag": "blade_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "刃"
+   ]
+  },
+  {
+   "tag": "jing_yuan_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "景元"
+   ]
+  },
+  {
+   "tag": "fu_xuan_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "符玄"
+   ]
+  },
+  {
+   "tag": "jingliu_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "镜流"
+   ]
+  },
+  {
+   "tag": "bailu_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "白露"
+   ]
+  },
+  {
+   "tag": "tingyun_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "停云"
+   ]
+  },
+  {
+   "tag": "luocha_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "罗刹"
+   ]
+  },
+  {
+   "tag": "qingque_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "青雀"
+   ]
+  },
+  {
+   "tag": "huohuo_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "藿藿"
+   ]
+  },
+  {
+   "tag": "ruan_mei_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "阮梅"
+   ]
+  },
+  {
+   "tag": "dr._ratio_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "真理医生"
+   ]
+  },
+  {
+   "tag": "sparkle_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "花火"
+   ]
+  },
+  {
+   "tag": "black_swan_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "黑天鹅"
+   ]
+  },
+  {
+   "tag": "acheron_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "黄泉"
+   ]
+  },
+  {
+   "tag": "aventurine_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "砂金"
+   ]
+  },
+  {
+   "tag": "robin_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "知更鸟"
+   ]
+  },
+  {
+   "tag": "boothill_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "波提欧"
+   ]
+  },
+  {
+   "tag": "firefly_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "流萤"
+   ]
+  },
+  {
+   "tag": "jade_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "翡翠"
+   ]
+  },
+  {
+   "tag": "yunli_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "云璃"
+   ]
+  },
+  {
+   "tag": "jiaoqiu_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "椒丘"
+   ]
+  },
+  {
+   "tag": "feixiao_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "飞霄"
+   ]
+  },
+  {
+   "tag": "lingsha_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "灵砂"
+   ]
+  },
+  {
+   "tag": "sunday_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "星期日"
+   ]
+  },
+  {
+   "tag": "fugue_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "忘归人"
+   ]
+  },
+  {
+   "tag": "the_herta_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "大黑塔"
+   ]
+  },
+  {
+   "tag": "aglaea_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "阿格莱雅"
+   ]
+  },
+  {
+   "tag": "tribbie_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "缇宝"
+   ]
+  },
+  {
+   "tag": "mydei_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "万敌"
+   ]
+  },
+  {
+   "tag": "castorice_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "遐蝶"
+   ]
+  },
+  {
+   "tag": "anaxa_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "那刻夏"
+   ]
+  },
+  {
+   "tag": "hyacine_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "风堇"
+   ]
+  },
+  {
+   "tag": "cipher_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "赛飞儿"
+   ]
+  },
+  {
+   "tag": "phainon_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "白厄"
+   ]
+  },
+  {
+   "tag": "cyrene_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "昔涟"
+   ]
+  },
+  {
+   "tag": "hysilens_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "海瑟音"
+   ]
+  },
+  {
+   "tag": "cerydra_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "刻律德菈"
+   ]
+  },
+  {
+   "tag": "evernight_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "长夜月"
+   ]
+  },
+  {
+   "tag": "seele_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "希儿",
+    "希儿(星铁)"
+   ]
+  },
+  {
+   "tag": "bronya_rand_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "布洛妮娅",
+    "布洛妮娅(星铁)"
+   ]
+  },
+  {
+   "tag": "clara_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "克拉拉"
+   ]
+  },
+  {
+   "tag": "gepard_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "杰帕德"
+   ]
+  },
+  {
+   "tag": "sampo_koski_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "桑博"
+   ]
+  },
+  {
+   "tag": "pela_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "佩拉"
+   ]
+  },
+  {
+   "tag": "serval_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "希露瓦"
+   ]
+  },
+  {
+   "tag": "lynx_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "玲可"
+   ]
+  },
+  {
+   "tag": "topaz_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "托帕"
+   ]
+  },
+  {
+   "tag": "guinaifen_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "桂乃芬"
+   ]
+  },
+  {
+   "tag": "hook_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "虎克"
+   ]
+  },
+  {
+   "tag": "herta_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "黑塔"
+   ]
+  },
+  {
+   "tag": "asta_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "艾丝妲"
+   ]
+  },
+  {
+   "tag": "gallagher_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "加拉赫"
+   ]
+  },
+  {
+   "tag": "misha_(honkai:_star_rail)",
+   "series": "崩坏:星穹铁道",
+   "names": [
+    "米沙"
+   ]
+  },
+  {
+   "tag": "anby_demara_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "安比",
+    "安比·德玛拉"
+   ]
+  },
+  {
+   "tag": "billy_kid_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "比利",
+    "比利·奇德"
+   ]
+  },
+  {
+   "tag": "nicole_demara_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "妮可",
+    "妮可·德玛拉"
+   ]
+  },
+  {
+   "tag": "nekomiya_mana_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "猫又",
+    "猫宫又奈"
+   ]
+  },
+  {
+   "tag": "corin_wickes_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "可琳"
+   ]
+  },
+  {
+   "tag": "von_lycaon_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "莱卡恩",
+    "狼哥"
+   ]
+  },
+  {
+   "tag": "soukaku_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "苍角"
+   ]
+  },
+  {
+   "tag": "ellen_joe_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "艾莲",
+    "鲨鱼妹"
+   ]
+  },
+  {
+   "tag": "grace_howard_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "格莉丝"
+   ]
+  },
+  {
+   "tag": "koleda_belobog_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "珂蕾妲"
+   ]
+  },
+  {
+   "tag": "alexandrina_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "丽娜",
+    "亚历山德丽娜"
+   ]
+  },
+  {
+   "tag": "zhu_yuan_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "朱鸢"
+   ]
+  },
+  {
+   "tag": "qingyi_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "青衣"
+   ]
+  },
+  {
+   "tag": "jane_doe_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "简",
+    "简·杜"
+   ]
+  },
+  {
+   "tag": "seth_lowell_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "赛斯"
+   ]
+  },
+  {
+   "tag": "caesar_king_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "凯撒",
+    "凯撒·金"
+   ]
+  },
+  {
+   "tag": "burnice_white_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "柏妮思"
+   ]
+  },
+  {
+   "tag": "luciana_de_montefio_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "露西",
+    "露西(zzz)"
+   ]
+  },
+  {
+   "tag": "piper_wheel_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "派派"
+   ]
+  },
+  {
+   "tag": "lighter_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "莱特"
+   ]
+  },
+  {
+   "tag": "tsukishiro_yanagi_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "月城柳",
+    "柳"
+   ]
+  },
+  {
+   "tag": "asaba_harumasa_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "浅羽悠真",
+    "悠真"
+   ]
+  },
+  {
+   "tag": "hoshimi_miyabi_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "星见雅",
+    "雅"
+   ]
+  },
+  {
+   "tag": "astra_yao_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "耀嘉音"
+   ]
+  },
+  {
+   "tag": "evelyn_chevalier_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "伊芙琳"
+   ]
+  },
+  {
+   "tag": "pulchra_fellini_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "波可娜"
+   ]
+  },
+  {
+   "tag": "trigger_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "扳机"
+   ]
+  },
+  {
+   "tag": "vivian_banshee_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "薇薇安"
+   ]
+  },
+  {
+   "tag": "hugo_vlad_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "雨果"
+   ]
+  },
+  {
+   "tag": "yixuan_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "仪玄"
+   ]
+  },
+  {
+   "tag": "ju_fufu_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "橘福福"
+   ]
+  },
+  {
+   "tag": "pan_yinhu_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "潘引壶"
+   ]
+  },
+  {
+   "tag": "amiya_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "阿米娅",
+    "驴子"
+   ]
+  },
+  {
+   "tag": "kal'tsit_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "凯尔希"
+   ]
+  },
+  {
+   "tag": "ch'en_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "陈",
+    "陈sir"
+   ]
+  },
+  {
+   "tag": "hoshiguma_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "星熊"
+   ]
+  },
+  {
+   "tag": "exusiai_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "能天使"
+   ]
+  },
+  {
+   "tag": "texas_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "德克萨斯"
+   ]
+  },
+  {
+   "tag": "lappland_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "拉普兰德"
+   ]
+  },
+  {
+   "tag": "silverash_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "银灰"
+   ]
+  },
+  {
+   "tag": "siege_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "推进之王",
+    "推王"
+   ]
+  },
+  {
+   "tag": "skadi_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "斯卡蒂"
+   ]
+  },
+  {
+   "tag": "specter_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "幽灵鲨"
+   ]
+  },
+  {
+   "tag": "gladiia_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "歌蕾蒂娅"
+   ]
+  },
+  {
+   "tag": "saria_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "塞雷娅"
+   ]
+  },
+  {
+   "tag": "ifrit_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "伊芙利特",
+    "小火龙"
+   ]
+  },
+  {
+   "tag": "eyjafjalla_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "艾雅法拉",
+    "小羊"
+   ]
+  },
+  {
+   "tag": "shining_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "闪灵"
+   ]
+  },
+  {
+   "tag": "nightingale_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "夜莺"
+   ]
+  },
+  {
+   "tag": "angelina_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "安洁莉娜"
+   ]
+  },
+  {
+   "tag": "suzuran_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "铃兰"
+   ]
+  },
+  {
+   "tag": "mudrock_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "泥岩"
+   ]
+  },
+  {
+   "tag": "nearl_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "临光"
+   ]
+  },
+  {
+   "tag": "blemishine_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "瑕光"
+   ]
+  },
+  {
+   "tag": "mlynar_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "玛恩纳"
+   ]
+  },
+  {
+   "tag": "surtr_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "史尔特尔",
+    "42"
+   ]
+  },
+  {
+   "tag": "thorns_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "棘刺"
+   ]
+  },
+  {
+   "tag": "mizuki_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "水月"
+   ]
+  },
+  {
+   "tag": "la_pluma_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "羽毛笔"
+   ]
+  },
+  {
+   "tag": "tequila_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "龙舌兰"
+   ]
+  },
+  {
+   "tag": "bagpipe_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "风笛"
+   ]
+  },
+  {
+   "tag": "saileach_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "琴柳"
+   ]
+  },
+  {
+   "tag": "horn_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "号角"
+   ]
+  },
+  {
+   "tag": "fiammetta_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "菲亚梅塔"
+   ]
+  },
+  {
+   "tag": "goldenglow_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "澄闪"
+   ]
+  },
+  {
+   "tag": "pozëmka_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "鸿雪"
+   ]
+  },
+  {
+   "tag": "dorothy_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "多萝西"
+   ]
+  },
+  {
+   "tag": "mountain_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "山"
+   ]
+  },
+  {
+   "tag": "gnosis_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "灵知"
+   ]
+  },
+  {
+   "tag": "ebenholz_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "黑键"
+   ]
+  },
+  {
+   "tag": "flametail_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "焰尾"
+   ]
+  },
+  {
+   "tag": "archetto_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "空弦"
+   ]
+  },
+  {
+   "tag": "nian_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "年"
+   ]
+  },
+  {
+   "tag": "dusk_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "夕"
+   ]
+  },
+  {
+   "tag": "ling_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "令"
+   ]
+  },
+  {
+   "tag": "chongyue_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "重岳"
+   ]
+  },
+  {
+   "tag": "shu_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "黍"
+   ]
+  },
+  {
+   "tag": "zuo_le_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "左乐"
+   ]
+  },
+  {
+   "tag": "lee_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "老鲤"
+   ]
+  },
+  {
+   "tag": "aak_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "阿"
+   ]
+  },
+  {
+   "tag": "elysium_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "极境"
+   ]
+  },
+  {
+   "tag": "ceobe_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "刻俄柏"
+   ]
+  },
+  {
+   "tag": "rosa_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "早露"
+   ]
+  },
+  {
+   "tag": "w_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "W",
+    "w"
+   ]
+  },
+  {
+   "tag": "ines_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "伊内丝"
+   ]
+  },
+  {
+   "tag": "muelsyse_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "缪尔赛思"
+   ]
+  },
+  {
+   "tag": "typhon_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "提丰"
+   ]
+  },
+  {
+   "tag": "virtuosa_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "阿尔图罗",
+    "塑心"
+   ]
+  },
+  {
+   "tag": "viviana_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "薇薇安娜"
+   ]
+  },
+  {
+   "tag": "degenbrecher_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "锏"
+   ]
+  },
+  {
+   "tag": "qiubai_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "仇白"
+   ]
+  },
+  {
+   "tag": "ray_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "莱伊"
+   ]
+  },
+  {
+   "tag": "perlica_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "佩丽卡"
+   ]
+  },
+  {
+   "tag": "female_endministrator_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "管理员",
+    "女管理员",
+    "终末地管理员"
+   ]
+  },
+  {
+   "tag": "chen_qianyu_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "陈千羽"
+   ]
+  },
+  {
+   "tag": "laevatain_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "莱万汀"
+   ]
+  },
+  {
+   "tag": "lifeng_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "黎风"
+   ]
+  },
+  {
+   "tag": "yvonne_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "伊冯"
+   ]
+  },
+  {
+   "tag": "snowshine_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "昼雪"
+   ]
+  },
+  {
+   "tag": "wulfgard_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "狼卫"
+   ]
+  },
+  {
+   "tag": "ember_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "余烬"
+   ]
+  },
+  {
+   "tag": "ardelia_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "阿德莉娅"
+   ]
+  },
+  {
+   "tag": "shiroko_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "白子",
+    "砂狼白子"
+   ]
+  },
+  {
+   "tag": "hoshino_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "星野",
+    "小鸟游星野"
+   ]
+  },
+  {
+   "tag": "serika_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "芹香",
+    "黑见芹香"
+   ]
+  },
+  {
+   "tag": "nonomi_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "野宫",
+    "十六夜野宫"
+   ]
+  },
+  {
+   "tag": "ayane_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "绫音",
+    "奥空绫音"
+   ]
+  },
+  {
+   "tag": "aru_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "阿露",
+    "陆八魔阿露"
+   ]
+  },
+  {
+   "tag": "mutsuki_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "睦月",
+    "浅黄睦月"
+   ]
+  },
+  {
+   "tag": "kayoko_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "佳代子",
+    "鬼方佳代子"
+   ]
+  },
+  {
+   "tag": "haruka_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "遥香",
+    "伊草遥香"
+   ]
+  },
+  {
+   "tag": "hina_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "日奈",
+    "空崎日奈"
+   ]
+  },
+  {
+   "tag": "ako_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "亚子",
+    "天雨亚子"
+   ]
+  },
+  {
+   "tag": "iori_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "伊织",
+    "银镜伊织"
+   ]
+  },
+  {
+   "tag": "alice_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "爱丽丝",
+    "天童爱丽丝"
+   ]
+  },
+  {
+   "tag": "momoi_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "桃井"
+   ]
+  },
+  {
+   "tag": "midori_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "绿",
+    "才羽绿"
+   ]
+  },
+  {
+   "tag": "yuzu_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "柚子",
+    "花冈柚子"
+   ]
+  },
+  {
+   "tag": "koharu_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "小春",
+    "下江小春"
+   ]
+  },
+  {
+   "tag": "hifumi_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "日富美",
+    "阿慈谷日富美"
+   ]
+  },
+  {
+   "tag": "azusa_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "梓",
+    "白洲梓"
+   ]
+  },
+  {
+   "tag": "hanako_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "花子",
+    "浦和花子"
+   ]
+  },
+  {
+   "tag": "mika_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "未花",
+    "圣园未花"
+   ]
+  },
+  {
+   "tag": "nagisa_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "渚",
+    "桐藤渚"
+   ]
+  },
+  {
+   "tag": "seia_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "圣娅",
+    "百合园圣娅"
+   ]
+  },
+  {
+   "tag": "yuuka_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "优香",
+    "早濑优香"
+   ]
+  },
+  {
+   "tag": "noa_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "诺亚",
+    "生盐诺亚"
+   ]
+  },
+  {
+   "tag": "koyuki_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "小雪",
+    "黑崎小雪"
+   ]
+  },
+  {
+   "tag": "karin_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "花凛",
+    "角楯花凛"
+   ]
+  },
+  {
+   "tag": "asuna_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "明日奈",
+    "一之濑明日奈"
+   ]
+  },
+  {
+   "tag": "neru_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "妮露",
+    "美甘妮露"
+   ]
+  },
+  {
+   "tag": "toki_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "时",
+    "飞鸟马时"
+   ]
+  },
+  {
+   "tag": "rio_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "莉音",
+    "调月莉音"
+   ]
+  },
+  {
+   "tag": "miyako_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "宫子",
+    "月雪宫子"
+   ]
+  },
+  {
+   "tag": "miyu_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "美游",
+    "霞泽美游"
+   ]
+  },
+  {
+   "tag": "iroha_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "伊吕波",
+    "枣伊吕波"
+   ]
+  },
+  {
+   "tag": "ibuki_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "伊吹",
+    "丹花伊吹"
+   ]
+  },
+  {
+   "tag": "makoto_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "真琴",
+    "羽沼真琴"
+   ]
+  },
+  {
+   "tag": "kisaki_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "妃咲",
+    "龙华妃咲"
+   ]
+  },
+  {
+   "tag": "kokona_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "心奈",
+    "春原心奈"
+   ]
+  },
+  {
+   "tag": "shun_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "瞬",
+    "春原瞬"
+   ]
+  },
+  {
+   "tag": "mari_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "玛丽",
+    "伊落玛丽"
+   ]
+  },
+  {
+   "tag": "hinata_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "日向",
+    "若叶日向"
+   ]
+  },
+  {
+   "tag": "sakurako_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "樱子",
+    "歌住樱子"
+   ]
+  },
+  {
+   "tag": "kazusa_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "和纱",
+    "杏山和纱"
+   ]
+  },
+  {
+   "tag": "airi_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "爱莉",
+    "栗村爱莉"
+   ]
+  },
+  {
+   "tag": "saya_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "纱绫",
+    "药子纱绫"
+   ]
+  },
+  {
+   "tag": "arona_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "阿罗娜"
+   ]
+  },
+  {
+   "tag": "plana_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "普拉娜"
+   ]
+  },
+  {
+   "tag": "yangyang_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "秧秧"
+   ]
+  },
+  {
+   "tag": "chixia_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "炽霞",
+    "小芳"
+   ]
+  },
+  {
+   "tag": "baizhi_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "白芷"
+   ]
+  },
+  {
+   "tag": "sanhua_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "散华"
+   ]
+  },
+  {
+   "tag": "jiyan_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "忌炎"
+   ]
+  },
+  {
+   "tag": "yinlin_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "吟霖"
+   ]
+  },
+  {
+   "tag": "encore_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "安可",
+    "安可(鸣潮)"
+   ]
+  },
+  {
+   "tag": "verina_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "维里奈"
+   ]
+  },
+  {
+   "tag": "calcharo_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "卡卡罗"
+   ]
+  },
+  {
+   "tag": "lingyang_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "凌阳"
+   ]
+  },
+  {
+   "tag": "jinhsi_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "今汐"
+   ]
+  },
+  {
+   "tag": "changli_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "长离"
+   ]
+  },
+  {
+   "tag": "zhezhi_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "折枝"
+   ]
+  },
+  {
+   "tag": "xiangli_yao_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "相里要"
+   ]
+  },
+  {
+   "tag": "shorekeeper_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "守岸人"
+   ]
+  },
+  {
+   "tag": "camellya_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "椿"
+   ]
+  },
+  {
+   "tag": "carlotta_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "珂莱塔"
+   ]
+  },
+  {
+   "tag": "roccia_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "洛可可"
+   ]
+  },
+  {
+   "tag": "phoebe_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "菲比"
+   ]
+  },
+  {
+   "tag": "brant_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "布兰特"
+   ]
+  },
+  {
+   "tag": "cantarella_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "坎特蕾拉"
+   ]
+  },
+  {
+   "tag": "zani_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "赞妮"
+   ]
+  },
+  {
+   "tag": "ciaccona_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "夏空"
+   ]
+  },
+  {
+   "tag": "cartethyia_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "卡提希娅"
+   ]
+  },
+  {
+   "tag": "lupa_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "露帕"
+   ]
+  },
+  {
+   "tag": "phrolova_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "弗洛洛"
+   ]
+  },
+  {
+   "tag": "augusta_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "奥古斯塔"
+   ]
+  },
+  {
+   "tag": "iuno_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "尤诺"
+   ]
+  },
+  {
+   "tag": "galbrena_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "嘉贝丽娜"
+   ]
+  },
+  {
+   "tag": "qiuyuan_(wuthering_waves)",
+   "series": "鸣潮",
+   "names": [
+    "仇远"
+   ]
+  },
+  {
+   "tag": "kiana_kaslana_(honkai_impact_3rd)",
+   "series": "崩坏3",
+   "names": [
+    "琪亚娜"
+   ]
+  },
+  {
+   "tag": "raiden_mei_(honkai_impact_3rd)",
+   "series": "崩坏3",
+   "names": [
+    "芽衣",
+    "雷电芽衣"
+   ]
+  },
+  {
+   "tag": "bronya_zaychik_(honkai_impact_3rd)",
+   "series": "崩坏3",
+   "names": [
+    "布洛妮娅(崩3)",
+    "板鸭"
+   ]
+  },
+  {
+   "tag": "elysia_(honkai_impact_3rd)",
+   "series": "崩坏3",
+   "names": [
+    "爱莉希雅"
+   ]
+  },
+  {
+   "tag": "fu_hua_(honkai_impact_3rd)",
+   "series": "崩坏3",
+   "names": [
+    "符华"
+   ]
+  },
+  {
+   "tag": "theresa_apocalypse_(honkai_impact_3rd)",
+   "series": "崩坏3",
+   "names": [
+    "德丽莎"
+   ]
+  },
+  {
+   "tag": "yae_sakura_(honkai_impact_3rd)",
+   "series": "崩坏3",
+   "names": [
+    "八重樱"
+   ]
+  },
+  {
+   "tag": "rita_rossweisse_(honkai_impact_3rd)",
+   "series": "崩坏3",
+   "names": [
+    "丽塔"
+   ]
+  },
+  {
+   "tag": "durandal_(honkai_impact_3rd)",
+   "series": "崩坏3",
+   "names": [
+    "幽兰黛尔"
+   ]
+  },
+  {
+   "tag": "seele_vollerei_(honkai_impact_3rd)",
+   "series": "崩坏3",
+   "names": [
+    "希儿(崩3)"
+   ]
+  },
+  {
+   "tag": "griseo_(honkai_impact_3rd)",
+   "series": "崩坏3",
+   "names": [
+    "格蕾修"
+   ]
+  },
+  {
+   "tag": "artoria_pendragon_(fate)",
+   "series": "FGO",
+   "names": [
+    "阿尔托莉雅",
+    "saber",
+    "呆毛王"
+   ]
+  },
+  {
+   "tag": "mash_kyrielight_(fate)",
+   "series": "FGO",
+   "names": [
+    "玛修"
+   ]
+  },
+  {
+   "tag": "jeanne_d'arc_(fate)",
+   "series": "FGO",
+   "names": [
+    "贞德"
+   ]
+  },
+  {
+   "tag": "okita_souji_(fate)",
+   "series": "FGO",
+   "names": [
+    "冲田总司"
+   ]
+  },
+  {
+   "tag": "scáthach_(fate)",
+   "series": "FGO",
+   "names": [
+    "斯卡哈"
+   ]
+  },
+  {
+   "tag": "tamamo_no_mae_(fate)",
+   "series": "FGO",
+   "names": [
+    "玉藻前"
+   ]
+  },
+  {
+   "tag": "nero_claudius_(fate)",
+   "series": "FGO",
+   "names": [
+    "尼禄"
+   ]
+  },
+  {
+   "tag": "gilgamesh_(fate)",
+   "series": "FGO",
+   "names": [
+    "吉尔伽美什",
+    "金闪闪"
+   ]
+  },
+  {
+   "tag": "morgan_(fate)",
+   "series": "FGO",
+   "names": [
+    "摩根"
+   ]
+  },
+  {
+   "tag": "melusine_(fate)",
+   "series": "FGO",
+   "names": [
+    "梅柳齐娜",
+    "妖兰"
+   ]
+  },
+  {
+   "tag": "baobhan_sith_(fate)",
+   "series": "FGO",
+   "names": [
+    "芭万希",
+    "妖精骑士崔斯坦"
+   ]
+  },
+  {
+   "tag": "kama_(fate)",
+   "series": "FGO",
+   "names": [
+    "迦摩"
+   ]
+  },
+  {
+   "tag": "bb_(fate)",
+   "series": "FGO",
+   "names": [
+    "BB",
+    "bb"
+   ]
+  },
+  {
+   "tag": "ereshkigal_(fate)",
+   "series": "FGO",
+   "names": [
+    "埃列什基伽勒",
+    "枪凛"
+   ]
+  },
+  {
+   "tag": "ishtar_(fate)",
+   "series": "FGO",
+   "names": [
+    "伊什塔尔",
+    "弓凛"
+   ]
+  },
+  {
+   "tag": "enterprise_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "企业"
+   ]
+  },
+  {
+   "tag": "belfast_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "贝尔法斯特",
+    "贝法"
+   ]
+  },
+  {
+   "tag": "unicorn_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "独角兽"
+   ]
+  },
+  {
+   "tag": "laffey_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "拉菲"
+   ]
+  },
+  {
+   "tag": "javelin_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "标枪"
+   ]
+  },
+  {
+   "tag": "ayanami_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "绫波"
+   ]
+  },
+  {
+   "tag": "prinz_eugen_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "欧根亲王"
+   ]
+  },
+  {
+   "tag": "hood_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "胡德"
+   ]
+  },
+  {
+   "tag": "akagi_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "赤城"
+   ]
+  },
+  {
+   "tag": "kaga_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "加贺"
+   ]
+  },
+  {
+   "tag": "amagi_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "天城"
+   ]
+  },
+  {
+   "tag": "shinano_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "信浓"
+   ]
+  },
+  {
+   "tag": "new_jersey_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "新泽西",
+    "花园"
+   ]
+  },
+  {
+   "tag": "cheshire_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "柴郡"
+   ]
+  },
+  {
+   "tag": "formidable_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "可畏"
+   ]
+  },
+  {
+   "tag": "rapi_(goddess_of_victory:_nikke)",
+   "series": "NIKKE",
+   "names": [
+    "拉毗"
+   ]
+  },
+  {
+   "tag": "anis_(goddess_of_victory:_nikke)",
+   "series": "NIKKE",
+   "names": [
+    "阿妮斯"
+   ]
+  },
+  {
+   "tag": "neon_(goddess_of_victory:_nikke)",
+   "series": "NIKKE",
+   "names": [
+    "尼恩"
+   ]
+  },
+  {
+   "tag": "marian_(goddess_of_victory:_nikke)",
+   "series": "NIKKE",
+   "names": [
+    "玛丽安"
+   ]
+  },
+  {
+   "tag": "snow_white_(goddess_of_victory:_nikke)",
+   "series": "NIKKE",
+   "names": [
+    "白雪公主(nikke)"
+   ]
+  },
+  {
+   "tag": "scarlet_(goddess_of_victory:_nikke)",
+   "series": "NIKKE",
+   "names": [
+    "红莲"
+   ]
+  },
+  {
+   "tag": "dorothy_(goddess_of_victory:_nikke)",
+   "series": "NIKKE",
+   "names": [
+    "桃乐丝"
+   ]
+  },
+  {
+   "tag": "modernia_(goddess_of_victory:_nikke)",
+   "series": "NIKKE",
+   "names": [
+    "神罚",
+    "现代亚"
+   ]
+  },
+  {
+   "tag": "red_hood_(goddess_of_victory:_nikke)",
+   "series": "NIKKE",
+   "names": [
+    "小红帽"
+   ]
+  },
+  {
+   "tag": "hk416_(girls'_frontline)",
+   "series": "少女前线",
+   "names": [
+    "HK416",
+    "416"
+   ]
+  },
+  {
+   "tag": "ump45_(girls'_frontline)",
+   "series": "少女前线",
+   "names": [
+    "UMP45",
+    "45姐"
+   ]
+  },
+  {
+   "tag": "m4a1_(girls'_frontline)",
+   "series": "少女前线",
+   "names": [
+    "M4A1"
+   ]
+  },
+  {
+   "tag": "wa2000_(girls'_frontline)",
+   "series": "少女前线",
+   "names": [
+    "WA2000",
+    "wa酱"
+   ]
+  },
+  {
+   "tag": "springfield_(girls'_frontline)",
+   "series": "少女前线",
+   "names": [
+    "春田"
+   ]
+  },
+  {
+   "tag": "lucia_(punishing:_gray_raven)",
+   "series": "战双帕弥什",
+   "names": [
+    "露西亚",
+    "露西亚(战双)"
+   ]
+  },
+  {
+   "tag": "liv_(punishing:_gray_raven)",
+   "series": "战双帕弥什",
+   "names": [
+    "丽芙"
+   ]
+  },
+  {
+   "tag": "nanami_(punishing:_gray_raven)",
+   "series": "战双帕弥什",
+   "names": [
+    "七实"
+   ]
+  },
+  {
+   "tag": "karenina_(punishing:_gray_raven)",
+   "series": "战双帕弥什",
+   "names": [
+    "卡列尼娜"
+   ]
+  },
+  {
+   "tag": "bianca_(punishing:_gray_raven)",
+   "series": "战双帕弥什",
+   "names": [
+    "比安卡",
+    "比安卡(战双)"
+   ]
+  },
+  {
+   "tag": "vera_(punishing:_gray_raven)",
+   "series": "战双帕弥什",
+   "names": [
+    "薇拉"
+   ]
+  },
+  {
+   "tag": "no._21_(punishing:_gray_raven)",
+   "series": "战双帕弥什",
+   "names": [
+    "21号"
+   ]
+  },
+  {
+   "tag": "qu_(punishing:_gray_raven)",
+   "series": "战双帕弥什",
+   "names": [
+    "曲"
+   ]
+  },
+  {
+   "tag": "vertin_(reverse:1999)",
+   "series": "重返未来:1999",
+   "names": [
+    "维尔汀"
+   ]
+  },
+  {
+   "tag": "sonetto_(reverse:1999)",
+   "series": "重返未来:1999",
+   "names": [
+    "十四行诗"
+   ]
+  },
+  {
+   "tag": "regulus_(reverse:1999)",
+   "series": "重返未来:1999",
+   "names": [
+    "星锑"
+   ]
+  },
+  {
+   "tag": "druvis_iii_(reverse:1999)",
+   "series": "重返未来:1999",
+   "names": [
+    "槲寄生"
+   ]
+  },
+  {
+   "tag": "sotheby_(reverse:1999)",
+   "series": "重返未来:1999",
+   "names": [
+    "苏芙比"
+   ]
+  },
+  {
+   "tag": "an-an_lee_(reverse:1999)",
+   "series": "重返未来:1999",
+   "names": [
+    "泥鯭的士",
+    "安安"
+   ]
+  },
+  {
+   "tag": "37_(reverse:1999)",
+   "series": "重返未来:1999",
+   "names": [
+    "37"
+   ]
+  },
+  {
+   "tag": "jiu_niangzi_(reverse:1999)",
+   "series": "重返未来:1999",
+   "names": [
+    "曲娘"
+   ]
+  },
+  {
+   "tag": "tooth_fairy_(reverse:1999)",
+   "series": "重返未来:1999",
+   "names": [
+    "牙仙"
+   ]
+  },
+  {
+   "tag": "special_week_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "特别周"
+   ]
+  },
+  {
+   "tag": "silence_suzuka_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "无声铃鹿"
+   ]
+  },
+  {
+   "tag": "tokai_teio_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "东海帝皇",
+    "帝宝"
+   ]
+  },
+  {
+   "tag": "mejiro_mcqueen_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "目白麦昆"
+   ]
+  },
+  {
+   "tag": "gold_ship_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "黄金船"
+   ]
+  },
+  {
+   "tag": "rice_shower_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "米浴"
+   ]
+  },
+  {
+   "tag": "mihono_bourbon_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "美浦波旁"
+   ]
+  },
+  {
+   "tag": "kitasan_black_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "北部玄驹"
+   ]
+  },
+  {
+   "tag": "satono_diamond_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "里见光钻"
+   ]
+  },
+  {
+   "tag": "nice_nature_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "优秀素质",
+    "内恰"
+   ]
+  },
+  {
+   "tag": "oguri_cap_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "小栗帽"
+   ]
+  },
+  {
+   "tag": "tamamo_cross_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "玉藻十字"
+   ]
+  },
+  {
+   "tag": "kyaru_(princess_connect!)",
+   "series": "公主连结",
+   "names": [
+    "凯露",
+    "臭鼬"
+   ]
+  },
+  {
+   "tag": "pecorine_(princess_connect!)",
+   "series": "公主连结",
+   "names": [
+    "佩可莉姆",
+    "吃货"
+   ]
+  },
+  {
+   "tag": "kokkoro_(princess_connect!)",
+   "series": "公主连结",
+   "names": [
+    "可可萝",
+    "妈"
+   ]
+  },
+  {
+   "tag": "frieren",
+   "series": "葬送的芙莉莲",
+   "names": [
+    "芙莉莲"
+   ]
+  },
+  {
+   "tag": "fern_(sousou_no_frieren)",
+   "series": "葬送的芙莉莲",
+   "names": [
+    "菲伦"
+   ]
+  },
+  {
+   "tag": "stark_(sousou_no_frieren)",
+   "series": "葬送的芙莉莲",
+   "names": [
+    "休塔尔克"
+   ]
+  },
+  {
+   "tag": "himmel_(sousou_no_frieren)",
+   "series": "葬送的芙莉莲",
+   "names": [
+    "辛美尔"
+   ]
+  },
+  {
+   "tag": "aura_(sousou_no_frieren)",
+   "series": "葬送的芙莉莲",
+   "names": [
+    "阿乌拉"
+   ]
+  },
+  {
+   "tag": "übel_(sousou_no_frieren)",
+   "series": "葬送的芙莉莲",
+   "names": [
+    "尤贝尔"
+   ]
+  },
+  {
+   "tag": "gotoh_hitori",
+   "series": "孤独摇滚",
+   "names": [
+    "后藤一里",
+    "波奇"
+   ]
+  },
+  {
+   "tag": "yamada_ryo",
+   "series": "孤独摇滚",
+   "names": [
+    "山田凉"
+   ]
+  },
+  {
+   "tag": "ijichi_nijika",
+   "series": "孤独摇滚",
+   "names": [
+    "伊地知虹夏"
+   ]
+  },
+  {
+   "tag": "kita_ikuyo",
+   "series": "孤独摇滚",
+   "names": [
+    "喜多郁代"
+   ]
+  },
+  {
+   "tag": "takamatsu_tomori",
+   "series": "BanG Dream!",
+   "names": [
+    "高松灯",
+    "灯"
+   ]
+  },
+  {
+   "tag": "chihaya_anon",
+   "series": "BanG Dream!",
+   "names": [
+    "千早爱音",
+    "爱音"
+   ]
+  },
+  {
+   "tag": "kaname_rana",
+   "series": "BanG Dream!",
+   "names": [
+    "要乐奈",
+    "乐奈"
+   ]
+  },
+  {
+   "tag": "nagasaki_soyo",
+   "series": "BanG Dream!",
+   "names": [
+    "长崎素世",
+    "素世"
+   ]
+  },
+  {
+   "tag": "shiina_taki",
+   "series": "BanG Dream!",
+   "names": [
+    "椎名立希",
+    "立希"
+   ]
+  },
+  {
+   "tag": "togawa_sakiko",
+   "series": "BanG Dream!",
+   "names": [
+    "丰川祥子",
+    "祥子"
+   ]
+  },
+  {
+   "tag": "wakaba_mutsumi",
+   "series": "BanG Dream!",
+   "names": [
+    "若叶睦",
+    "睦"
+   ]
+  },
+  {
+   "tag": "misumi_uika",
+   "series": "BanG Dream!",
+   "names": [
+    "三角初华",
+    "初华"
+   ]
+  },
+  {
+   "tag": "yahata_umiri",
+   "series": "BanG Dream!",
+   "names": [
+    "八幡海铃",
+    "海铃"
+   ]
+  },
+  {
+   "tag": "yutenji_nyamu",
+   "series": "BanG Dream!",
+   "names": [
+    "祐天寺若麦",
+    "若麦",
+    "喵梦"
+   ]
+  },
+  {
+   "tag": "anya_(spy_x_family)",
+   "series": "间谍过家家",
+   "names": [
+    "阿尼亚"
+   ]
+  },
+  {
+   "tag": "yor_briar",
+   "series": "间谍过家家",
+   "names": [
+    "约尔",
+    "荆棘公主"
+   ]
+  },
+  {
+   "tag": "loid_forger",
+   "series": "间谍过家家",
+   "names": [
+    "劳埃德",
+    "黄昏"
+   ]
+  },
+  {
+   "tag": "gojou_satoru",
+   "series": "咒术回战",
+   "names": [
+    "五条悟"
+   ]
+  },
+  {
+   "tag": "itadori_yuuji",
+   "series": "咒术回战",
+   "names": [
+    "虎杖悠仁"
+   ]
+  },
+  {
+   "tag": "fushiguro_megumi",
+   "series": "咒术回战",
+   "names": [
+    "伏黑惠"
+   ]
+  },
+  {
+   "tag": "kugisaki_nobara",
+   "series": "咒术回战",
+   "names": [
+    "钉崎野蔷薇"
+   ]
+  },
+  {
+   "tag": "getou_suguru",
+   "series": "咒术回战",
+   "names": [
+    "夏油杰"
+   ]
+  },
+  {
+   "tag": "okkotsu_yuuta",
+   "series": "咒术回战",
+   "names": [
+    "乙骨忧太"
+   ]
+  },
+  {
+   "tag": "kamado_tanjirou",
+   "series": "鬼灭之刃",
+   "names": [
+    "灶门炭治郎",
+    "炭治郎"
+   ]
+  },
+  {
+   "tag": "kamado_nezuko",
+   "series": "鬼灭之刃",
+   "names": [
+    "灶门祢豆子",
+    "祢豆子"
+   ]
+  },
+  {
+   "tag": "agatsuma_zenitsu",
+   "series": "鬼灭之刃",
+   "names": [
+    "我妻善逸",
+    "善逸"
+   ]
+  },
+  {
+   "tag": "hashibira_inosuke",
+   "series": "鬼灭之刃",
+   "names": [
+    "嘴平伊之助",
+    "伊之助"
+   ]
+  },
+  {
+   "tag": "tomioka_giyuu",
+   "series": "鬼灭之刃",
+   "names": [
+    "富冈义勇"
+   ]
+  },
+  {
+   "tag": "kochou_shinobu",
+   "series": "鬼灭之刃",
+   "names": [
+    "蝴蝶忍"
+   ]
+  },
+  {
+   "tag": "rengoku_kyoujurou",
+   "series": "鬼灭之刃",
+   "names": [
+    "炼狱杏寿郎"
+   ]
+  },
+  {
+   "tag": "kanroji_mitsuri",
+   "series": "鬼灭之刃",
+   "names": [
+    "甘露寺蜜璃"
+   ]
+  },
+  {
+   "tag": "tokitou_muichirou",
+   "series": "鬼灭之刃",
+   "names": [
+    "时透无一郎"
+   ]
+  },
+  {
+   "tag": "ayanami_rei",
+   "series": "EVA",
+   "names": [
+    "绫波丽"
+   ]
+  },
+  {
+   "tag": "souryuu_asuka_langley",
+   "series": "EVA",
+   "names": [
+    "明日香"
+   ]
+  },
+  {
+   "tag": "ikari_shinji",
+   "series": "EVA",
+   "names": [
+    "碇真嗣"
+   ]
+  },
+  {
+   "tag": "nagisa_kaworu",
+   "series": "EVA",
+   "names": [
+    "渚薰"
+   ]
+  },
+  {
+   "tag": "makinami_mari_illustrious",
+   "series": "EVA",
+   "names": [
+    "真希波"
+   ]
+  },
+  {
+   "tag": "nishikigi_chisato",
+   "series": "莉可丽丝",
+   "names": [
+    "锦木千束",
+    "千束"
+   ]
+  },
+  {
+   "tag": "inoue_takina",
+   "series": "莉可丽丝",
+   "names": [
+    "井上泷奈",
+    "泷奈"
+   ]
+  },
+  {
+   "tag": "kitagawa_marin",
+   "series": "更衣人偶坠入爱河",
+   "names": [
+    "喜多川海梦",
+    "海梦"
+   ]
+  },
+  {
+   "tag": "hoshino_ai_(oshi_no_ko)",
+   "series": "我推的孩子",
+   "names": [
+    "星野爱"
+   ]
+  },
+  {
+   "tag": "hoshino_ruby",
+   "series": "我推的孩子",
+   "names": [
+    "星野露比",
+    "露比"
+   ]
+  },
+  {
+   "tag": "hoshino_aquamarine",
+   "series": "我推的孩子",
+   "names": [
+    "星野阿库亚",
+    "阿库亚"
+   ]
+  },
+  {
+   "tag": "arima_kana",
+   "series": "我推的孩子",
+   "names": [
+    "有马加奈"
+   ]
+  },
+  {
+   "tag": "kurokawa_akane",
+   "series": "我推的孩子",
+   "names": [
+    "黑川茜",
+    "黑川赤音"
+   ]
+  },
+  {
+   "tag": "makima_(chainsaw_man)",
+   "series": "链锯人",
+   "names": [
+    "玛奇玛"
+   ]
+  },
+  {
+   "tag": "power_(chainsaw_man)",
+   "series": "链锯人",
+   "names": [
+    "帕瓦"
+   ]
+  },
+  {
+   "tag": "denji_(chainsaw_man)",
+   "series": "链锯人",
+   "names": [
+    "电次"
+   ]
+  },
+  {
+   "tag": "reze_(chainsaw_man)",
+   "series": "链锯人",
+   "names": [
+    "蕾塞"
+   ]
+  },
+  {
+   "tag": "higashiyama_kobeni",
+   "series": "链锯人",
+   "names": [
+    "东山小红"
+   ]
+  },
+  {
+   "tag": "makise_kurisu",
+   "series": "命运石之门",
+   "names": [
+    "牧濑红莉栖",
+    "助手"
+   ]
+  },
+  {
+   "tag": "okabe_rintarou",
+   "series": "命运石之门",
+   "names": [
+    "冈部伦太郎",
+    "凶真"
+   ]
+  },
+  {
+   "tag": "shiina_mayuri",
+   "series": "命运石之门",
+   "names": [
+    "椎名真由理",
+    "嘟嘟噜"
+   ]
+  },
+  {
+   "tag": "kaname_madoka",
+   "series": "魔法少女小圆",
+   "names": [
+    "鹿目圆",
+    "小圆"
+   ]
+  },
+  {
+   "tag": "akemi_homura",
+   "series": "魔法少女小圆",
+   "names": [
+    "晓美焰"
+   ]
+  },
+  {
+   "tag": "tomoe_mami",
+   "series": "魔法少女小圆",
+   "names": [
+    "巴麻美"
+   ]
+  },
+  {
+   "tag": "miki_sayaka",
+   "series": "魔法少女小圆",
+   "names": [
+    "美树沙耶香"
+   ]
+  },
+  {
+   "tag": "sakura_kyouko",
+   "series": "魔法少女小圆",
+   "names": [
+    "佐仓杏子"
+   ]
+  },
+  {
+   "tag": "hirasawa_yui",
+   "series": "轻音少女",
+   "names": [
+    "平泽唯"
+   ]
+  },
+  {
+   "tag": "akiyama_mio",
+   "series": "轻音少女",
+   "names": [
+    "秋山澪"
+   ]
+  },
+  {
+   "tag": "nakano_azusa",
+   "series": "轻音少女",
+   "names": [
+    "中野梓",
+    "梓喵"
+   ]
+  },
+  {
+   "tag": "tainaka_ritsu",
+   "series": "轻音少女",
+   "names": [
+    "田井中律"
+   ]
+  },
+  {
+   "tag": "kotobuki_tsumugi",
+   "series": "轻音少女",
+   "names": [
+    "琴吹䌷"
+   ]
+  },
+  {
+   "tag": "yukinoshita_yukino",
+   "series": "我的青春恋爱物语",
+   "names": [
+    "雪之下雪乃",
+    "雪乃"
+   ]
+  },
+  {
+   "tag": "yuigahama_yui",
+   "series": "我的青春恋爱物语",
+   "names": [
+    "由比滨结衣",
+    "团子"
+   ]
+  },
+  {
+   "tag": "isshiki_iroha",
+   "series": "我的青春恋爱物语",
+   "names": [
+    "一色彩羽"
+   ]
+  },
+  {
+   "tag": "asuna_(sword_art_online)",
+   "series": "刀剑神域",
+   "names": [
+    "亚丝娜"
+   ]
+  },
+  {
+   "tag": "kirito",
+   "series": "刀剑神域",
+   "names": [
+    "桐人"
+   ]
+  },
+  {
+   "tag": "sinon_(sword_art_online)",
+   "series": "刀剑神域",
+   "names": [
+    "诗乃"
+   ]
+  },
+  {
+   "tag": "alice_zuberg",
+   "series": "刀剑神域",
+   "names": [
+    "爱丽丝(刀剑神域)"
+   ]
+  },
+  {
+   "tag": "rem_(re:zero)",
+   "series": "Re:0",
+   "names": [
+    "雷姆"
+   ]
+  },
+  {
+   "tag": "ram_(re:zero)",
+   "series": "Re:0",
+   "names": [
+    "拉姆"
+   ]
+  },
+  {
+   "tag": "emilia_(re:zero)",
+   "series": "Re:0",
+   "names": [
+    "爱蜜莉雅",
+    "EMT"
+   ]
+  },
+  {
+   "tag": "beatrice_(re:zero)",
+   "series": "Re:0",
+   "names": [
+    "碧翠丝"
+   ]
+  },
+  {
+   "tag": "violet_evergarden",
+   "series": "紫罗兰永恒花园",
+   "names": [
+    "薇尔莉特"
+   ]
+  },
+  {
+   "tag": "maomao_(kusuriya_no_hitorigoto)",
+   "series": "药屋少女的呢喃",
+   "names": [
+    "猫猫",
+    "猫猫(药屋)"
+   ]
+  },
+  {
+   "tag": "jinshi_(kusuriya_no_hitorigoto)",
+   "series": "药屋少女的呢喃",
+   "names": [
+    "壬氏"
+   ]
+  },
+  {
+   "tag": "ayase_momo",
+   "series": "胆大党",
+   "names": [
+    "绫濑桃",
+    "小桃"
+   ]
+  },
+  {
+   "tag": "takakura_ken_(dandadan)",
+   "series": "胆大党",
+   "names": [
+    "高仓健",
+    "厄卡伦"
+   ]
+  },
+  {
+   "tag": "shiratori_aira",
+   "series": "胆大党",
+   "names": [
+    "白鸟爱罗"
+   ]
+  },
+  {
+   "tag": "marcille_donato",
+   "series": "迷宫饭",
+   "names": [
+    "玛露西尔"
+   ]
+  },
+  {
+   "tag": "falin_touden",
+   "series": "迷宫饭",
+   "names": [
+    "法琳"
+   ]
+  },
+  {
+   "tag": "laios_touden",
+   "series": "迷宫饭",
+   "names": [
+    "莱欧斯"
+   ]
+  },
+  {
+   "tag": "chilchuck_tims",
+   "series": "迷宫饭",
+   "names": [
+    "齐尔查克"
+   ]
+  },
+  {
+   "tag": "senshi_(dungeon_meshi)",
+   "series": "迷宫饭",
+   "names": [
+    "森西"
+   ]
+  },
+  {
+   "tag": "vladilena_milize",
+   "series": "86",
+   "names": [
+    "蕾娜"
+   ]
+  },
+  {
+   "tag": "shinei_nouzen",
+   "series": "86",
+   "names": [
+    "辛耶",
+    "辛"
+   ]
+  },
+  {
+   "tag": "rimuru_tempest",
+   "series": "转生史莱姆",
+   "names": [
+    "利姆鲁",
+    "萌王"
+   ]
+  },
+  {
+   "tag": "yanami_anna",
+   "series": "败犬女主太多了",
+   "names": [
+    "八奈见杏菜"
+   ]
+  },
+  {
+   "tag": "nukumizu_kazuhiko",
+   "series": "败犬女主太多了",
+   "names": [
+    "温水和彦"
+   ]
+  },
+  {
+   "tag": "hakurei_reimu",
+   "series": "东方Project",
+   "names": [
+    "博丽灵梦",
+    "灵梦"
+   ]
+  },
+  {
+   "tag": "kirisame_marisa",
+   "series": "东方Project",
+   "names": [
+    "雾雨魔理沙",
+    "魔理沙"
+   ]
+  },
+  {
+   "tag": "izayoi_sakuya",
+   "series": "东方Project",
+   "names": [
+    "十六夜咲夜",
+    "咲夜"
+   ]
+  },
+  {
+   "tag": "remilia_scarlet",
+   "series": "东方Project",
+   "names": [
+    "蕾米莉亚"
+   ]
+  },
+  {
+   "tag": "flandre_scarlet",
+   "series": "东方Project",
+   "names": [
+    "芙兰朵露",
+    "二小姐"
+   ]
+  },
+  {
+   "tag": "konpaku_youmu",
+   "series": "东方Project",
+   "names": [
+    "魂魄妖梦",
+    "妖梦"
+   ]
+  },
+  {
+   "tag": "cirno",
+   "series": "东方Project",
+   "names": [
+    "琪露诺",
+    "⑨"
+   ]
+  },
+  {
+   "tag": "komeiji_koishi",
+   "series": "东方Project",
+   "names": [
+    "古明地恋",
+    "恋恋"
+   ]
+  },
+  {
+   "tag": "shameimaru_aya",
+   "series": "东方Project",
+   "names": [
+    "射命丸文"
+   ]
+  },
+  {
+   "tag": "kochiya_sanae",
+   "series": "东方Project",
+   "names": [
+    "东风谷早苗",
+    "早苗"
+   ]
+  },
+  {
+   "tag": "hatsune_miku",
+   "series": "Vocaloid",
+   "names": [
+    "初音未来",
+    "初音",
+    "miku"
+   ]
+  },
+  {
+   "tag": "kagamine_rin",
+   "series": "Vocaloid",
+   "names": [
+    "镜音铃",
+    "镜音リン"
+   ]
+  },
+  {
+   "tag": "kagamine_len",
+   "series": "Vocaloid",
+   "names": [
+    "镜音连"
+   ]
+  },
+  {
+   "tag": "megurine_luka",
+   "series": "Vocaloid",
+   "names": [
+    "巡音流歌",
+    "巡音"
+   ]
+  },
+  {
+   "tag": "kasane_teto",
+   "series": "Vocaloid",
+   "names": [
+    "重音teto",
+    "重音テト"
+   ]
+  },
+  {
+   "tag": "gumi",
+   "series": "Vocaloid",
+   "names": [
+    "GUMI",
+    "gumi"
+   ]
+  },
+  {
+   "tag": "kal'tsit",
+   "series": "明日方舟",
+   "names": [
+    "凯尔希"
+   ]
+  },
+  {
+   "tag": "chen_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "陈",
+    "陈晖洁"
+   ]
+  },
+  {
+   "tag": "hoshiguma",
+   "series": "明日方舟",
+   "names": [
+    "星熊"
+   ]
+  },
+  {
+   "tag": "silverash",
+   "series": "明日方舟",
+   "names": [
+    "银灰"
+   ]
+  },
+  {
+   "tag": "lappland",
+   "series": "明日方舟",
+   "names": [
+    "拉普兰德"
+   ]
+  },
+  {
+   "tag": "exusiai",
+   "series": "明日方舟",
+   "names": [
+    "能天使"
+   ]
+  },
+  {
+   "tag": "mostima",
+   "series": "明日方舟",
+   "names": [
+    "莫斯提马"
+   ]
+  },
+  {
+   "tag": "eyjafjalla",
+   "series": "明日方舟",
+   "names": [
+    "艾雅法拉"
+   ]
+  },
+  {
+   "tag": "rosmontis",
+   "series": "明日方舟",
+   "names": [
+    "迷迭香"
+   ]
+  },
+  {
+   "tag": "blemishine",
+   "series": "明日方舟",
+   "names": [
+    "瑕光"
+   ]
+  },
+  {
+   "tag": "doctor_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "博士",
+    "刀客塔"
+   ]
+  },
+  {
+   "tag": "projekt_red",
+   "series": "明日方舟",
+   "names": [
+    "红"
+   ]
+  },
+  {
+   "tag": "phantom_(arknights)",
+   "series": "明日方舟",
+   "names": [
+    "傀影"
+   ]
+  },
+  {
+   "tag": "gladiia",
+   "series": "明日方舟",
+   "names": [
+    "歌蕾蒂娅"
+   ]
+  },
+  {
+   "tag": "ganyu",
+   "series": "原神",
+   "names": [
+    "甘雨"
+   ]
+  },
+  {
+   "tag": "hu_tao",
+   "series": "原神",
+   "names": [
+    "胡桃"
+   ]
+  },
+  {
+   "tag": "raiden_shogun",
+   "series": "原神",
+   "names": [
+    "雷电将军",
+    "影"
+   ]
+  },
+  {
+   "tag": "yae_miko",
+   "series": "原神",
+   "names": [
+    "八重神子"
+   ]
+  },
+  {
+   "tag": "kamisato_ayaka",
+   "series": "原神",
+   "names": [
+    "神里绫华"
+   ]
+  },
+  {
+   "tag": "kamisato_ayato",
+   "series": "原神",
+   "names": [
+    "神里绫人"
+   ]
+  },
+  {
+   "tag": "yoimiya",
+   "series": "原神",
+   "names": [
+    "宵宫"
+   ]
+  },
+  {
+   "tag": "sangonomiya_kokomi",
+   "series": "原神",
+   "names": [
+    "珊瑚宫心海"
+   ]
+  },
+  {
+   "tag": "nahida",
+   "series": "原神",
+   "names": [
+    "纳西妲"
+   ]
+  },
+  {
+   "tag": "furina",
+   "series": "原神",
+   "names": [
+    "芙宁娜"
+   ]
+  },
+  {
+   "tag": "neuvillette",
+   "series": "原神",
+   "names": [
+    "那维莱特"
+   ]
+  },
+  {
+   "tag": "kinich",
+   "series": "原神",
+   "names": [
+    "基尼奇"
+   ]
+  },
+  {
+   "tag": "mualani",
+   "series": "原神",
+   "names": [
+    "玛拉妮"
+   ]
+  },
+  {
+   "tag": "jingliu",
+   "series": "崩坏：星穹铁道",
+   "names": [
+    "镜流"
+   ]
+  },
+  {
+   "tag": "dan_heng",
+   "series": "崩坏：星穹铁道",
+   "names": [
+    "丹恒"
+   ]
+  },
+  {
+   "tag": "bronya_(honkai:_star_rail)",
+   "series": "崩坏：星穹铁道",
+   "names": [
+    "布洛妮娅"
+   ]
+  },
+  {
+   "tag": "welt_(honkai:_star_rail)",
+   "series": "崩坏：星穹铁道",
+   "names": [
+    "瓦尔特"
+   ]
+  },
+  {
+   "tag": "ruan_mei",
+   "series": "崩坏：星穹铁道",
+   "names": [
+    "阮梅"
+   ]
+  },
+  {
+   "tag": "yunli",
+   "series": "崩坏：星穹铁道",
+   "names": [
+    "云璃"
+   ]
+  },
+  {
+   "tag": "nicole_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "妮可"
+   ]
+  },
+  {
+   "tag": "anby_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "安比"
+   ]
+  },
+  {
+   "tag": "nekomiya_mana",
+   "series": "绝区零",
+   "names": [
+    "猫又"
+   ]
+  },
+  {
+   "tag": "soukaku",
+   "series": "绝区零",
+   "names": [
+    "苍角"
+   ]
+  },
+  {
+   "tag": "von_lycaon",
+   "series": "绝区零",
+   "names": [
+    "莱卡恩"
+   ]
+  },
+  {
+   "tag": "ellen_joe",
+   "series": "绝区零",
+   "names": [
+    "艾莲"
+   ]
+  },
+  {
+   "tag": "zhu_yuan",
+   "series": "绝区零",
+   "names": [
+    "朱鸢"
+   ]
+  },
+  {
+   "tag": "qingyi",
+   "series": "绝区零",
+   "names": [
+    "青衣"
+   ]
+  },
+  {
+   "tag": "jane_doe",
+   "series": "绝区零",
+   "names": [
+    "简"
+   ]
+  },
+  {
+   "tag": "caesar_(zenless_zone_zero)",
+   "series": "绝区零",
+   "names": [
+    "凯撒"
+   ]
+  },
+  {
+   "tag": "burnice",
+   "series": "绝区零",
+   "names": [
+    "柏妮思"
+   ]
+  },
+  {
+   "tag": "aris_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "天童爱丽丝"
+   ]
+  },
+  {
+   "tag": "hasumi_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "羽川莲见"
+   ]
+  },
+  {
+   "tag": "mashiro_(blue_archive)",
+   "series": "蔚蓝档案",
+   "names": [
+    "静山真白"
+   ]
+  },
+  {
+   "tag": "atago_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "爱宕"
+   ]
+  },
+  {
+   "tag": "takao_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "高雄"
+   ]
+  },
+  {
+   "tag": "taihou_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "大凤"
+   ]
+  },
+  {
+   "tag": "bismarck_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "俾斯麦"
+   ]
+  },
+  {
+   "tag": "bremerton_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "布莱默顿"
+   ]
+  },
+  {
+   "tag": "st._louis_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "圣路易斯"
+   ]
+  },
+  {
+   "tag": "honolulu_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "火奴鲁鲁"
+   ]
+  },
+  {
+   "tag": "sirius_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "天狼星"
+   ]
+  },
+  {
+   "tag": "dido_(azur_lane)",
+   "series": "碧蓝航线",
+   "names": [
+    "黛朵"
+   ]
+  },
+  {
+   "tag": "saber",
+   "series": "Fate",
+   "names": [
+    "阿尔托莉雅",
+    "saber"
+   ]
+  },
+  {
+   "tag": "tohsaka_rin",
+   "series": "Fate",
+   "names": [
+    "远坂凛"
+   ]
+  },
+  {
+   "tag": "matou_sakura",
+   "series": "Fate",
+   "names": [
+    "间桐樱"
+   ]
+  },
+  {
+   "tag": "mash_kyrielight",
+   "series": "Fate",
+   "names": [
+    "玛修"
+   ]
+  },
+  {
+   "tag": "merlin_(fate)",
+   "series": "Fate",
+   "names": [
+    "梅林"
+   ]
+  },
+  {
+   "tag": "scathach_(fate)",
+   "series": "Fate",
+   "names": [
+    "斯卡哈"
+   ]
+  },
+  {
+   "tag": "astolfo_(fate)",
+   "series": "Fate",
+   "names": [
+    "阿斯托尔福"
+   ]
+  },
+  {
+   "tag": "kaito",
+   "series": "VOCALOID",
+   "names": [
+    "kaito"
+   ]
+  },
+  {
+   "tag": "meiko",
+   "series": "VOCALOID",
+   "names": [
+    "meiko"
+   ]
+  },
+  {
+   "tag": "hong_meiling",
+   "series": "东方Project",
+   "names": [
+    "红美铃"
+   ]
+  },
+  {
+   "tag": "patchouli_knowledge",
+   "series": "东方Project",
+   "names": [
+    "帕秋莉"
+   ]
+  },
+  {
+   "tag": "saigyouji_yuyuko",
+   "series": "东方Project",
+   "names": [
+    "西行寺幽幽子"
+   ]
+  },
+  {
+   "tag": "yakumo_yukari",
+   "series": "东方Project",
+   "names": [
+    "八云紫"
+   ]
+  },
+  {
+   "tag": "yakumo_ran",
+   "series": "东方Project",
+   "names": [
+    "八云蓝"
+   ]
+  },
+  {
+   "tag": "reisen_udongein_inaba",
+   "series": "东方Project",
+   "names": [
+    "铃仙"
+   ]
+  },
+  {
+   "tag": "fujiwara_no_mokou",
+   "series": "东方Project",
+   "names": [
+    "藤原妹红"
+   ]
+  },
+  {
+   "tag": "houraisan_kaguya",
+   "series": "东方Project",
+   "names": [
+    "蓬莱山辉夜"
+   ]
+  },
+  {
+   "tag": "komeiji_satori",
+   "series": "东方Project",
+   "names": [
+    "古明地觉"
+   ]
+  },
+  {
+   "tag": "reiuji_utsuho",
+   "series": "东方Project",
+   "names": [
+    "灵乌路空"
+   ]
+  },
+  {
+   "tag": "gardevoir",
+   "series": "宝可梦",
+   "names": [
+    "沙奈朵"
+   ]
+  },
+  {
+   "tag": "lucario",
+   "series": "宝可梦",
+   "names": [
+    "路卡利欧"
+   ]
+  },
+  {
+   "tag": "lopunny",
+   "series": "宝可梦",
+   "names": [
+    "长耳兔"
+   ]
+  },
+  {
+   "tag": "tsareena",
+   "series": "宝可梦",
+   "names": [
+    "甜冷美后"
+   ]
+  },
+  {
+   "tag": "mawile",
+   "series": "宝可梦",
+   "names": [
+    "大嘴娃"
+   ]
+  },
+  {
+   "tag": "braixen",
+   "series": "宝可梦",
+   "names": [
+    "长尾火狐"
+   ]
+  },
+  {
+   "tag": "serperior",
+   "series": "宝可梦",
+   "names": [
+    "君主蛇"
+   ]
+  },
+  {
+   "tag": "jigglypuff",
+   "series": "宝可梦",
+   "names": [
+    "胖丁"
+   ]
+  },
+  {
+   "tag": "pikachu",
+   "series": "宝可梦",
+   "names": [
+    "皮卡丘"
+   ]
+  },
+  {
+   "tag": "eevee",
+   "series": "宝可梦",
+   "names": [
+    "伊布"
+   ]
+  },
+  {
+   "tag": "sylveon",
+   "series": "宝可梦",
+   "names": [
+    "仙子伊布"
+   ]
+  },
+  {
+   "tag": "umbreon",
+   "series": "宝可梦",
+   "names": [
+    "月亮伊布"
+   ]
+  },
+  {
+   "tag": "espeon",
+   "series": "宝可梦",
+   "names": [
+    "太阳伊布"
+   ]
+  },
+  {
+   "tag": "vaporeon",
+   "series": "宝可梦",
+   "names": [
+    "水伊布"
+   ]
+  },
+  {
+   "tag": "tokai_teio",
+   "series": "赛马娘",
+   "names": [
+    "东海帝皇"
+   ]
+  },
+  {
+   "tag": "special_week",
+   "series": "赛马娘",
+   "names": [
+    "特别周"
+   ]
+  },
+  {
+   "tag": "silence_suzuka",
+   "series": "赛马娘",
+   "names": [
+    "无声铃鹿"
+   ]
+  },
+  {
+   "tag": "vodka_(umamusume)",
+   "series": "赛马娘",
+   "names": [
+    "伏特加"
+   ]
+  },
+  {
+   "tag": "daiwa_scarlet",
+   "series": "赛马娘",
+   "names": [
+    "大和赤骥"
+   ]
+  },
+  {
+   "tag": "gold_ship",
+   "series": "赛马娘",
+   "names": [
+    "黄金船"
+   ]
+  },
+  {
+   "tag": "mejiro_mcqueen",
+   "series": "赛马娘",
+   "names": [
+    "目白麦昆"
+   ]
+  },
+  {
+   "tag": "symboli_rudolf",
+   "series": "赛马娘",
+   "names": [
+    "鲁道夫象征"
+   ]
+  },
+  {
+   "tag": "maruzensky",
+   "series": "赛马娘",
+   "names": [
+    "丸善斯基"
+   ]
+  },
+  {
+   "tag": "katsuragi_misato",
+   "series": "EVA",
+   "names": [
+    "葛城美里"
+   ]
+  },
+  {
+   "tag": "makinami_mari",
+   "series": "EVA",
+   "names": [
+    "真希波"
+   ]
+  },
+  {
+   "tag": "makima",
+   "series": "链锯人",
+   "names": [
+    "玛奇玛"
+   ]
+  },
+  {
+   "tag": "kobeni_(chainsaw_man)",
+   "series": "链锯人",
+   "names": [
+    "东山小红"
+   ]
+  },
+  {
+   "tag": "hoshino_ai",
+   "series": "我推的孩子",
+   "names": [
+    "星野爱"
+   ]
+  },
+  {
+   "tag": "hoshino_aqua",
+   "series": "我推的孩子",
+   "names": [
+    "星野阿库亚"
+   ]
+  },
+  {
+   "tag": "kana_arima",
+   "series": "我推的孩子",
+   "names": [
+    "有马加奈"
+   ]
+  },
+  {
+   "tag": "anya_forger",
+   "series": "间谍过家家",
+   "names": [
+    "阿尼亚"
+   ]
+  },
+  {
+   "tag": "yor_forger",
+   "series": "间谍过家家",
+   "names": [
+    "约尔"
+   ]
+  },
+  {
+   "tag": "uzui_tengen",
+   "series": "鬼灭之刃",
+   "names": [
+    "宇髄天元"
+   ]
+  }
+ ]
 }
