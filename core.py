@@ -63,7 +63,8 @@ DEFAULT_CONFIG = {
         "quality_prefix": "masterpiece, best quality, score_7, safe",
         "default_negative": "worst quality, low quality, score_1, score_2, score_3, artist name, blurry, jpeg artifacts, chromatic aberration",
     },
-    "bot": {"cooldown_seconds": 3, "default_style": "默认"},
+    "bot": {"cooldown_seconds": 3, "default_style": "默认",
+            "daily_quota": 0, "max_pending_per_user": 2, "blacklist": []},
     "lora": {"dir": "", "max_trigger": 2, "default_weight": 0.8},
     "web": {"host": "127.0.0.1", "port": 8081},
 }
@@ -419,6 +420,43 @@ async def enqueue(job):
     PENDING.append(job)
     await QUEUE.put(job)
     return len(PENDING)
+
+
+# ========== 配额 / 排队限制 ==========
+
+USAGE_PATH = DATA_DIR / "usage.json"
+
+
+def _usage_today():
+    today = time.strftime("%Y-%m-%d")
+    data = load_json(USAGE_PATH, {}) or {}
+    if data.get("date") != today:
+        data = {"date": today, "counts": {}}
+    return data
+
+
+def quota_remaining(user_id):
+    """剩余每日配额；返回 None 表示不限额"""
+    q = int(CFG["bot"].get("daily_quota", 0) or 0)
+    if q <= 0:
+        return None
+    used = _usage_today().get("counts", {}).get(str(user_id), 0)
+    return max(0, q - used)
+
+
+def quota_consume(user_id):
+    data = _usage_today()
+    data.setdefault("counts", {})[str(user_id)] = data.get("counts", {}).get(str(user_id), 0) + 1
+    save_json(USAGE_PATH, data)
+
+
+def pending_of(user_id):
+    """该用户尚未完成的任务数（排队中 + 正在跑）"""
+    uid = str(user_id)
+    n = sum(1 for j in PENDING if str(j.get("user_name")) == uid)
+    if CURRENT is not None and str(CURRENT.get("user_name")) == uid:
+        n += 1
+    return n
 
 
 async def notify(job, text):

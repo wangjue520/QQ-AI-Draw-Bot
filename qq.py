@@ -209,6 +209,11 @@ async def on_message(ws, evt):
     user_id = evt.get("user_id")
     target = evt.get("group_id") if msg_type == "group" else user_id
 
+    # 黑名单：完全不搭理（不回复任何消息）
+    uid = str(user_id)
+    if uid in {str(x).strip() for x in core.CFG["bot"].get("blacklist", [])}:
+        return
+
     async def reply(text_, at=True):
         segs = []
         if msg_type == "group" and at:
@@ -227,6 +232,18 @@ async def on_message(ws, evt):
         return
     if cmd["cmd"] == "unknown":
         await reply("没看懂指令，@我 帮助 查看用法")
+        return
+
+    # 每日配额（0 = 不限）
+    remain = core.quota_remaining(user_id)
+    if remain is not None and remain <= 0:
+        await reply(f"你今天的跑图配额已用完（每日 {int(core.CFG['bot'].get('daily_quota', 0))} 张），明天再来吧")
+        return
+
+    # 每用户最大排队任务数（0 = 不限）
+    max_p = int(core.CFG["bot"].get("max_pending_per_user", 0) or 0)
+    if max_p > 0 and core.pending_of(user_id) >= max_p:
+        await reply(f"你的任务还在排队/跑图中，跑完再发（每人最多 {max_p} 个未完成任务）")
         return
 
     cooldown = float(core.CFG["bot"].get("cooldown_seconds", 3))
@@ -264,8 +281,11 @@ async def on_message(ws, evt):
     job["notify_image"] = notify_image
 
     n = await core.enqueue(job)
+    core.quota_consume(user_id)
     if n > 1:
         await reply(f"已加入队列，前面还有 {n - 1} 个任务", at=False)
+    elif remain is not None and remain - 1 <= 5:
+        await reply(f"任务已受理（今日剩余配额 {remain - 1} 张）", at=False)
     # 记录供重roll（完成时由 run_job 填充 core）
     orig_run = job
 

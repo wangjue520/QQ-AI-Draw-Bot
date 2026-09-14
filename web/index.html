@@ -212,7 +212,13 @@ th{color:var(--dim);font-weight:normal;font-size:12px}
       <div><label>默认画风</label><input id="sDefStyle"></div>
       <div><label>OneBot 端口</label><input id="sObPort" type="number"></div>
     </div>
-    <div class="muted" style="margin-top:6px">端口类改动需要重启机器人才生效。</div>
+    <div class="row">
+      <div><label>每日每用户跑图配额（0=不限）</label><input id="sQuota" type="number" min="0"></div>
+      <div><label>每用户最大未完成任务数（0=不限）</label><input id="sMaxPending" type="number" min="0"></div>
+    </div>
+    <label>黑名单 QQ 号（每行一个；名单内的人机器人完全不搭理，不回复任何消息）</label>
+    <textarea id="sBlacklist" style="min-height:70px" placeholder="123456789&#10;987654321"></textarea>
+    <div class="muted" style="margin-top:6px">端口类改动需要重启机器人才生效，其余保存即生效。</div>
   </div>
   <button class="btn" onclick="saveSettings()">保存全部设置</button>
 </section>
@@ -505,6 +511,8 @@ async function loadSettings(){
   $("sQuality").value=s.gen.quality_prefix; $("sNegative").value=s.gen.default_negative;
   $("sCooldown").value=s.bot.cooldown_seconds; $("sDefStyle").value=s.bot.default_style;
   $("sObPort").value=s.onebot.ws_port;
+  $("sQuota").value=s.bot.daily_quota||0; $("sMaxPending").value=s.bot.max_pending_per_user||0;
+  $("sBlacklist").value=(s.bot.blacklist||[]).join("\n");
 }
 async function saveSettings(){
   const num=(id,def)=>{const v=parseFloat($(id).value);return isNaN(v)?def:v;};
@@ -515,7 +523,9 @@ async function saveSettings(){
     gen:{steps:num("sSteps",30),cfg:num("sCfg",5),sampler:$("sSampler").value.trim(),
       width:num("sW",1024),height:num("sH",1024),
       quality_prefix:$("sQuality").value,default_negative:$("sNegative").value},
-    bot:{cooldown_seconds:num("sCooldown",3),default_style:$("sDefStyle").value.trim()},
+    bot:{cooldown_seconds:num("sCooldown",3),default_style:$("sDefStyle").value.trim(),
+      daily_quota:num("sQuota",0),max_pending_per_user:num("sMaxPending",0),
+      blacklist:$("sBlacklist").value.split("\n").map(s=>s.trim()).filter(Boolean)},
     onebot:{ws_port:num("sObPort",8080)},
   });
   toast("设置已保存（端口改动需重启）");
