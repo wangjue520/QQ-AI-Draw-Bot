@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-QQ Anima 跑图机器人 · 主入口
+跑图姬 · QQ 出图机器人 · 主入口
 启动三部分：QQ 接入（NapCat）+ Web 控制台 + 跑图队列
 """
 
@@ -36,7 +36,7 @@ async def main():
     ]
     url = await panel.serve()
     print("=" * 50, flush=True)
-    print("  QQ Anima 跑图机器人已启动", flush=True)
+    print("  跑图姬已启动", flush=True)
     print(f"  Web 控制台：{url}", flush=True)
     print(f"  提示词优化：{'已启用' if core.llm_available() else '未启用（在 Web 控制台-设置里填 key）'}", flush=True)
     lora_dir = core.CFG["lora"].get("dir", "")

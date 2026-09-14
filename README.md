@@ -1,6 +1,6 @@
-# QQ Anima 跑图机器人
+# 跑图姬（qq-forge-bot）
 
-群里 **@机器人 + 指令 + 画面描述**，自动优化提示词、自动触发角色 LoRA、调用本地 WebUI Forge 出图并发回群里。自带 **Web 控制台**：画风、LoRA、角色字典、提示词规则、QQ 账号全部网页里管理。
+QQ 出图机器人：群里 @它说"画一个佩丽卡"，自动优化提示词、自动触发角色 LoRA、调用本地 WebUI Forge 出图并发回群里。后端**不限模型**（Anima / SDXL / Pony / Illustrious / Flux，Forge 支持的都能跑）。自带 **Web 控制台**：画风、LoRA、角色字典、提示词规则、QQ 账号全部网页里管理。
 
 ## 系统组成
 
