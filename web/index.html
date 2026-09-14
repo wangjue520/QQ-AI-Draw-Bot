@@ -236,6 +236,11 @@ th{color:var(--dim);font-weight:normal;font-size:12px}
     <h3>当前绑定 <span class="muted">（机器人用哪个 QQ 号收发消息）</span>
       <button class="btn sec" style="float:right;font-size:12px" onclick="loadQQ()">刷新</button></h3>
     <div id="qqCurrent" class="muted">加载中…</div>
+    <div id="qqQrBox" class="hide" style="text-align:center;margin-top:12px">
+      <img id="qqQrImg" style="max-width:260px;border-radius:10px;border:1px solid var(--border)">
+      <div class="muted" style="margin-top:6px">小号需要重新登录：用手机 QQ 扫码，并在手机上点"登录"确认</div>
+      <button class="btn sec" style="margin-top:8px" onclick="refreshQr()">刷新二维码</button>
+    </div>
   </div>
   <div class="card">
     <h3>一键启动设置</h3>
@@ -327,15 +332,17 @@ function openForge(){
 async function loadQQ(){
   let d;
   try{ d = await api("/api/qq/accounts"); }
-  catch(e){ $("qqCurrent").innerHTML='<span class="bad">NapCat 未启动</span>'; $("qqTable").innerHTML=""; return; }
-  if(d.error){ $("qqCurrent").innerHTML='<span class="bad">NapCat 未启动或未登录</span>'; $("qqTable").innerHTML=""; return; }
+  catch(e){ $("qqCurrent").innerHTML='<span class="bad">NapCat 未启动</span>'; $("qqTable").innerHTML=""; $("qqQrBox").classList.add("hide"); return; }
+  if(d.error){ $("qqCurrent").innerHTML='<span class="bad">NapCat 未启动或未登录</span>'; $("qqTable").innerHTML=""; $("qqQrBox").classList.add("hide"); return; }
   const cur = d.current;
   if(cur && d.online){
     $("qqCurrent").innerHTML = '<span class="dot on"></span> <b>'+esc(cur.nick||cur.uin)+'</b>'
       +' <span class="muted">('+esc(cur.uin)+')</span>';
+    $("qqQrBox").classList.add("hide");
   }else{
     $("qqCurrent").innerHTML = '<span class="dot off"></span> <span class="bad">未登录</span>'
-      +' <span class="muted">（在下面选一个账号切换，或去 NapCat 扫码）</span>';
+      +' <span class="muted">（扫下方二维码，或点列表里的账号切换）</span>';
+    loadQr();
   }
   if(!d.accounts.length){
     $("qqTable").innerHTML='<tr><td class="muted">没有可快速登录的账号</td></tr>';
@@ -355,6 +362,21 @@ async function saveAutoLogin(){
   const r = await api("/api/qq/autologin",{uin:$("qqAutoLogin").value});
   $("autoMsg").textContent = r.ok ? "已保存，下次一键启动自动登录该账号" : ("保存失败："+(r.msg||""));
 }
+
+// ---- 扫码登录二维码 ----
+async function loadQr(){
+  let d;
+  try{ d = await api("/api/qq/qrcode"); }catch(e){ return; }
+  if(d.error || !d.needed){ $("qqQrBox").classList.add("hide"); return; }
+  $("qqQrImg").src = d.img;
+  $("qqQrBox").classList.remove("hide");
+  clearTimeout(window._qrT);
+  window._qrT = setTimeout(()=>{
+    const t = $("tab-qq");
+    if(t && !t.classList.contains("hide")) loadQQ();
+  }, 8000);
+}
+function refreshQr(){ api("/api/qq/qrcode?refresh=1").then(loadQr); }
 
 // ---- Forge 模型 / VAE ----
 let forgeModelCache = {};

@@ -588,5 +588,8 @@ async def run_job(job):
 
     cb = job.get("notify_image")
     if cb:
-        await cb(b64, fname)
+        try:
+            await cb(b64, fname)
+        except Exception:
+            pass  # QQ 掉线导致图片发不出不算任务失败（图已存 outputs 和历史）
     await notify(job, f"完成，耗时 {duration}s")

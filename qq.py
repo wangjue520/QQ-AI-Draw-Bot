@@ -170,10 +170,13 @@ async def call_api(ws, action, params):
 
 
 async def send_msg(ws, msg_type, target, segments):
-    if msg_type == "group":
-        await call_api(ws, "send_group_msg", {"group_id": target, "message": segments})
-    else:
-        await call_api(ws, "send_private_msg", {"user_id": target, "message": segments})
+    try:
+        if msg_type == "group":
+            await call_api(ws, "send_group_msg", {"group_id": target, "message": segments})
+        else:
+            await call_api(ws, "send_private_msg", {"user_id": target, "message": segments})
+    except websockets.ConnectionClosed:
+        pass  # QQ 掉线时静默丢弃，NapCat 重连后自动恢复
 
 
 def check_auth(ws):
@@ -322,6 +325,8 @@ async def handler(ws):
                 continue
             if evt.get("post_type") == "message":
                 asyncio.create_task(on_message(ws, evt))
+    except websockets.ConnectionClosed:
+        pass  # NapCat 重启/掉线属正常情况，等它重连即可
     finally:
         print(f"[QQ] NapCat 连接断开 {peer}", flush=True)
 

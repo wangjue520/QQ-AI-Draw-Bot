@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
 """Web 控制台：HTTP API + 静态页面（aiohttp）"""
 
+import base64
 import hashlib
+import io
 import json
 import time
 from pathlib import Path
 
 from aiohttp import web
 import httpx
+import qrcode
 
 import core
 
@@ -168,6 +171,38 @@ async def api_qq_autologin(request):
         return web.json_response({"ok": False, "msg": r.get("message", "设置失败")})
     except Exception as e:
         return web.json_response({"ok": False, "msg": str(e)})
+
+
+_QR_CACHE = {"img": None, "ts": 0.0}
+
+
+async def api_qq_qrcode(request):
+    """需要扫码时返回二维码图片(dataURL)；已登录返回 needed=False。
+    带 90 秒缓存，避免页面轮询把二维码刷得没法扫。"""
+    try:
+        cfg = json.loads(NAPCAT_WEBUI_JSON.read_text(encoding="utf-8"))
+        token = cfg["token"]
+        h = hashlib.sha256((token + ".napcat").encode()).hexdigest()
+        async with httpx.AsyncClient(timeout=15) as cli:
+            cred = (await cli.post("http://127.0.0.1:6099/api/auth/login",
+                                   json={"hash": h, "totpCode": ""})).json()["data"]["Credential"]
+            head = {"Authorization": f"Bearer {cred}"}
+            st = (await cli.post("http://127.0.0.1:6099/api/QQLogin/CheckLoginStatus",
+                                 json={}, headers=head)).json()["data"]
+        if st.get("isLogin"):
+            _QR_CACHE.update(img=None, ts=0.0)
+            return web.json_response({"needed": False})
+        refresh = request.query.get("refresh") == "1"
+        if refresh or not _QR_CACHE["img"] or time.time() - _QR_CACHE["ts"] > 90:
+            r = await _nc_post("QQLogin/RefreshQRcode", {})
+            url = r["data"]["qrcodeurl"]
+            buf = io.BytesIO()
+            qrcode.make(url).save(buf, format="PNG")
+            _QR_CACHE["img"] = "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
+            _QR_CACHE["ts"] = time.time()
+        return web.json_response({"needed": True, "img": _QR_CACHE["img"]})
+    except Exception as e:
+        return web.json_response({"error": str(e)}, status=502)
 
 
 async def api_qq_switch(request):
@@ -336,6 +371,7 @@ def make_app():
     app.router.add_get("/api/qq/accounts", api_qq_accounts)
     app.router.add_post("/api/qq/switch", api_qq_switch)
     app.router.add_post("/api/qq/autologin", api_qq_autologin)
+    app.router.add_get("/api/qq/qrcode", api_qq_qrcode)
     app.router.add_get("/api/forge_models", api_forge_models)
     app.router.add_post("/api/forge_models", api_forge_models_set)
     app.router.add_get("/api/presets", api_get_presets)
