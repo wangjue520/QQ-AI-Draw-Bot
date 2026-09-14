@@ -75,6 +75,21 @@ def parse_command(text):
     for kw in ("再来一张", "再画一张", "再来", "重roll", "reroll"):
         if t == kw or t.startswith(kw):
             return {"cmd": "reroll"}
+    # 支持「画风X 画 …」顺序：先消费开头带分隔符的画风，再找动词
+    lead_style, rest = match_style(t)
+    if lead_style:
+        cmd = _parse_draw_verb(rest, lead_style)
+        if cmd:
+            return cmd
+    cmd = _parse_draw_verb(t, None)
+    if cmd:
+        return cmd
+    return {"cmd": "unknown"}
+
+
+def _parse_draw_verb(t, lead_style):
+    """匹配开头的作画动词（画/生图/draw/raw…），剩余交给 build_draw；
+    若 build_draw 没识别到画风，则用 lead_style（「画风X 画…」的写法）。"""
     for kws, mode in ((("生图", "原tag", "raw"), "raw"), (("画", "draw", "绘图"), "draw")):
         for kw in kws:
             if t == kw:
@@ -83,8 +98,11 @@ def parse_command(text):
                 rest = t[len(kw):].lstrip(KW_SEP).strip()
                 if not rest:
                     return {"cmd": "help"}
-                return build_draw(mode, rest)
-    return {"cmd": "unknown"}
+                cmd = build_draw(mode, rest)
+                if lead_style and cmd.get("cmd") == "draw" and not cmd.get("style"):
+                    cmd["style"] = lead_style
+                return cmd
+    return None
 
 
 def build_draw(mode, rest):
