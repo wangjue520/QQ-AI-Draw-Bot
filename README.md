@@ -2,6 +2,8 @@
 
 QQ 出图机器人：群里 @它说"画一个佩丽卡"，自动优化提示词、自动触发角色 LoRA、调用本地 WebUI Forge 出图并发回群里。后端**不限模型**（Anima / SDXL / Pony / Illustrious / Flux，Forge 支持的都能跑）。自带 **Web 控制台**：画风、LoRA、角色字典、提示词规则、QQ 账号全部网页里管理。
 
+> **English — QQ-AI-Draw-Bot**: an AI image-generation bot for QQ groups. `@bot draw <prompt>` → LLM prompt optimization → character LoRA auto-trigger → local Stable Diffusion (WebUI Forge) → image sent back to the group. Model-agnostic (Anima / SDXL / Pony / Illustrious / Flux). Ships with a web console (styles / LoRAs / character dictionary / QQ account management). Built on NapCat (OneBot 11).
+
 ## 系统组成
 
 ```
