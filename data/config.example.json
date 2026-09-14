@@ -1,0 +1,40 @@
+{
+  "onebot": {
+    "ws_host": "127.0.0.1",
+    "ws_port": 8080,
+    "access_token": ""
+  },
+  "webui": {
+    "base_url": "http://127.0.0.1:7860",
+    "timeout": 600
+  },
+  "llm": {
+    "base_url": "https://api.x.ai/v1",
+    "api_key": "在这里填你的xAI key（xai- 开头）",
+    "model": "grok-4",
+    "proxy": ""
+  },
+  "gen": {
+    "width": 1024,
+    "height": 1024,
+    "steps": 30,
+    "cfg": 5,
+    "sampler": "Euler a",
+    "scheduler": "Automatic",
+    "quality_prefix": "masterpiece, best quality, score_7, safe",
+    "default_negative": "worst quality, low quality, score_1, score_2, score_3, artist name, blurry, jpeg artifacts, chromatic aberration"
+  },
+  "bot": {
+    "cooldown_seconds": 3,
+    "default_style": "默认"
+  },
+  "lora": {
+    "dir": "在这里填Forge的 models\\Lora 完整路径",
+    "max_trigger": 2,
+    "default_weight": 0.8
+  },
+  "web": {
+    "host": "127.0.0.1",
+    "port": 8081
+  }
+}

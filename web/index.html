@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anima 跑图机器人控制台</title>
+<style>
+:root{--bg:#12141a;--panel:#1b1e27;--border:#2a2e3a;--fg:#e6e8ee;--dim:#8b90a0;--accent:#7aa2ff;--ok:#4ade80;--bad:#f87171}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font:14px/1.6 "Microsoft YaHei",system-ui,sans-serif}
+header{padding:14px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{font-size:17px}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:5px}
+.dot.on{background:var(--ok)}.dot.off{background:var(--bad)}
+nav{display:flex;gap:4px;padding:10px 22px 0;border-bottom:1px solid var(--border);flex-wrap:wrap}
+nav button{background:none;border:none;color:var(--dim);padding:8px 14px;cursor:pointer;font-size:14px;border-bottom:2px solid transparent}
+nav button.act{color:var(--fg);border-bottom-color:var(--accent)}
+main{padding:20px 22px;max-width:1100px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:16px}
+.card h3{font-size:14px;margin-bottom:10px;color:var(--accent)}
+input,textarea,select{background:#12141a;border:1px solid var(--border);color:var(--fg);border-radius:6px;padding:7px 10px;font-size:13px;width:100%}
+textarea{min-height:90px;resize:vertical;font-family:Consolas,monospace}
+label{display:block;font-size:12px;color:var(--dim);margin:8px 0 3px}
+button.btn{background:var(--accent);border:none;color:#0b0e14;padding:7px 16px;border-radius:6px;cursor:pointer;font-size:13px}
+button.btn.sec{background:#2a2e3a;color:var(--fg)}
+button.btn.danger{background:#3a2027;color:var(--bad)}
+button.btn:hover{filter:brightness(1.12)}
+.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1;min-width:140px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:7px 9px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+th{color:var(--dim);font-weight:normal;font-size:12px}
+.tag{display:inline-block;background:#232838;border-radius:4px;padding:1px 7px;margin:1px;font-size:12px}
+.imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.imgs figure{background:#12141a;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.imgs img{width:100%;display:block;aspect-ratio:1;object-fit:cover;cursor:pointer}
+.imgs figcaption{font-size:11px;color:var(--dim);padding:5px 7px;word-break:break-all}
+.imgs figcaption b{color:var(--fg);font-weight:normal}
+.muted{color:var(--dim);font-size:12px}
+.ok{color:var(--ok)}.bad{color:var(--bad)}
+.log{font-family:Consolas,monospace;font-size:12px;color:var(--dim);white-space:pre-wrap}
+#toast{position:fixed;top:16px;right:16px;background:#232838;border:1px solid var(--accent);padding:9px 16px;border-radius:8px;display:none;z-index:9}
+.pill{font-size:11px;padding:1px 8px;border-radius:10px;background:#232838;color:var(--dim)}
+.pbar{background:#12141a;border:1px solid var(--border);border-radius:7px;height:14px;overflow:hidden}
+.pbar>div{height:100%;background:var(--accent);transition:width .5s}
+#forgeProgPreview img{max-width:280px;border-radius:8px;border:1px solid var(--border);display:block}
+.hide{display:none}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎨 Anima 跑图机器人控制台</h1>
+  <span class="muted"><span id="dotLlm" class="dot off"></span>提示词优化</span>
+  <span class="muted"><span id="dotLora" class="dot off"></span>LoRA目录</span>
+  <span class="muted">WebUI: <a id="webuiHeadLink" href="#" target="_blank" style="color:var(--accent);text-decoration:none"><span id="webuiUrl">-</span></a></span>
+</header>
+<nav>
+  <button data-tab="draw" class="act">跑图 / 队列</button>
+  <button data-tab="presets">画风预设</button>
+  <button data-tab="lora">LoRA 管理</button>
+  <button data-tab="dict">角色字典</button>
+  <button data-tab="prompt">优化提示词</button>
+  <button data-tab="settings">设置</button>
+  <button data-tab="forge">Forge WebUI</button>
+  <button data-tab="qq">QQ 账号</button>
+</nav>
+<main>
+
+<section id="tab-draw">
+  <div class="card">
+    <h3>手动跑图（不用开 QQ 也能测试）</h3>
+    <div class="row">
+      <div><label>画风</label><select id="dStyle"></select></div>
+      <div><label>尺寸</label><select id="dSize">
+        <option value="">默认(配置)</option><option value="1024,1024">方 1024x1024</option>
+        <option value="1344,768">横 1344x768</option><option value="768,1344">竖 768x1344</option>
+      </select></div>
+      <div><label>自定义分辨率</label><input id="dCustomSize" placeholder="如 1000x1400，留空用上面选择"></div>
+      <div><label>提示词优化</label><select id="dMode">
+        <option value="draw">AI 优化</option><option value="raw">原样直跑</option>
+      </select></div>
+    </div>
+    <label>画面描述</label>
+    <textarea id="dContent" placeholder="例：画一个芙宁娜在海边看日落"></textarea>
+    <div style="margin-top:10px"><button class="btn" onclick="submitDraw()">加入队列</button>
+    <span class="muted" id="drawMsg"></span></div>
+  </div>
+  <div class="card">
+    <h3>Forge 跑图进度 <span class="muted">（实时）</span></h3>
+    <div id="forgeProgWrap">
+      <div class="pbar"><div id="forgeProgBar" style="width:0%"></div></div>
+      <div id="forgeProgText" class="muted" style="margin-top:6px">Forge 空闲</div>
+      <div id="forgeProgPreview" style="margin-top:8px"></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>队列状态 <span class="muted">（每 2 秒自动刷新）</span></h3>
+    <div id="curJob" class="muted">空闲</div>
+    <div id="pendJobs"></div>
+  </div>
+  <div class="card">
+    <h3>历史记录</h3>
+    <div class="imgs" id="history"></div>
+  </div>
+</section>
+
+<section id="tab-presets" class="hide">
+  <div class="card">
+    <h3>新增 / 编辑画风</h3>
+    <div class="row"><div><label>画风名（指令里用的名字）</label><input id="pName" placeholder="例：厚涂"></div>
+    <div><label>介绍</label><input id="pDesc"></div></div>
+    <label>正向内容（拼在提示词里，LoRA 写法 &lt;lora:文件名:权重&gt;，画师要写 @画师名）</label>
+    <textarea id="pPos" placeholder="<lora:xxx:0.8>, @quasarcake, cel shading"></textarea>
+    <label>负向追加（没有可留空）</label>
+    <textarea id="pNeg" style="min-height:50px"></textarea>
+    <div style="margin-top:10px"><button class="btn" onclick="savePreset()">保存</button>
+    <button class="btn sec" onclick="clearPresetForm()">清空表单</button></div>
+  </div>
+  <div class="card"><h3>已有画风</h3><table id="presetTable"></table></div>
+</section>
+
+<section id="tab-lora" class="hide">
+  <div class="card">
+    <h3>LoRA 管理</h3>
+    <div class="muted" style="margin-bottom:8px">LoRA 目录在「设置」里填。识别依据是每个 LoRA 旁边的 .civitai.info 文件（C站下载时自动带的）。命中触发词或别名时机器人会自动加上该 LoRA。「别名」填中文名，逗号分隔。</div>
+    <button class="btn sec" onclick="loadLoras()">重新扫描</button>
+  </div>
+  <div class="card"><table id="loraTable"></table></div>
+</section>
+
+<section id="tab-dict" class="hide">
+  <div class="card">
+    <h3>角色字典 <span class="muted" id="dictTotal"></span></h3>
+    <div class="row"><div><input id="dictQ" placeholder="搜索中文名 / tag / 作品名，回车查询" onkeydown="if(event.key==='Enter')loadDict()"></div>
+    <div style="flex:0"><button class="btn sec" onclick="loadDict()">搜索</button></div></div>
+  </div>
+  <div class="card">
+    <h3>新增角色</h3>
+    <div class="row">
+      <div><label>D站tag（下划线写法）</label><input id="dcTag" placeholder="furina_(genshin_impact)"></div>
+      <div><label>作品</label><input id="dcSeries" placeholder="原神"></div>
+      <div><label>中文名/别名（逗号分隔）</label><input id="dcNames" placeholder="芙宁娜,芙芙,水神"></div>
+    </div>
+    <div style="margin-top:10px"><button class="btn" onclick="addDict()">添加</button></div>
+  </div>
+  <div class="card">
+    <h3>批量导入 <span class="muted">（每行一条：tag,作品,中文名1,中文名2…）</span></h3>
+    <textarea id="dcBulk" style="min-height:110px" placeholder="perlica_(arknights),明日方舟,佩丽卡&#10;luo_xiaohei,罗小黑战记,罗小黑"></textarea>
+    <div style="margin-top:10px"><button class="btn" onclick="bulkAddDict()">导入</button>
+    <span class="muted" id="bulkMsg"></span></div>
+  </div>
+  <div class="card"><table id="dictTable"></table></div>
+</section>
+
+<section id="tab-prompt" class="hide">
+  <div class="card">
+    <h3>AI 提示词优化 · 系统提示词</h3>
+    <div class="muted" style="margin-bottom:8px">这是发给大模型的 system prompt，内置了 Anima 官方提示词规则。可自由修改，保存后立即生效。</div>
+    <textarea id="optPrompt" style="min-height:420px"></textarea>
+    <div style="margin-top:10px"><button class="btn" onclick="savePrompt()">保存</button></div>
+  </div>
+</section>
+
+<section id="tab-settings" class="hide">
+  <div class="card">
+    <h3>LoRA</h3>
+    <label>LoRA 目录（Forge 的 models\Lora 完整路径）</label>
+    <input id="sLoraDir" placeholder="D:/stable-diffusion-webui-forge/models/Lora">
+    <div class="row">
+      <div><label>单张图最多自动触发几个 LoRA</label><input id="sMaxTrigger" type="number" min="0" max="5"></div>
+      <div><label>LoRA 默认权重</label><input id="sLoraWeight" type="number" step="0.05" min="0" max="2"></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>大模型（提示词优化）</h3>
+    <div class="row">
+      <div><label>API 地址</label><input id="sLlmBase"></div>
+      <div><label>模型</label><input id="sLlmModel"></div>
+    </div>
+    <div class="row">
+      <div><label>API Key <span class="muted">(留空表示不修改)</span></label><input id="sLlmKey" placeholder=""></div>
+      <div><label>代理（可留空）</label><input id="sLlmProxy" placeholder="http://127.0.0.1:7890"></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>WebUI / 生成参数</h3>
+    <div class="row">
+      <div><label>WebUI 地址</label><input id="sWebui"></div>
+      <div><label>步数</label><input id="sSteps" type="number"></div>
+      <div><label>CFG</label><input id="sCfg" type="number" step="0.5"></div>
+    </div>
+    <div class="row">
+      <div><label>采样器</label><input id="sSampler"></div>
+      <div><label>默认宽</label><input id="sW" type="number"></div>
+      <div><label>默认高</label><input id="sH" type="number"></div>
+    </div>
+    <label>质量前缀（拼在所有提示词最前面）</label><input id="sQuality">
+    <label>默认负向提示词</label><textarea id="sNegative" style="min-height:50px"></textarea>
+  </div>
+  <div class="card">
+    <h3>QQ / 其他</h3>
+    <div class="row">
+      <div><label>冷却秒数</label><input id="sCooldown" type="number"></div>
+      <div><label>默认画风</label><input id="sDefStyle"></div>
+      <div><label>OneBot 端口</label><input id="sObPort" type="number"></div>
+    </div>
+    <div class="muted" style="margin-top:6px">端口类改动需要重启机器人才生效。</div>
+  </div>
+  <button class="btn" onclick="saveSettings()">保存全部设置</button>
+</section>
+
+<section id="tab-forge" class="hide">
+  <div class="card">
+    <h3>Forge WebUI <span class="muted">（内嵌窗口可直接操作 Forge）</span>
+      <a id="forgeLink" href="#" target="_blank" style="float:right;font-size:12px;color:var(--accent);text-decoration:none">在新标签页打开 ↗</a></h3>
+    <iframe id="forgeFrame" style="width:100%;height:calc(100vh - 240px);border:1px solid var(--border);border-radius:8px;background:#1a1c24"></iframe>
+  </div>
+</section>
+
+<section id="tab-qq" class="hide">
+  <div class="card">
+    <h3>当前绑定 <span class="muted">（机器人用哪个 QQ 号收发消息）</span>
+      <button class="btn sec" style="float:right;font-size:12px" onclick="loadQQ()">刷新</button></h3>
+    <div id="qqCurrent" class="muted">加载中…</div>
+  </div>
+  <div class="card">
+    <h3>一键启动设置</h3>
+    <label>双击「启动机器人.bat」时自动登录的 QQ（在 Forge / NapCat 拉起后自动上线，全程免扫码）</label>
+    <div class="row">
+      <div><select id="qqAutoLogin"></select></div>
+      <div style="flex:0;min-width:120px"><button class="btn" onclick="saveAutoLogin()">保存</button></div>
+    </div>
+    <div class="muted" style="margin-top:6px" id="autoMsg"></div>
+  </div>
+  <div class="card">
+    <h3>可切换的账号 <span class="muted">（本机登录过的 QQ，点一下即可切换，无需扫码）</span></h3>
+    <table id="qqTable"></table>
+  </div>
+  <div class="muted">切换后约 10~20 秒生效，机器人窗口会显示新的 [QQ] NapCat 已接入。</div>
+</section>
+
+</main>
+<div id="toast"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+function toast(t, bad){ const el=$("toast"); el.textContent=t; el.style.display="block";
+  el.style.borderColor = bad?"var(--bad)":"var(--accent)";
+  clearTimeout(el._t); el._t=setTimeout(()=>el.style.display="none",2600); }
+async function api(path, body){
+  const opt = body?{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)}:{};
+  const r = await fetch(path, opt);
+  return r.json();
+}
+// ---- 标签页 ----
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll("nav button").forEach(x=>x.classList.remove("act"));
+  b.classList.add("act");
+  document.querySelectorAll("main section").forEach(s=>s.classList.add("hide"));
+  $("tab-"+b.dataset.tab).classList.remove("hide");
+  if(b.dataset.tab==="presets")loadPresets();
+  if(b.dataset.tab==="lora")loadLoras();
+  if(b.dataset.tab==="dict")loadDict();
+  if(b.dataset.tab==="prompt")loadPrompt();
+  if(b.dataset.tab==="settings")loadSettings();
+  if(b.dataset.tab==="forge")openForge();
+  if(b.dataset.tab==="qq")loadQQ();
+});
+
+// ---- 跑图/队列 ----
+async function submitDraw(){
+  const content=$("dContent").value.trim();
+  if(!content){toast("先写点画面描述",true);return;}
+  const cs=$("dCustomSize").value.trim();
+  const m=cs.match(/^(\d{3,4})\s*[x×*]\s*(\d{3,4})$/);
+  let size=null;
+  if(m) size=[parseInt(m[1]),parseInt(m[2])];
+  else if($("dSize").value) size=$("dSize").value.split(",").map(Number);
+  const r=await api("/api/draw",{content, style:$("dStyle").value||null,
+    size, mode:$("dMode").value});
+  if(r.ok){toast("已加入队列（第 "+r.queue_pos+" 位）");$("drawMsg").textContent="";}
+  else toast(r.msg||"失败",true);
+}
+async function refreshStatus(){
+  try{
+    const s=await api("/api/status");
+    $("dotLlm").className="dot "+(s.llm_ok?"on":"off");
+    $("dotLora").className="dot "+(s.lora_dir?"on":"off");
+    $("webuiUrl").textContent=s.webui;
+    $("webuiHeadLink").href=s.webui||"#";
+    $("forgeLink").href=s.webui||"#";
+    const c=s.current;
+    $("curJob").innerHTML = c
+      ? `<span class="pill" style="color:var(--ok)">跑图中</span> [${c.source}] ${esc(c.content||"")} <span class="muted">${(c.logs||[]).slice(-1).map(l=>esc(l.text)).join("")}</span>`
+      : '<span class="muted">空闲</span>';
+    $("pendJobs").innerHTML = s.pending.map((j,i)=>
+      `<div><span class="pill">排队 ${i+1}</span> [${j.source}] ${esc(j.content||"")}</div>`).join("");
+    $("history").innerHTML = s.history.map(h=>`
+      <figure><img src="/outputs/${h.file}" loading="lazy" onclick="window.open('/outputs/${h.file}')"
+        title="${esc(h.prompt)}">
+      <figcaption><b>${esc(h.user||h.source)}</b> · ${h.time} · ${h.duration}s
+      ${(h.loras||[]).map(l=>`<span class="tag">${esc(l)}</span>`).join("")}
+      <br>${esc((h.content||h.prompt||"").slice(0,60))}</figcaption></figure>`).join("");
+  }catch(e){}
+}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function openForge(){
+  const url=$("webuiUrl").textContent||"http://127.0.0.1:7860";
+  $("forgeLink").href=url;
+  if(!$("forgeFrame").src) $("forgeFrame").src=url;
+}
+
+// ---- QQ 账号 ----
+async function loadQQ(){
+  let d;
+  try{ d = await api("/api/qq/accounts"); }
+  catch(e){ $("qqCurrent").innerHTML='<span class="bad">NapCat 未启动</span>'; $("qqTable").innerHTML=""; return; }
+  if(d.error){ $("qqCurrent").innerHTML='<span class="bad">NapCat 未启动或未登录</span>'; $("qqTable").innerHTML=""; return; }
+  const cur = d.current;
+  if(cur && d.online){
+    $("qqCurrent").innerHTML = '<span class="dot on"></span> <b>'+esc(cur.nick||cur.uin)+'</b>'
+      +' <span class="muted">('+esc(cur.uin)+')</span>';
+  }else{
+    $("qqCurrent").innerHTML = '<span class="dot off"></span> <span class="bad">未登录</span>'
+      +' <span class="muted">（在下面选一个账号切换，或去 NapCat 扫码）</span>';
+  }
+  if(!d.accounts.length){
+    $("qqTable").innerHTML='<tr><td class="muted">没有可快速登录的账号</td></tr>';
+    return;
+  }
+  $("qqTable").innerHTML = "<tr><th>QQ号</th><th>昵称</th><th>状态</th><th></th></tr>" +
+    d.accounts.map(a=>{
+      const isCur = cur && String(a.uin)===String(cur.uin) && d.online;
+      return `<tr><td class="log">${esc(a.uin)}</td><td>${esc(a.nickName||"")}</td>
+        <td>${isCur?'<span class="ok">当前绑定</span>':'<span class="muted">-</span>'}</td>
+        <td style="width:90px">${isCur?"":`<button class="btn sec" onclick="switchQQ(${JSON.stringify(String(a.uin))})">切换</button>`}</td></tr>`;
+    }).join("");
+  $("qqAutoLogin").innerHTML = '<option value="">（不自动登录）</option>' +
+    d.accounts.map(a=>`<option value="${esc(String(a.uin))}" ${String(a.uin)===String(d.auto_login||"")?"selected":""}>${esc(a.nickName||a.uin)}（${esc(a.uin)}）</option>`).join("");
+}
+async function saveAutoLogin(){
+  const r = await api("/api/qq/autologin",{uin:$("qqAutoLogin").value});
+  $("autoMsg").textContent = r.ok ? "已保存，下次一键启动自动登录该账号" : ("保存失败："+(r.msg||""));
+}
+async function switchQQ(uin){
+  if(!confirm("把机器人切换到 QQ "+uin+" ？"))return;
+  const r = await api("/api/qq/switch",{uin});
+  if(r.ok){ toast("切换中，约 10~20 秒后生效"); }
+  else toast(r.msg||"切换失败", true);
+  setTimeout(loadQQ, 6000);
+}
+setInterval(refreshStatus,2000); refreshStatus();
+
+// ---- Forge 实时跑图进度 ----
+async function refreshForgeProgress(){
+  let p;
+  try{ p = await api("/api/progress"); }
+  catch(e){ $("forgeProgText").textContent="Forge 未连接"; $("forgeProgBar").style.width="0%"; return; }
+  if(p.error){ $("forgeProgText").textContent="Forge 未连接"; $("forgeProgBar").style.width="0%"; return; }
+  const st = p.state||{};
+  const busy = (p.progress||0) > 0.001 || st.job;
+  if(!busy){
+    $("forgeProgBar").style.width="0%";
+    $("forgeProgText").textContent = "Forge 空闲";
+    $("forgeProgPreview").innerHTML = "";
+    return;
+  }
+  const pct = Math.round((p.progress||0)*100);
+  $("forgeProgBar").style.width = pct + "%";
+  let txt = pct + "%";
+  if(st.sampling_step != null && st.sampling_steps)
+    txt += " · 采样 " + st.sampling_step + "/" + st.sampling_steps;
+  if(p.eta_relative != null && p.eta_relative > 0)
+    txt += " · 剩余约 " + Math.round(p.eta_relative) + "s";
+  $("forgeProgText").textContent = txt;
+  $("forgeProgPreview").innerHTML = p.current_image
+    ? '<img src="data:image/png;base64,' + p.current_image + '">' : "";
+}
+setInterval(refreshForgeProgress,2000); refreshForgeProgress();
+
+// ---- 画风预设 ----
+async function loadPresets(){
+  const p=await api("/api/presets");
+  // 同步跑图页下拉
+  $("dStyle").innerHTML = Object.keys(p).map(n=>`<option>${esc(n)}</option>`).join("");
+  $("presetTable").innerHTML = "<tr><th>名字</th><th>介绍</th><th>正向</th><th></th></tr>" +
+    Object.entries(p).map(([n,v])=>`<tr><td><b>${esc(n)}</b></td><td class="muted">${esc(v.description||"")}</td>
+    <td class="log">${esc(v.positive||"")}</td>
+    <td><button class="btn sec" onclick='editPreset(${JSON.stringify(n)})'>编辑</button>
+    <button class="btn danger" onclick='delPreset(${JSON.stringify(n)})'>删</button></td></tr>`).join("");
+}
+function editPreset(n){ api("/api/presets").then(p=>{ const v=p[n]||{};
+  $("pName").value=n;$("pDesc").value=v.description||"";$("pPos").value=v.positive||"";$("pNeg").value=v.negative||"";
+  toast("已载入 "+n); }); }
+function clearPresetForm(){["pName","pDesc","pPos","pNeg"].forEach(i=>$(i).value="");}
+async function savePreset(){
+  const r=await api("/api/presets/save",{name:$("pName").value,description:$("pDesc").value,
+    positive:$("pPos").value,negative:$("pNeg").value});
+  if(r.ok){toast("已保存");loadPresets();}else toast(r.msg,true);
+}
+async function delPreset(n){ if(!confirm("删除画风 "+n+"？"))return;
+  await api("/api/presets/delete",{name:n}); loadPresets(); }
+
+// ---- LoRA ----
+async function loadLoras(){
+  const r=await api("/api/loras");
+  const rows=r.loras.map(l=>`<tr>
+    <td><b>${esc(l.stem)}</b><br><span class="muted">${esc(l.model_name||"")}${l.missing?' <span class="bad">未扫描到文件</span>':''}</span></td>
+    <td>${(l.triggers||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")||'<span class="muted">无</span>'}</td>
+    <td><input value="${esc((l.aliases||[]).join(","))}" onchange='updLora(${JSON.stringify(l.stem)},{aliases:this.value.split(/[,,]/).map(s=>s.trim()).filter(Boolean)})'></td>
+    <td style="width:80px"><input type="number" step="0.05" min="0" max="2" value="${l.weight}"
+      onchange='updLora(${JSON.stringify(l.stem)},{weight:parseFloat(this.value)})'></td>
+    <td style="width:60px"><input type="checkbox" ${l.enabled?"checked":""}
+      onchange='updLora(${JSON.stringify(l.stem)},{enabled:this.checked})'></td>
+  </tr>`).join("");
+  $("loraTable").innerHTML="<tr><th>LoRA</th><th>触发词（来自 civitai.info）</th><th>中文别名</th><th>权重</th><th>启用</th></tr>"+rows;
+  if(!r.loras.length)$("loraTable").innerHTML="<tr><td class='muted'>没扫到 LoRA。先去「设置」填 LoRA 目录。</td></tr>";
+}
+async function updLora(stem,patch){ patch.stem=stem; await api("/api/loras/update",patch); toast("已保存"); }
+
+// ---- 角色字典 ----
+async function loadDict(){
+  const r=await api("/api/dict?q="+encodeURIComponent($("dictQ").value));
+  $("dictTotal").textContent="共 "+r.total+" 条";
+  $("dictTable").innerHTML="<tr><th>中文名</th><th>D站tag</th><th>作品</th><th></th></tr>"+
+    r.entries.map(e=>`<tr><td>${e.names.map(n=>`<span class="tag">${esc(n)}</span>`).join("")}</td>
+    <td class="log">${esc(e.tag)}</td><td class="muted">${esc(e.series)}</td>
+    <td><button class="btn danger" onclick='delDict(${JSON.stringify(e.tag)})'>删</button></td></tr>`).join("");
+}
+async function addDict(){
+  const r=await api("/api/dict/add",{tag:$("dcTag").value,series:$("dcSeries").value,
+    names:$("dcNames").value.split(/[,,]/).map(s=>s.trim()).filter(Boolean)});
+  if(r.ok){toast("已添加");loadDict();}else toast(r.msg,true);
+}
+async function bulkAddDict(){
+  const lines=$("dcBulk").value.split("\n").map(s=>s.trim()).filter(Boolean);
+  if(!lines.length){toast("先粘贴内容",true);return;}
+  let ok=0, fail=0;
+  for(const line of lines){
+    const parts=line.split(/[,，]/).map(s=>s.trim()).filter(Boolean);
+    if(parts.length<3){fail++;continue;}
+    const r=await api("/api/dict/add",{tag:parts[0],series:parts[1],names:parts.slice(2)});
+    r.ok?ok++:fail++;
+  }
+  $("bulkMsg").textContent=`导入完成：成功 ${ok} 条${fail?`，失败 ${fail} 条（格式应为 tag,作品,中文名）`:""}`;
+  $("dcBulk").value="";
+  loadDict();
+}
+async function delDict(tag){ await api("/api/dict/delete",{tag}); loadDict(); }
+
+// ---- 优化提示词 ----
+async function loadPrompt(){ const r=await api("/api/optimizer_prompt"); $("optPrompt").value=r.prompt; }
+async function savePrompt(){ const r=await api("/api/optimizer_prompt",{prompt:$("optPrompt").value});
+  r.ok?toast("已保存，立即生效"):toast(r.msg,true); }
+
+// ---- 设置 ----
+async function loadSettings(){
+  const s=await api("/api/settings");
+  $("sLoraDir").value=s.lora.dir; $("sMaxTrigger").value=s.lora.max_trigger; $("sLoraWeight").value=s.lora.default_weight;
+  $("sLlmBase").value=s.llm.base_url; $("sLlmModel").value=s.llm.model; $("sLlmProxy").value=s.llm.proxy||"";
+  $("sLlmKey").placeholder=s.llm.has_key?"已保存（留空不修改）":"未设置";
+  $("sWebui").value=s.webui.base_url;
+  $("sSteps").value=s.gen.steps; $("sCfg").value=s.gen.cfg; $("sSampler").value=s.gen.sampler;
+  $("sW").value=s.gen.width; $("sH").value=s.gen.height;
+  $("sQuality").value=s.gen.quality_prefix; $("sNegative").value=s.gen.default_negative;
+  $("sCooldown").value=s.bot.cooldown_seconds; $("sDefStyle").value=s.bot.default_style;
+  $("sObPort").value=s.onebot.ws_port;
+}
+async function saveSettings(){
+  const num=(id,def)=>{const v=parseFloat($(id).value);return isNaN(v)?def:v;};
+  await api("/api/settings",{
+    lora:{dir:$("sLoraDir").value.trim(),max_trigger:num("sMaxTrigger",2),default_weight:num("sLoraWeight",0.8)},
+    llm:{base_url:$("sLlmBase").value.trim(),model:$("sLlmModel").value.trim(),proxy:$("sLlmProxy").value.trim(),api_key:$("sLlmKey").value.trim()},
+    webui:{base_url:$("sWebui").value.trim()},
+    gen:{steps:num("sSteps",30),cfg:num("sCfg",5),sampler:$("sSampler").value.trim(),
+      width:num("sW",1024),height:num("sH",1024),
+      quality_prefix:$("sQuality").value,default_negative:$("sNegative").value},
+    bot:{cooldown_seconds:num("sCooldown",3),default_style:$("sDefStyle").value.trim()},
+    onebot:{ws_port:num("sObPort",8080)},
+  });
+  toast("设置已保存（端口改动需重启）");
+}
+loadPresets();
+</script>
+</body>
+</html>

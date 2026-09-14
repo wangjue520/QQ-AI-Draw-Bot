@@ -1,0 +1,14 @@
+# 密钥与登录会话（绝不能上传）
+data/config.json
+NapCat/
+
+# 运行产物
+outputs/
+data/history.json
+__pycache__/
+*.log
+*.pyc
+
+# 系统垃圾
+Thumbs.db
+desktop.ini

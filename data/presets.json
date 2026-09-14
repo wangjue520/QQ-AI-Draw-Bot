@@ -1,0 +1,22 @@
+{
+  "默认": {
+    "description": "不加风格，纯提示词出图",
+    "positive": "<lora:kieed_v2_epoch35:0.6> <lora:Ashima:1> <lora:壱珂 anima:0.3>  <lora:endfield_all_v3:1>",
+    "negative": ""
+  },
+  "赛璐璐": {
+    "description": "平涂赛璐璐动画风（示例预设，请换成你自己的画师串/LoRA）",
+    "positive": "@quasarcake, cel shading, flat colors, anime screencap",
+    "negative": ""
+  },
+  "水彩": {
+    "description": "清新水彩风（示例预设）",
+    "positive": "watercolor (medium), traditional media, soft colors",
+    "negative": ""
+  },
+  "像素": {
+    "description": "像素风（示例预设）",
+    "positive": "pixel art, 16-bit, limited palette",
+    "negative": ""
+  }
+}
