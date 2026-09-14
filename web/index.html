@@ -148,7 +148,11 @@ th{color:var(--dim);font-weight:normal;font-size:12px}
     <div style="margin-top:10px"><button class="btn" onclick="bulkAddDict()">导入</button>
     <span class="muted" id="bulkMsg"></span></div>
   </div>
-  <div class="card"><table id="dictTable"></table></div>
+  <div class="card">
+    <h3>字典列表 <span class="muted" id="dictListNote"></span>
+      <button class="btn sec" style="float:right;font-size:12px" id="dictToggleBtn" onclick="toggleDictAll()">显示全部</button></h3>
+    <table id="dictTable"></table>
+  </div>
 </section>
 
 <section id="tab-prompt" class="hide">
@@ -449,9 +453,15 @@ async function loadLoras(){
 async function updLora(stem,patch){ patch.stem=stem; await api("/api/loras/update",patch); toast("已保存"); }
 
 // ---- 角色字典 ----
+let dictShowAll = false;
+function toggleDictAll(){ dictShowAll = !dictShowAll; loadDict(); }
 async function loadDict(){
-  const r=await api("/api/dict?q="+encodeURIComponent($("dictQ").value));
+  const r=await api("/api/dict?q="+encodeURIComponent($("dictQ").value)+"&limit="+(dictShowAll?10000:200));
   $("dictTotal").textContent="共 "+r.total+" 条";
+  $("dictListNote").textContent = r.total>200
+    ? (dictShowAll ? ("已显示全部 "+r.entries.length+" 条") : (r.entries.length+" / "+r.total+" 条，点右上显示全部"))
+    : "";
+  $("dictToggleBtn").textContent = dictShowAll?"收起":"显示全部";
   $("dictTable").innerHTML="<tr><th>中文名</th><th>D站tag</th><th>作品</th><th></th></tr>"+
     r.entries.map(e=>`<tr><td>${e.names.map(n=>`<span class="tag">${esc(n)}</span>`).join("")}</td>
     <td class="log">${esc(e.tag)}</td><td class="muted">${esc(e.series)}</td>

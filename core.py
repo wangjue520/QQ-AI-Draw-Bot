@@ -118,7 +118,8 @@ def find_characters(text, entries=None):
         if e["tag"] in seen:
             continue
         for name in e.get("names", []):
-            if name and name.lower() in low:
+            name = name.strip()
+            if len(name) >= 2 and name.lower() in low:
                 hits.append(e)
                 seen.add(e["tag"])
                 break
@@ -222,6 +223,14 @@ def detect_loras(final_prompt, user_text, loras=None):
                 if alias and alias.lower() in norm_user:
                     hits.append((stem, lora["weight"], alias))
                     break
+    def _pos(hit):
+        _, _, word = hit
+        p = norm_prompt.find(word.lower())
+        if p < 0:
+            p = norm_user.find(word.lower())
+        return (p if p >= 0 else 10 ** 6, hit[0])
+
+    hits.sort(key=_pos)
     max_n = int(CFG["lora"].get("max_trigger", 2))
     return hits[:max_n]
 
@@ -324,10 +333,12 @@ async def resolve_size_hint(hint):
     return [w, h]
 
 
-async def wait_forge_idle(job=None):
-    """等 Forge 空闲再提交。本地 WebUI 手点的任务永远优先，机器人不抢。"""
+async def wait_forge_idle(job=None, timeout=1800):
+    """等 Forge 空闲再提交。本地 WebUI 手点的任务永远优先，机器人不抢。
+    超过 timeout 秒 Forge 仍在跑就直接提交（交给 Forge 内部排队），避免无限等待。"""
     url = CFG["webui"]["base_url"].rstrip("/")
     warned = False
+    t0 = time.time()
     while True:
         try:
             async with httpx.AsyncClient(timeout=10) as cli:
@@ -341,6 +352,10 @@ async def wait_forge_idle(job=None):
             warned = True
             if job is not None:
                 await notify(job, "Forge 正在跑本地任务，排队等待中…")
+        if time.time() - t0 > timeout:
+            if job is not None:
+                await notify(job, "Forge 长时间未空闲，直接提交排队")
+            return
         await asyncio.sleep(2)
 
 
@@ -376,6 +391,7 @@ async def txt2img(prompt, negative, width, height):
 # ========== 任务队列 ==========
 
 QUEUE = asyncio.Queue()
+PENDING = []            # QUEUE 的镜像列表，公开读取用（不碰 asyncio.Queue 私有属性）
 CURRENT = None          # 正在执行的任务
 HISTORY = load_json(HISTORY_PATH, []) or []
 HISTORY_MAX = 100
@@ -388,7 +404,7 @@ def history_save():
 def queue_status():
     return {
         "current": public_job(CURRENT) if CURRENT else None,
-        "pending": [public_job(j) for j in list(QUEUE._queue)],
+        "pending": [public_job(j) for j in PENDING],
         "history": HISTORY[-HISTORY_MAX:][::-1],
     }
 
@@ -396,12 +412,13 @@ def queue_status():
 def public_job(job):
     if job is None:
         return None
-    return {k: v for k, v in job.items() if k not in ("notify", "notify_image", "_ws")}
+    return {k: v for k, v in job.items() if k not in ("notify", "notify_image", "_ws", "done")}
 
 
 async def enqueue(job):
+    PENDING.append(job)
     await QUEUE.put(job)
-    return QUEUE.qsize()
+    return len(PENDING)
 
 
 async def notify(job, text):
@@ -418,9 +435,17 @@ async def worker():
     global CURRENT
     while True:
         job = await QUEUE.get()
+        if PENDING and PENDING[0] is job:
+            PENDING.pop(0)
+        else:
+            try:
+                PENDING.remove(job)
+            except ValueError:
+                pass
         CURRENT = job
         job["state"] = "running"
         job["start"] = time.time()
+        job["done"] = asyncio.Event()
         try:
             await run_job(job)
             job["state"] = "done"
@@ -430,6 +455,7 @@ async def worker():
             await notify(job, f"跑图失败：{e}")
             print(f"[错误] {e}", flush=True)
         finally:
+            job["done"].set()
             CURRENT = None
             QUEUE.task_done()
 
@@ -474,6 +500,7 @@ async def run_job(job):
         negative = f'{negative}, {preset["negative"].strip()}' if negative else preset["negative"].strip()
 
     # LoRA 自动触发
+    job["loras"] = []
     lora_hits = detect_loras(prompt + ", " + core, user_text)
     if lora_hits:
         lora_tags = ", ".join(f"<lora:{stem}:{w}>" for stem, w, _ in lora_hits)

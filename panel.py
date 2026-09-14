@@ -261,7 +261,11 @@ async def api_get_dict(request):
         entries = [e for e in entries
                    if q in e["tag"].lower() or q in e.get("series", "").lower()
                    or any(q in n.lower() for n in e.get("names", []))]
-    return web.json_response({"total": len(core.load_dict_entries()), "entries": entries[:200]})
+    try:
+        limit = max(1, min(int(request.query.get("limit", 200)), 10000))
+    except (TypeError, ValueError):
+        limit = 200
+    return web.json_response({"total": len(core.load_dict_entries()), "entries": entries[:limit]})
 
 
 async def api_add_dict(request):

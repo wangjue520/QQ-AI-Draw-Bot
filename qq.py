@@ -61,15 +61,7 @@ LAST_TIME = {}   # user_id -> 冷却计时
 
 # ========== 指令解析 ==========
 
-def strip_prefix(text, keywords):
-    for kw in keywords:
-        if text == kw:
-            return ""
-        if text.startswith(kw):
-            rest = text[len(kw):]
-            if rest[:1] in (" ", "　", ",", "，", ":", "："):
-                return rest[1:].strip()
-    return None
+KW_SEP = " ,，:：、　\t"
 
 
 def parse_command(text):
@@ -80,37 +72,54 @@ def parse_command(text):
         return {"cmd": "help"}
     if t in ("画风", "风格", "styles", "style"):
         return {"cmd": "styles"}
-    rest = strip_prefix(t, ("再来一张", "再画一张", "再来", "重roll", "reroll"))
-    if rest is not None:
-        return {"cmd": "reroll"}
+    for kw in ("再来一张", "再画一张", "再来", "重roll", "reroll"):
+        if t == kw or t.startswith(kw):
+            return {"cmd": "reroll"}
     for kws, mode in ((("生图", "原tag", "raw"), "raw"), (("画", "draw", "绘图"), "draw")):
-        rest = strip_prefix(t, kws)
-        if rest is not None:
-            if not rest:
+        for kw in kws:
+            if t == kw:
                 return {"cmd": "help"}
-            style, rest = match_style(rest)
-            size, rest = match_size(rest)
-            style2, rest = match_style(rest)
-            if style2:
-                style = style2
-            if size is None:
-                size, rest = extract_size_anywhere(rest)
-            hint, rest = extract_fuzzy_size(rest)
-            if size is None:
-                size, rest = match_size(rest)
-            if not rest:
-                return {"cmd": "help"}
-            return {"cmd": "draw", "mode": mode, "style": style, "size": size,
-                    "size_hint": hint if size is None else None, "content": rest}
-    if t.startswith("画") and len(t) > 1 and t[:2] != "画风":
-        content = t[1:].strip()
-        size, content = extract_size_anywhere(content)
-        hint, content = extract_fuzzy_size(content)
-        if size is None:
-            size, content = match_size(content)
-        return {"cmd": "draw", "mode": "draw", "style": None, "size": size,
-                "size_hint": hint if size is None else None, "content": content}
+            if t.startswith(kw):
+                rest = t[len(kw):].lstrip(KW_SEP).strip()
+                if not rest:
+                    return {"cmd": "help"}
+                return build_draw(mode, rest)
     return {"cmd": "unknown"}
+
+
+def build_draw(mode, rest):
+    """循环消费开头的修饰 token（画风/横竖方/精准分辨率/模糊分辨率），
+    与顺序无关；剩下的就是画面描述。优先级：精准/横竖方 > 模糊分辨率。"""
+    style, size, hint = None, None, None
+    rest = rest.strip()
+    while rest:
+        s2, r2 = match_style(rest)
+        if s2:
+            style = s2
+            rest = r2
+            continue
+        sz, r2 = match_size(rest)
+        if sz:
+            size = sz
+            rest = r2
+            continue
+        sz, r2 = extract_size_anywhere(rest)
+        if sz and size is None:
+            size = sz
+            rest = r2
+            continue
+        h, r2 = extract_fuzzy_size(rest)
+        if h:
+            hint = h
+            rest = r2
+            continue
+        break
+    if size is not None:
+        hint = None
+    if not rest:
+        return {"cmd": "help"}
+    return {"cmd": "draw", "mode": mode, "style": style, "size": size,
+            "size_hint": hint, "content": rest}
 
 
 def match_style(rest):
@@ -261,8 +270,12 @@ async def on_message(ws, evt):
     orig_run = job
 
     async def _remember():
-        while orig_run.get("state") not in ("done", "failed"):
-            await asyncio.sleep(0.5)
+        done_evt = orig_run.get("done")
+        if done_evt is not None:
+            await done_evt.wait()
+        else:
+            while orig_run.get("state") not in ("done", "failed"):
+                await asyncio.sleep(0.5)
         if orig_run.get("state") == "done":
             LAST_JOB[user_id] = {
                 "core": orig_run.get("core", ""),
