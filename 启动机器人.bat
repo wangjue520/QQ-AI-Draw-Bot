@@ -1,6 +1,12 @@
 @echo off
 title QQ Anima 跑图机器人
 cd /d "%~dp0"
+
+REM ================== 按你的实际环境修改这两行 ==================
+set "FORGE_DIR=F:\sd-forge-aki\sd-webui-forge-aki-v1.0\sd-webui-forge-aki"
+set "QQ_EXE=F:\QQ.exe"
+REM ==============================================================
+
 echo ==========================================
 echo   QQ Anima 跑图机器人 一键启动器
 echo ==========================================
@@ -28,8 +34,8 @@ if errorlevel 1 goto pipfail
 echo.
 
 echo [3/4] 检查 Forge / NapCat ...
-powershell -NoProfile -Command "if (Get-NetTCPConnection -State Listen -LocalPort 7860 -ErrorAction SilentlyContinue) { Write-Host '  Forge 已在运行' } else { Start-Process -FilePath 'F:\sd-forge-aki\sd-webui-forge-aki-v1.0\sd-webui-forge-aki\webui-user.bat' -WorkingDirectory 'F:\sd-forge-aki\sd-webui-forge-aki-v1.0\sd-webui-forge-aki' -WindowStyle Minimized; Write-Host '  Forge 未运行，已最小化启动（模型加载约 3 分钟，加载完才能跑图）' }"
-powershell -NoProfile -Command "if (Get-Process NapCatWinBootMain -ErrorAction SilentlyContinue) { Write-Host '  NapCat 已在运行' } else { $env:NAPCAT_PATCH_PACKAGE='%~dp0NapCat\Shell\qqnt.json'; $env:NAPCAT_LOAD_PATH='%~dp0NapCat\Shell\loadNapCat.js'; $env:NAPCAT_INJECT_PATH='%~dp0NapCat\Shell\NapCatWinBootHook.dll'; $env:NAPCAT_LAUNCHER_PATH='%~dp0NapCat\Shell\NapCatWinBootMain.exe'; $env:NAPCAT_MAIN_PATH='%~dp0NapCat\Shell\napcat.mjs'; Start-Process -FilePath $env:NAPCAT_LAUNCHER_PATH -ArgumentList '\"F:\QQ.exe\"', $env:NAPCAT_INJECT_PATH -WorkingDirectory '%~dp0NapCat\Shell' -WindowStyle Minimized; Write-Host '  NapCat 未运行，已最小化启动' }"
+powershell -NoProfile -Command "if (Get-NetTCPConnection -State Listen -LocalPort 7860 -ErrorAction SilentlyContinue) { Write-Host '  Forge 已在运行' } else { Start-Process -FilePath '%FORGE_DIR%\webui-user.bat' -WorkingDirectory '%FORGE_DIR%' -WindowStyle Minimized; Write-Host '  Forge 未运行，已最小化启动（模型加载约 3 分钟，加载完才能跑图）' }"
+powershell -NoProfile -Command "if (Get-Process NapCatWinBootMain -ErrorAction SilentlyContinue) { Write-Host '  NapCat 已在运行' } else { $env:NAPCAT_PATCH_PACKAGE='%~dp0NapCat\Shell\qqnt.json'; $env:NAPCAT_LOAD_PATH='%~dp0NapCat\Shell\loadNapCat.js'; $env:NAPCAT_INJECT_PATH='%~dp0NapCat\Shell\NapCatWinBootHook.dll'; $env:NAPCAT_LAUNCHER_PATH='%~dp0NapCat\Shell\NapCatWinBootMain.exe'; $env:NAPCAT_MAIN_PATH='%~dp0NapCat\Shell\napcat.mjs'; Start-Process -FilePath $env:NAPCAT_LAUNCHER_PATH -ArgumentList '\"%QQ_EXE%\"', $env:NAPCAT_INJECT_PATH -WorkingDirectory '%~dp0NapCat\Shell' -WindowStyle Minimized; Write-Host '  NapCat 未运行，已最小化启动' }"
 powershell -NoProfile -Command "Start-Process -FilePath 'py.exe' -ArgumentList '-3','%~dp0napcat_auto_login.py' -WorkingDirectory '%~dp0' -WindowStyle Hidden"
 echo   小号自动登录任务已提交（NapCat 起来后自动上线，无需扫码）
 echo.

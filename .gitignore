@@ -12,3 +12,6 @@ __pycache__/
 # 系统垃圾
 Thumbs.db
 desktop.ini
+
+# 本机专属文档（含个人路径/账号信息，仅本地保留）
+教程.md
