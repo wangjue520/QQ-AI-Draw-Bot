@@ -65,54 +65,100 @@ FORGE_URL = lambda: core.CFG["webui"]["base_url"].rstrip("/")
 
 
 async def api_forge_models(request):
-    """Forge 当前模型/VAE + 可选列表（模型=sd-models；VAE=forge附加模块目录）"""
+    """Forge 当前模型 + 可选列表（模型=sd-models；VAE/文本编码器=forge附加模块，分目录列出）"""
     try:
         async with httpx.AsyncClient(timeout=15) as cli:
             opts = (await cli.get(f"{FORGE_URL()}/sdapi/v1/options")).json()
             models = (await cli.get(f"{FORGE_URL()}/sdapi/v1/sd-models")).json()
         preset = opts.get("forge_preset", "")
         checkpoint = opts.get(f"forge_checkpoint_{preset}") or opts.get("sd_model_checkpoint", "")
-        modules = opts.get(f"forge_additional_modules_{preset}") or []
-        vae_dir = ""
-        if modules:
-            vae_dir = str(Path(modules[0]).parent)
-        vaes = []
-        if vae_dir and Path(vae_dir).is_dir():
-            vaes = sorted(p.name for p in Path(vae_dir).iterdir()
-                          if p.suffix.lower() in (".safetensors", ".ckpt", ".pt"))
+        modules = [str(m) for m in (opts.get(f"forge_additional_modules_{preset}") or [])]
+
+        # 定位 models 目录：优先用 LoRA 目录推（可靠），否则用现有模块路径推
+        models_root = None
+        lora_dir = core.CFG["lora"].get("dir", "")
+        if lora_dir and Path(lora_dir).parent.is_dir():
+            models_root = Path(lora_dir).parent
+        else:
+            for m in modules:
+                p = Path(m).parent
+                if p.name.lower() in ("vae", "text_encoder"):
+                    models_root = p.parent
+                    break
+        vae_dir = str(models_root / "VAE") if models_root else ""
+        te_dir = str(models_root / "text_encoder") if models_root else ""
+
+        def _files(d):
+            if not d or not Path(d).is_dir():
+                return []
+            return sorted(p.name for p in Path(d).iterdir()
+                          if p.is_file() and p.suffix.lower() in (".safetensors", ".ckpt", ".pt"))
+
+        cur_vae, cur_te, other = [], [], []
+        for m in modules:
+            p = Path(m)
+            if vae_dir and p.parent == Path(vae_dir):
+                cur_vae.append(p.name)
+            elif te_dir and p.parent == Path(te_dir):
+                cur_te.append(p.name)
+            else:
+                other.append(m)
         return web.json_response({
             "preset": preset,
             "checkpoint": checkpoint,
             "checkpoints": [{"name": m.get("model_name", ""), "title": m.get("title", "")}
                             for m in models],
             "vae_dir": vae_dir,
-            "vae_current": [Path(m).name for m in modules],
-            "vaes": vaes,
+            "vaes": _files(vae_dir),
+            "vae_current": cur_vae,
+            "te_dir": te_dir,
+            "tes": _files(te_dir),
+            "te_current": cur_te,
+            "other_modules": other,
         })
     except Exception as e:
         return web.json_response({"error": str(e)}, status=502)
 
 
 async def api_forge_models_set(request):
-    """切换 Forge 当前预设的 checkpoint / VAE"""
+    """切换 Forge 当前预设的 checkpoint / VAE / 文本编码器（文本编码器 Flux、Qwen 类模型才需要）"""
     body = await request.json()
     try:
         async with httpx.AsyncClient(timeout=30) as cli:
             opts = (await cli.get(f"{FORGE_URL()}/sdapi/v1/options")).json()
             preset = opts.get("forge_preset", "")
+            old_modules = [str(m) for m in (opts.get(f"forge_additional_modules_{preset}") or [])]
             payload = {}
             ckpt = (body.get("checkpoint") or "").strip()
             if ckpt:
                 payload[f"forge_checkpoint_{preset}"] = ckpt
-            vae = (body.get("vae") or "").strip()
-            if vae and body.get("vae_dir"):
-                payload[f"forge_additional_modules_{preset}"] = [str(Path(body["vae_dir"]) / vae)]
+
+            vae_dir = (body.get("vae_dir") or "").strip()
+            te_dir = (body.get("te_dir") or "").strip()
+            new_vae = (body.get("vae") or "").strip()
+            new_te = [str(x).strip() for x in (body.get("te") or []) if str(x).strip()]
+
+            keep = []
+            for m in old_modules:
+                p = Path(m)
+                if vae_dir and p.parent == Path(vae_dir):
+                    continue  # 旧的 VAE 由本次选择接管
+                if te_dir and p.parent == Path(te_dir):
+                    continue  # 旧的 TE 由本次选择接管
+                keep.append(m)
+            modules = keep[:]
+            if te_dir:
+                modules += [str(Path(te_dir) / t) for t in new_te]
+            if vae_dir and new_vae:
+                modules.append(str(Path(vae_dir) / new_vae))
+            payload[f"forge_additional_modules_{preset}"] = modules
+
             if not payload:
                 return web.json_response({"ok": False, "msg": "没有要修改的项"})
             r = await cli.post(f"{FORGE_URL()}/sdapi/v1/options", json=payload)
             if r.status_code != 200:
                 return web.json_response({"ok": False, "msg": f"Forge 返回 {r.status_code}"})
-        return web.json_response({"ok": True, "applied": payload})
+        return web.json_response({"ok": True, "applied": {k: (v if not isinstance(v, list) else f"{len(v)} 个模块") for k, v in payload.items()}})
     except Exception as e:
         return web.json_response({"ok": False, "msg": str(e)})
 

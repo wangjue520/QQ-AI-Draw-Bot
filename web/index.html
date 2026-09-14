@@ -378,7 +378,7 @@ async function loadQr(){
 }
 function refreshQr(){ api("/api/qq/qrcode?refresh=1").then(loadQr); }
 
-// ---- Forge 模型 / VAE ----
+// ---- Forge 模型 / VAE / 文本编码器 ----
 let forgeModelCache = {};
 async function loadForgeModels(){
   let d;
@@ -387,20 +387,29 @@ async function loadForgeModels(){
   if(d.error){ $("forgeModelBox").innerHTML='<span class="bad">Forge 未连接</span>'; return; }
   forgeModelCache = d;
   const opts = d.checkpoints.map(c=>`<option value="${esc(c.title)}" ${c.title===d.checkpoint?"selected":""}>${esc(c.name)}</option>`).join("");
-  const vaeOpts = '<option value="">（保持当前）</option>' +
-    d.vaes.map(v=>`<option value="${esc(v)}" ${(d.vae_current||[]).includes(v)?"selected":""}>${esc(v)}</option>`).join("");
+  const vaeCur = (d.vae_current||[])[0] || "";
+  const vaeOpts = `<option value="" ${vaeCur?"":"selected"}>（不使用 VAE）</option>` +
+    d.vaes.map(v=>`<option value="${esc(v)}" ${v===vaeCur?"selected":""}>${esc(v)}</option>`).join("");
+  const teSet = new Set(d.te_current||[]);
+  const teOpts = d.tes.map(v=>`<option value="${esc(v)}" ${teSet.has(v)?"selected":""}>${esc(v)}</option>`).join("");
   $("forgeModelBox").innerHTML = `
     <div class="row">
       <div><label>架构预设</label><input value="${esc(d.preset)}" disabled></div>
       <div><label>模型（checkpoint）</label><select id="fmCkpt">${opts}</select></div>
       <div><label>VAE</label><select id="fmVae">${vaeOpts}</select></div>
     </div>
-    <div class="muted" style="margin-top:6px">文本编码器随模型内置，Forge 不提供单独切换；VAE 目录：${esc(d.vae_dir||"-")}</div>
+    <div class="row">
+      <div><label>文本编码器（Flux / Qwen 类模型需要，SD1.5 / SDXL 自带可留空；按住 Ctrl 多选）</label>
+      <select id="fmTe" multiple size="4">${teOpts}</select></div>
+    </div>
+    <div class="muted" style="margin-top:6px">VAE 目录：${esc(d.vae_dir||"-")} ｜ 文本编码器目录：${esc(d.te_dir||"-")}</div>
     <div style="margin-top:10px"><button class="btn" onclick="saveForgeModels()">应用切换</button>
     <span class="muted" id="fmMsg"></span></div>`;
 }
 async function saveForgeModels(){
-  const r = await api("/api/forge_models",{checkpoint:$("fmCkpt").value, vae:$("fmVae").value, vae_dir:forgeModelCache.vae_dir});
+  const te = Array.from($("fmTe").selectedOptions).map(o=>o.value);
+  const r = await api("/api/forge_models",{checkpoint:$("fmCkpt").value, vae:$("fmVae").value, te,
+    vae_dir:forgeModelCache.vae_dir, te_dir:forgeModelCache.te_dir});
   $("fmMsg").textContent = r.ok ? "已切换（Forge 加载新模型需几秒）" : ("失败："+(r.msg||""));
   setTimeout(loadForgeModels, 4000);
 }
