@@ -234,8 +234,9 @@ th{color:var(--dim);font-weight:normal;font-size:12px}
 <section id="tab-qq" class="hide">
   <div class="card">
     <h3>当前绑定 <span class="muted">（机器人用哪个 QQ 号收发消息）</span>
-      <button class="btn sec" style="float:right;font-size:12px" onclick="loadQQ()">刷新</button></h3>
+      <button id="qqRefreshBtn" class="btn sec" style="float:right;font-size:12px" onclick="loadQQ()">刷新</button></h3>
     <div id="qqCurrent" class="muted">加载中…</div>
+    <div id="qqActions" style="margin-top:8px"></div>
     <div id="qqQrBox" class="hide" style="text-align:center;margin-top:12px">
       <img id="qqQrImg" style="max-width:260px;border-radius:10px;border:1px solid var(--border)">
       <div class="muted" style="margin-top:6px">小号需要重新登录：用手机 QQ 扫码，并在手机上点"登录"确认</div>
@@ -329,23 +330,11 @@ function openForge(){
 }
 
 // ---- QQ 账号 ----
-async function loadQQ(){
-  let d;
-  try{ d = await api("/api/qq/accounts"); }
-  catch(e){ $("qqCurrent").innerHTML='<span class="bad">NapCat 未启动</span>'; $("qqTable").innerHTML=""; $("qqQrBox").classList.add("hide"); return; }
-  if(d.error){ $("qqCurrent").innerHTML='<span class="bad">NapCat 未启动或未登录</span>'; $("qqTable").innerHTML=""; $("qqQrBox").classList.add("hide"); return; }
+function renderQQTable(d){
   const cur = d.current;
-  if(cur && d.online){
-    $("qqCurrent").innerHTML = '<span class="dot on"></span> <b>'+esc(cur.nick||cur.uin)+'</b>'
-      +' <span class="muted">('+esc(cur.uin)+')</span>';
-    $("qqQrBox").classList.add("hide");
-  }else{
-    $("qqCurrent").innerHTML = '<span class="dot off"></span> <span class="bad">未登录</span>'
-      +' <span class="muted">（扫下方二维码，或点列表里的账号切换）</span>';
-    loadQr();
-  }
   if(!d.accounts.length){
     $("qqTable").innerHTML='<tr><td class="muted">没有可快速登录的账号</td></tr>';
+    $("qqAutoLogin").innerHTML="";
     return;
   }
   $("qqTable").innerHTML = "<tr><th>QQ号</th><th>昵称</th><th>状态</th><th></th></tr>" +
@@ -358,6 +347,72 @@ async function loadQQ(){
   $("qqAutoLogin").innerHTML = '<option value="">（不自动登录）</option>' +
     d.accounts.map(a=>`<option value="${esc(String(a.uin))}" ${String(a.uin)===String(d.auto_login||"")?"selected":""}>${esc(a.nickName||a.uin)}（${esc(a.uin)}）</option>`).join("");
 }
+async function loadQQ(){
+  const btn = $("qqRefreshBtn");
+  if(btn){ btn.disabled = true; btn.textContent = "刷新中…"; }
+  $("qqActions").innerHTML = '<span class="muted">检测中…</span>';
+  const done = ()=>{ if(btn){ btn.disabled = false; btn.textContent = "刷新"; } };
+  let d;
+  try{ d = await api("/api/qq/accounts"); }
+  catch(e){
+    $("qqCurrent").innerHTML='<span class="bad">控制台请求失败：'+esc(e.message||e)+'</span>';
+    $("qqActions").innerHTML='<button class="btn sec" onclick="loadQQ()">重试</button>';
+    $("qqTable").innerHTML=""; $("qqQrBox").classList.add("hide"); done(); return;
+  }
+  const wsTxt = d.ws_connected
+    ? '<span class="dot on"></span> 机器人已接入'
+    : '<span class="dot off"></span> 等待机器人接入';
+
+  // ① NapCat 没启动
+  if(!d.napcat_up){
+    $("qqCurrent").innerHTML='<span class="dot off"></span> <span class="bad">NapCat 未启动</span>'
+      +'　<span class="muted">'+wsTxt+'</span>';
+    $("qqActions").innerHTML = d.qq_path
+      ? '<button class="btn" onclick="startNapCat(this)">启动 NapCat</button> <span id="startMsg" class="muted"></span>'
+      : '<span class="muted">未检测到 QQ。请先安装 <a href="https://im.qq.com" target="_blank">QQ</a>，或双击 部署NapCat.bat / 启动机器人.bat</span>';
+    $("qqTable").innerHTML=""; $("qqAutoLogin").innerHTML=""; $("qqQrBox").classList.add("hide");
+    done(); return;
+  }
+  // ② 已在线
+  if(d.online && d.current){
+    $("qqCurrent").innerHTML='<span class="dot on"></span> <b>'+esc(d.current.nick||d.current.uin)+'</b>'
+      +' <span class="muted">('+esc(d.current.uin)+')</span>　<span class="muted">'+wsTxt+'</span>';
+    $("qqActions").innerHTML='<span class="ok">✓ 一切正常</span>'
+      + (d.ws_connected ? "" : ' <span class="muted">（NapCat 已登录，等它连机器人，几秒后点刷新）</span>');
+    $("qqQrBox").classList.add("hide");
+    renderQQTable(d); done(); return;
+  }
+  // ③ NapCat 在、小号未登录
+  $("qqCurrent").innerHTML='<span class="dot off"></span> <span class="bad">小号未登录</span>'
+    +'　<span class="muted">NapCat 运行中 · '+wsTxt+'</span>';
+  const quick = d.auto_login
+    || String((d.accounts.find(a=>a.isQuickLogin)||{}).uin || "");
+  let act = "";
+  if(quick) act += `<button class="btn" onclick="quickLogin(${JSON.stringify(quick)})">一键登录</button> `;
+  act += '<button class="btn sec" onclick="showQrBox()">扫码登录</button>';
+  if(d.error) act += ' <span class="bad">'+esc(d.error)+'</span>';
+  $("qqActions").innerHTML = act;
+  renderQQTable(d);
+  loadQr();
+  done();
+}
+async function startNapCat(b){
+  b.disabled = true; b.textContent = "启动中…";
+  try{
+    const r = await api("/api/qq/start",{});
+    toast(r.msg || (r.ok ? "已启动" : "启动失败"), !r.ok);
+    if(r.ok) setTimeout(loadQQ, 12000); else { b.disabled=false; b.textContent="启动 NapCat"; }
+  }catch(e){
+    toast("启动失败："+(e.message||e), true);
+    b.disabled=false; b.textContent="启动 NapCat";
+  }
+}
+async function quickLogin(uin){
+  const r = await api("/api/qq/switch",{uin});
+  toast(r.ok ? "已请求快速登录，10~20 秒后自动刷新" : ("登录失败："+(r.msg||"")), !r.ok);
+  if(r.ok) setTimeout(loadQQ, 12000);
+}
+function showQrBox(){ $("qqQrBox").classList.remove("hide"); loadQr(); }
 async function saveAutoLogin(){
   const r = await api("/api/qq/autologin",{uin:$("qqAutoLogin").value});
   $("autoMsg").textContent = r.ok ? "已保存，下次一键启动自动登录该账号" : ("保存失败："+(r.msg||""));

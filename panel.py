@@ -5,6 +5,8 @@ import base64
 import hashlib
 import io
 import json
+import os
+import subprocess
 import time
 from pathlib import Path
 
@@ -13,6 +15,7 @@ import httpx
 import qrcode
 
 import core
+import qq
 
 BASE_DIR = Path(__file__).resolve().parent
 INDEX_HTML = BASE_DIR / "web" / "index.html"
@@ -179,8 +182,74 @@ async def _nc_post(ep, payload):
         return r.json()
 
 
+async def _nc_up() -> bool:
+    """NapCat WebUI(6099) 是否可达"""
+    try:
+        async with httpx.AsyncClient(timeout=4) as cli:
+            await cli.get("http://127.0.0.1:6099")
+        return True
+    except Exception:
+        return False
+
+
+def _find_qq() -> str:
+    """找 QQ.exe：注册表（InstallLocation / DisplayIcon 兜底）+ 常见路径"""
+    candidates = []
+    try:
+        import winreg
+        for root, sub in (
+            (winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"),
+            (winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall"),
+            (winreg.HKEY_CURRENT_USER, r"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"),
+        ):
+            try:
+                with winreg.OpenKey(root, sub) as k:
+                    for i in range(winreg.QueryInfoKey(k)[0]):
+                        try:
+                            with winreg.OpenKey(k, winreg.EnumKey(k, i)) as sk:
+                                name = str(winreg.QueryValueEx(sk, "DisplayName")[0])
+                                if name.startswith("QQ"):
+                                    for val in ("InstallLocation", "DisplayIcon"):
+                                        try:
+                                            loc = winreg.QueryValueEx(sk, val)[0]
+                                            if loc:
+                                                candidates.append(str(loc))
+                                        except OSError:
+                                            pass
+                        except OSError:
+                            pass
+            except OSError:
+                pass
+    except Exception:
+        pass
+    pf = os.environ.get("ProgramFiles", r"C:\Program Files")
+    candidates += [
+        os.path.join(pf, "Tencent", "QQ", "QQ.exe"),
+        os.path.join(pf, "Tencent", "QQNT", "QQ.exe"),
+        r"D:\Program Files\Tencent\QQ\QQ.exe", r"D:\Tencent\QQ\QQ.exe",
+        r"D:\QQ.exe", r"E:\QQ.exe", r"F:\QQ.exe",
+    ]
+    for c in candidates:
+        c = c.split(",")[0].strip().strip('"')  # DisplayIcon 常带 ,0 后缀
+        if c.lower().endswith("qq.exe") and os.path.isfile(c):
+            return c
+    return ""
+
+
 async def api_qq_accounts(request):
-    """当前登录账号 + 可快速登录的账号列表"""
+    """QQ 绑定状态：结构化三态（NapCat 未启动 / 未登录 / 已在线）+ 可切换账号列表"""
+    result = {
+        "napcat_up": await _nc_up(),
+        "ws_connected": bool(getattr(qq, "CONNECTED", False)),
+        "online": False,
+        "current": None,
+        "accounts": [],
+        "auto_login": "",
+        "qq_path": _find_qq(),
+        "error": "",
+    }
+    if not result["napcat_up"]:
+        return web.json_response(result)
     try:
         info = await _nc_post("QQLogin/GetQQLoginInfo", {})
         quick = await _nc_post("QQLogin/GetQuickLoginListNew", {})
@@ -190,20 +259,50 @@ async def api_qq_accounts(request):
         if cur and not any(str(e.get("uin")) == str(cur.get("uin")) for e in entries):
             entries.insert(0, {"uin": cur.get("uin"), "nickName": cur.get("nick"),
                                "isQuickLogin": False})
-        auto_login = ""
+        result["current"] = cur
+        result["accounts"] = entries
+        result["online"] = bool((status.get("data") or {}).get("isLogin"))
         try:
-            auto_login = str(json.loads(NAPCAT_WEBUI_JSON.read_text(encoding="utf-8"))
-                             .get("autoLoginAccount", "") or "")
+            result["auto_login"] = str(json.loads(NAPCAT_WEBUI_JSON.read_text(encoding="utf-8"))
+                                       .get("autoLoginAccount", "") or "")
         except Exception:
             pass
-        return web.json_response({
-            "current": cur,
-            "online": bool((status.get("data") or {}).get("isLogin")),
-            "accounts": entries,
-            "auto_login": auto_login,
-        })
     except Exception as e:
-        return web.json_response({"error": str(e)}, status=502)
+        result["error"] = str(e)[:200]
+    return web.json_response(result)
+
+
+async def api_qq_start(request):
+    """从控制台启动 NapCat（等同启动机器人.bat 里的拉起逻辑）"""
+    try:
+        shell_dir = BASE_DIR / "NapCat" / "Shell"
+        boot = shell_dir / "NapCatWinBootMain.exe"
+        if not boot.exists():
+            return web.json_response({"ok": False,
+                                      "msg": "未找到 NapCat\\Shell，请先双击 部署NapCat.bat 部署"})
+        if await _nc_up():
+            return web.json_response({"ok": True, "msg": "NapCat 已在运行，无需启动"})
+        qq_exe = _find_qq()
+        if not qq_exe:
+            return web.json_response({"ok": False,
+                                      "msg": "没找到 QQ.exe，请先安装 https://im.qq.com 或编辑 启动机器人.bat 的 QQ_EXE"})
+        env = dict(os.environ)
+        env["NAPCAT_PATCH_PACKAGE"] = str(shell_dir / "qqnt.json")
+        env["NAPCAT_LOAD_PATH"] = str(shell_dir / "loadNapCat.js")
+        env["NAPCAT_INJECT_PATH"] = str(shell_dir / "NapCatWinBootHook.dll")
+        env["NAPCAT_LAUNCHER_PATH"] = str(boot)
+        env["NAPCAT_MAIN_PATH"] = str(shell_dir / "napcat.mjs")
+        subprocess.Popen(
+            [str(boot), qq_exe, str(shell_dir / "NapCatWinBootHook.dll")],
+            cwd=str(shell_dir), env=env,
+            stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            close_fds=True,
+            creationflags=getattr(subprocess, "DETACHED_PROCESS", 0)
+            | getattr(subprocess, "CREATE_NEW_PROCESS_GROUP", 0),
+        )
+        return web.json_response({"ok": True, "msg": "已启动 NapCat，等 10~30 秒小号窗口出现后点刷新"})
+    except Exception as e:
+        return web.json_response({"ok": False, "msg": str(e)})
 
 
 async def api_qq_autologin(request):
@@ -415,6 +514,7 @@ def make_app():
     app.router.add_post("/api/draw", api_draw)
     app.router.add_get("/api/progress", api_progress)
     app.router.add_get("/api/qq/accounts", api_qq_accounts)
+    app.router.add_post("/api/qq/start", api_qq_start)
     app.router.add_post("/api/qq/switch", api_qq_switch)
     app.router.add_post("/api/qq/autologin", api_qq_autologin)
     app.router.add_get("/api/qq/qrcode", api_qq_qrcode)

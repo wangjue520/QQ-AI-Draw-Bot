@@ -327,11 +327,16 @@ async def on_message(ws, evt):
     asyncio.create_task(_remember())
 
 
+CONNECTED = False       # 反向 WS 当前是否接入（面板"QQ 账号"页显示用）
+
+
 async def handler(ws):
+    global CONNECTED
     if not check_auth(ws):
         await ws.close(code=4401, reason="bad token")
         return
     peer = getattr(ws, "remote_address", "?")
+    CONNECTED = True
     print(f"[QQ] NapCat 已接入 {peer}", flush=True)
     try:
         async for raw in ws:
@@ -346,6 +351,7 @@ async def handler(ws):
     except websockets.ConnectionClosed:
         pass  # NapCat 重启/掉线属正常情况，等它重连即可
     finally:
+        CONNECTED = False
         print(f"[QQ] NapCat 连接断开 {peer}", flush=True)
 
 
