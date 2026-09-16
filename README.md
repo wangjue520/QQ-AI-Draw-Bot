@@ -69,28 +69,32 @@ QQ 出图机器人：群里 @它说"画一个佩丽卡"，自动优化提示词�
 2. 再打开 `http://127.0.0.1:7860/sdapi/v1/progress` → 显示一段 JSON（有 `progress`、`current_image` 等字段）= API 已开 ✅
    （如果跳回主页 = 没开 `--api`，回去加上参数重启 Forge）
 
-**放模型**：
+**放模型**（两种方式，任选）：
 
-- 大模型（ckpt/safetensors）→ Forge 目录下的 `models\Stable-diffusion`；LoRA → `models\Lora`
-- 模型从 [Civitai](https://civitai.com) / [HuggingFace](https://huggingface.co) 下载；**C 站下的 LoRA 务必把旁边的 `.civitai.info` 一起放进 LoRA 目录**——机器人自动触发 LoRA 全靠读它
+- **方式一：自动下载（推荐）**：在 forge-webui-launcher 的模型管理里粘贴模型链接即可自动下载。首次使用先去 Civitai 右上角头像 → **Account settings → API Keys** 创建一个 key，填进启动器设置里，之后复制任何模型页面链接都能一键下载
+- **方式二：手动放置**：从 [Civitai](https://civitai.com) / [HuggingFace](https://huggingface.co) 下载后——大模型（ckpt/safetensors）→ Forge 目录下的 `models\Stable-diffusion`；LoRA → `models\Lora`。**C 站下的 LoRA 务必把旁边的 `.civitai.info` 一起放进 LoRA 目录**——机器人自动触发 LoRA 全靠读它
+
+**推荐模型（Anima 生态，三个都下）**：
+
+| 模型 | 作用 | 链接 |
+|---|---|---|
+| **Anima** | 主模型 | https://civitai.com/models/2458426 |
+| **Qwen-3-0.6B base/anima** | 配套文本编码器 | https://civitai.com/models/2400206 |
+| **Qwen-Image VAE** | 配套 VAE | https://civitai.com/models/1912333 |
+
+> Anima 基于 Qwen-Image 架构，后两个是它的配套文本编码器和 VAE，少一个都跑不了。想用别的模型（SDXL / Pony / Flux 等）也完全可以，机器人不限模型。
 
 > 备用方案：官方一键包 <https://github.com/lllyasviel/stable-diffusion-webui-forge>（解压后先 `update.bat` 再 `run.bat`，参数加 `--api`）。已经装过 A1111 / 旧版 Forge 的不用重装：编辑 `webui-user.bat`，给 `COMMANDLINE_ARGS` 加上 `--api` 重启即可。
 
-## 第 3 步 · 安装 QQ 和 NapCat（约 10 分钟）
+## 第 3 步 · 安装 QQ 和 NapCat（约 5 分钟）
 
 > NapCat = 托管 QQ 小号的协议端，机器人通过它收发消息。
 
 1. 装官方 QQ 客户端（<https://im.qq.com>），登录你的**大号**没问题
-2. 下载 NapCat：<https://github.com/NapNeko/NapCatQQ/releases>（选最新版的 `NapCat.Shell.zip`），解压出 `Shell` 文件夹，放进**本项目文件夹**里的 `NapCat` 文件夹中。最终要能看到这个文件：
-   ```
-   本项目文件夹\NapCat\Shell\launcher.bat
-   ```
-   （如果你拿到的项目压缩包里已经自带 `NapCat` 文件夹，跳过这步）
-3. 右键 `NapCat\Shell\launcher.bat` → **以管理员身份运行** → 弹出小号的独立 QQ 登录窗口 → 手机扫码，**扫完记得在手机上点"登录"按钮**
-4. 登录成功后，浏览器打开 NapCat 控制台 `http://127.0.0.1:6099`（进入所需 token 记在 `NapCat\Shell\config\webui.json` 里）→ **网络配置** → 新建 **WebSocket 客户端**：
-   - URL：`ws://127.0.0.1:8080`
-   - 消息格式：**Array**
-   - 保存并启用
+2. **双击 `部署NapCat.bat`**——自动从 GitHub 下载最新版 NapCat、解压到 `NapCat\Shell`、检查 QQ 安装位置，全程不用动手
+   （连不上 GitHub 时会提示手动下载，照提示做即可）
+3. 之后双击 `启动机器人.bat`：自动拉起 NapCat、弹出小号的独立 QQ 登录窗口 → 手机扫码，**扫完记得在手机上点"登录"按钮**
+4. 登录一次以后全部免扫码：启动器会让小号**自动上线**，并**自动把反向 WS（ws://127.0.0.1:8080）配好**——正常情况下完全不用打开 NapCat 的控制台
 
 > ⚠️ **机器人小号不要在日常 QQ 客户端里登录**。同一 QQ 不能两处同时在线：小号挂在普通 QQ 里，NapCat 就永远上不了线（现象：不出二维码、或提示"当前账号已登录"）。日常 QQ 只登大号，小号专号专用只给 NapCat。
 
@@ -100,11 +104,11 @@ QQ 出图机器人：群里 @它说"画一个佩丽卡"，自动优化提示词�
 2. 进 `data` 文件夹，把 `config.example.json` **复制**一份，改名为 `config.json`，右键 → 打开方式 → 记事本：
    - `"api_key"`：填 xAI 的 key（`xai-` 开头，https://console.x.ai 生成）
    - `"dir"`（lora 段下面）：填 Forge 的 LoRA 目录完整路径，例如 `D:\webui-forge\models\Lora`
-3. 右键 `启动机器人.bat` → 编辑，把开头两行改成你自己电脑的路径：
+3. 右键 `启动机器人.bat` → 编辑，把开头的 `FORGE_DIR=` 改成你的 Forge 目录：
    ```bat
-   set "FORGE_DIR=D:\webui-forge"                 ← Forge 的目录（里面放着 webui-user.bat 的那一层）
-   set "QQ_EXE=C:\Program Files\Tencent\QQ\QQ.exe" ← QQ 的安装位置
+   set "FORGE_DIR=D:\webui-forge"   ← Forge 的目录（里面放着 webui-user.bat 的那一层）
    ```
+   （QQ 的安装位置启动器会**自动探测**，一般不用改 `QQ_EXE=` 那行）
    > 不知道路径怎么填？打开到那个文件夹，**用鼠标点一下文件夹顶部地址栏，路径会整行变蓝，Ctrl+C 复制**，粘贴进 bat 即可。注意：路径里不要带中文和空格。
 
 ## 第 5 步 · 一键启动
@@ -112,9 +116,10 @@ QQ 出图机器人：群里 @它说"画一个佩丽卡"，自动优化提示词�
 **双击 `启动机器人.bat`**，它会自动按顺序：
 
 1. 检查并安装 Python 依赖（首次约 1 分钟）
-2. Forge 没开就最小化启动它（模型加载约 3 分钟，加载完才能出图）
-3. NapCat 没开就最小化启动，并**自动登录小号（免扫码）**
-4. 启动机器人本体，并自动打开控制台 `http://127.0.0.1:8081`
+2. 没装过 NapCat 的话，自动调用 `部署NapCat.bat` 先部署
+3. Forge 没开就最小化启动它（模型加载约 3 分钟，加载完才能出图）
+4. NapCat 没开就最小化启动，并让**小号自动上线 + 自动配好反向 WS（免扫码）**
+5. 启动机器人本体，并自动打开控制台 `http://127.0.0.1:8081`
 
 启动成功的标志（机器人窗口里依次出现）：
 
@@ -182,13 +187,13 @@ QQ 出图机器人：群里 @它说"画一个佩丽卡"，自动优化提示词�
 ## 常见问题（按症状排查）
 
 - **报错"没找到 Python"**：第 1 步没装/漏勾 `Add python.exe to PATH`，重装打勾即可
-- **卡在 `[QQ] 等待 NapCat 连接`**：NapCat 没开或没登录 → 重跑启动器，会自动补起并自动登录；别在任务管理器里只杀 NapCat 主进程，会残留孤儿 QQ 进程抢登录状态（要杀就结束整棵进程树）
+- **控制台显示 QQ 未接入 / 卡在 `[QQ] 等待 NapCat 连接`**：NapCat 没起来或没登录 → 重跑启动器，会自动补起 + 自动登录 + 自动配好 WS；别在任务管理器里只杀 NapCat 主进程，会残留孤儿 QQ 进程抢登录状态（要杀就结束整棵进程树）
 - **NapCat 不出二维码 / 提示"当前账号已登录，无法重复登录"**：小号被登在日常 QQ 里了——去日常 QQ 退出该小号即可（控制台"QQ 账号"页能看到状态）
 - **登录卡死/失败**：任务管理器结束今天新出现的 `QQ.exe`（保留你自己大号的），重跑启动器；扫码入口：小号独立 QQ 窗口（自动刷新）或 `NapCat\Shell\cache\qrcode.png`，扫完**必须在手机上点"登录"**
 - **提示词优化失败 / 提示没填 key**：控制台 → 设置 → 检查 xAI 的 key（`xai-` 开头）；key 无效不影响跑图，只是跳过优化
 - **跑图没反应 / 报连不上 Forge**：Forge 没开或没开 `--api`——浏览器打开 `http://127.0.0.1:7860/sdapi/v1/progress`，能显示 JSON 才算通
 - **图片发不出 / 发得慢**：升级 NapCat；群里发图受 QQ 风控限制，别刷屏
-- **端口冲突**：8080/8081 在控制台"设置"里改；NapCat 的 WS 地址同步改（NapCat 控制台 → 网络配置）
+- **端口冲突**：8080/8081 在控制台"设置"里改；改后 NapCat 的 WS 地址同步改（NapCat 控制台 `http://127.0.0.1:6099` → 网络配置，token 在 `NapCat\Shell\config\webui.json` 里）
 
 ## 进阶玩法
 
@@ -201,14 +206,15 @@ QQ 出图机器人：群里 @它说"画一个佩丽卡"，自动优化提示词�
 
 | 文件 | 作用 |
 |---|---|
-| `启动机器人.bat` | 一键启动 Forge + NapCat + 机器人（路径在 bat 头部按实际环境修改） |
+| `启动机器人.bat` | 一键启动 Forge + NapCat + 机器人（NapCat 缺失时自动部署；FORGE_DIR 在 bat 头部按实际环境修改） |
+| `部署NapCat.bat` | 自动下载、解压、部署 NapCat（首次使用自动调用，也可双击单独运行） |
 | `停止机器人.bat` | 只结束 bot.py 进程 |
-| `napcat_auto_login.py` | 启动器调用的 NapCat 自动登录脚本 |
+| `napcat_auto_login.py` | 启动器调用：自动登录小号（免扫码）+ 自动配置反向 WS |
 | `bot.py / core.py / qq.py / panel.py` | 机器人源码 |
 | `web/index.html` | 控制台页面 |
 | `data/` | 配置、角色字典、画风预设（config.json 不入库） |
 | `outputs/` | 出图存档 |
-| `NapCat/Shell/` | NapCat 本体（不入库，按第 3 步自行放置） |
+| `NapCat/Shell/` | NapCat 本体（不入库，由 `部署NapCat.bat` 自动部署） |
 
 ## 免责说明
 

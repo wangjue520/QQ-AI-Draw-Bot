@@ -1,14 +1,17 @@
 @echo off
-title ÅÜÍ¼¼§
+chcp 65001 >nul
+title è·‘å›¾å§¬
 cd /d "%~dp0"
 
-REM ================== °´ÄãµÄÊµ¼Ê»·¾³ĞŞ¸ÄÕâÁ½ĞĞ ==================
+REM ================== æŒ‰ä½ çš„å®é™…ç¯å¢ƒä¿®æ”¹è¿™ä¸¤è¡Œ ==================
 set "FORGE_DIR=F:\sd-forge-aki\sd-webui-forge-aki-v1.0\sd-webui-forge-aki"
 set "QQ_EXE=F:\QQ.exe"
+REM   FORGE_DIRï¼šForge çš„ç›®å½•ï¼ˆé‡Œé¢æ”¾ç€ webui-user.bat çš„é‚£ä¸€å±‚ï¼‰
+REM   QQ_EXEï¼šQQ çš„å®‰è£…ä½ç½®ï¼ˆæ–‡ä»¶ä¸å­˜åœ¨æ—¶å¯åŠ¨å™¨ä¼šè‡ªåŠ¨æ¢æµ‹ï¼Œä¸€èˆ¬ä¸ç”¨æ”¹ï¼‰
 REM ==============================================================
 
 echo ==========================================
-echo   ÅÜÍ¼¼§ Ò»¼üÆô¶¯Æ÷
+echo   è·‘å›¾å§¬ ä¸€é”®å¯åŠ¨å™¨
 echo ==========================================
 echo.
 
@@ -20,38 +23,74 @@ if not defined PY (
     if not errorlevel 1 set PY=python
 )
 if not defined PY goto nopython
-echo [1/4] Python:
+echo [1/5] Python:
 %PY% --version
 echo.
 
-echo [2/4] ¼ì²éÒÀÀµ£¨¿¨Ì«¾ÃËµÃ÷ÍøÂç²»Í¨£©...
+echo [2/5] æ£€æŸ¥ä¾èµ–ï¼ˆå¡å¤ªä¹…è¯´æ˜ç½‘ç»œä¸é€šï¼‰...
 %PY% -m pip install -U --disable-pip-version-check -r requirements.txt
 if errorlevel 1 (
-    echo Ä¬ÈÏÔ´Ê§°Ü£¬×Ô¶¯»»Çå»ª¾µÏñÖØÊÔ ...
+    echo é»˜è®¤æºå¤±è´¥ï¼Œè‡ªåŠ¨æ¢æ¸…åé•œåƒé‡è¯• ...
     %PY% -m pip install -U --disable-pip-version-check -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 )
 if errorlevel 1 goto pipfail
 echo.
 
-echo [3/4] ¼ì²é Forge / NapCat ...
-powershell -NoProfile -Command "if (Get-NetTCPConnection -State Listen -LocalPort 7860 -ErrorAction SilentlyContinue) { Write-Host '  Forge ÒÑÔÚÔËĞĞ' } else { Start-Process -FilePath '%FORGE_DIR%\webui-user.bat' -WorkingDirectory '%FORGE_DIR%' -WindowStyle Minimized; Write-Host '  Forge Î´ÔËĞĞ£¬ÒÑ×îĞ¡»¯Æô¶¯£¨Ä£ĞÍ¼ÓÔØÔ¼ 3 ·ÖÖÓ£¬¼ÓÔØÍê²ÅÄÜÅÜÍ¼£©' }"
-powershell -NoProfile -Command "if (Get-Process NapCatWinBootMain -ErrorAction SilentlyContinue) { Write-Host '  NapCat ÒÑÔÚÔËĞĞ' } else { $env:NAPCAT_PATCH_PACKAGE='%~dp0NapCat\Shell\qqnt.json'; $env:NAPCAT_LOAD_PATH='%~dp0NapCat\Shell\loadNapCat.js'; $env:NAPCAT_INJECT_PATH='%~dp0NapCat\Shell\NapCatWinBootHook.dll'; $env:NAPCAT_LAUNCHER_PATH='%~dp0NapCat\Shell\NapCatWinBootMain.exe'; $env:NAPCAT_MAIN_PATH='%~dp0NapCat\Shell\napcat.mjs'; Start-Process -FilePath $env:NAPCAT_LAUNCHER_PATH -ArgumentList '\"%QQ_EXE%\"', $env:NAPCAT_INJECT_PATH -WorkingDirectory '%~dp0NapCat\Shell' -WindowStyle Minimized; Write-Host '  NapCat Î´ÔËĞĞ£¬ÒÑ×îĞ¡»¯Æô¶¯' }"
-powershell -NoProfile -Command "Start-Process -FilePath 'py.exe' -ArgumentList '-3','%~dp0napcat_auto_login.py' -WorkingDirectory '%~dp0' -WindowStyle Hidden"
-echo   Ğ¡ºÅ×Ô¶¯µÇÂ¼ÈÎÎñÒÑÌá½»£¨NapCat ÆğÀ´ºó×Ô¶¯ÉÏÏß£¬ÎŞĞèÉ¨Âë£©
+echo [3/5] æ£€æŸ¥ NapCat ...
+if not exist "%~dp0NapCat\Shell\napcat.mjs" (
+    echo   é¦–æ¬¡ä½¿ç”¨ï¼Œæ­£åœ¨è‡ªåŠ¨éƒ¨ç½² NapCat ...
+    call "%~dp0éƒ¨ç½²NapCat.bat" --from-launcher
+)
+if exist "%~dp0NapCat\Shell\napcat.mjs" (
+    echo   NapCat å·²å°±ç»ª
+) else (
+    echo   [è­¦å‘Š] NapCat æœªå°±ç»ªï¼Œæœºå™¨äººèƒ½å¯åŠ¨ä½† QQ è¿ä¸ä¸Šï¼ˆé‡è·‘æœ¬ bat æˆ–åŒå‡» éƒ¨ç½²NapCat.batï¼‰
+)
 echo.
 
-echo [4/4] Æô¶¯»úÆ÷ÈË£¨±¾´°¿Ú²»ÄÜ¹Ø£¬¹ØÁË»úÆ÷ÈË¾ÍÏÂÏß£©...
+echo [4/5] æ£€æŸ¥ Forge / NapCat / QQ ...
+if not exist "%FORGE_DIR%\webui-user.bat" (
+    echo   [è­¦å‘Š] FORGE_DIR æŒ‡å‘çš„ç›®å½•ä¸å¯¹ï¼š%FORGE_DIR%
+    echo   è¯·å³é”®ç¼–è¾‘æœ¬ batï¼ŒæŠŠ FORGE_DIR= æ”¹æˆä½ çš„ Forge ç›®å½•åé‡å¼€
+)
+powershell -NoProfile -Command "if (Get-NetTCPConnection -State Listen -LocalPort 7860 -ErrorAction SilentlyContinue) { Write-Host '  Forge å·²åœ¨è¿è¡Œ' } else { Start-Process -FilePath '%FORGE_DIR%\webui-user.bat' -WorkingDirectory '%FORGE_DIR%' -WindowStyle Minimized; Write-Host '  Forge æœªè¿è¡Œï¼Œå·²æœ€å°åŒ–å¯åŠ¨ï¼ˆæ¨¡å‹åŠ è½½çº¦ 3 åˆ†é’Ÿï¼ŒåŠ è½½å®Œæ‰èƒ½è·‘å›¾ï¼‰' }"
+if not exist "%QQ_EXE%" (
+    echo   QQ_EXE=%QQ_EXE% ä¸å­˜åœ¨ï¼Œå°è¯•è‡ªåŠ¨æ¢æµ‹ QQ ...
+    set "QQ_DETECTED="
+    rem ä¸ç”¨ç®¡é“ç¬¦ï¼ˆfor /f åå¼•å·é‡Œ ^| è½¬ä¹‰ä¸å¯é ï¼‰ï¼›QQ NT å¸è½½é¡¹å¸¸ä¸å†™å®‰è£…ç›®å½•ï¼Œç”¨ DisplayIcon å…œåº•
+    for /f "usebackq delims=" %%i in (`powershell -NoProfile -Command "$c=@('%ProgramFiles%\Tencent\QQ\QQ.exe','%ProgramFiles(x86)%\Tencent\QQ\QQ.exe','D:\Program Files\Tencent\QQ\QQ.exe','D:\Tencent\QQ\QQ.exe','D:\QQ\QQ.exe','E:\QQ.exe','F:\QQ.exe'); foreach($k in 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*','HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'){ foreach($p in (Get-ItemProperty $k -ErrorAction SilentlyContinue)){ if($p.DisplayName -match '^QQ'){ $loc=$p.InstallLocation; if($loc){ $c+=(Join-Path $loc 'QQ.exe') } else { $c+=($p.DisplayIcon -replace ',\d+$','') } } } }; $f=$null; foreach($x in $c){ if(-not $f -and ($x -like '*\QQ.exe') -and (Test-Path $x)){ $f=$x } }; if($f){ $f }"`) do set "QQ_DETECTED=%%~i"
+    if defined QQ_DETECTED (
+        echo   å·²è‡ªåŠ¨æ‰¾åˆ° QQï¼š%QQ_DETECTED%
+        set "QQ_EXE=%QQ_DETECTED%"
+    ) else (
+        echo   [è­¦å‘Š] è‡ªåŠ¨æ¢æµ‹å¤±è´¥ã€‚è¯·å®‰è£… QQï¼šhttps://im.qq.com ï¼Œæˆ–ç¼–è¾‘æœ¬ bat çš„ QQ_EXE=
+    )
+)
+if exist "%QQ_EXE%" (
+    powershell -NoProfile -Command "if (Get-Process NapCatWinBootMain -ErrorAction SilentlyContinue) { Write-Host '  NapCat å·²åœ¨è¿è¡Œ' } else { $env:NAPCAT_PATCH_PACKAGE='%~dp0NapCat\Shell\qqnt.json'; $env:NAPCAT_LOAD_PATH='%~dp0NapCat\Shell\loadNapCat.js'; $env:NAPCAT_INJECT_PATH='%~dp0NapCat\Shell\NapCatWinBootHook.dll'; $env:NAPCAT_LAUNCHER_PATH='%~dp0NapCat\Shell\NapCatWinBootMain.exe'; $env:NAPCAT_MAIN_PATH='%~dp0NapCat\Shell\napcat.mjs'; Start-Process -FilePath $env:NAPCAT_LAUNCHER_PATH -ArgumentList '\"%QQ_EXE%\"', $env:NAPCAT_INJECT_PATH -WorkingDirectory '%~dp0NapCat\Shell' -WindowStyle Minimized; Write-Host '  NapCat æœªè¿è¡Œï¼Œå·²æœ€å°åŒ–å¯åŠ¨' }"
+    if "%PY%"=="py -3" (
+        powershell -NoProfile -Command "Start-Process -FilePath 'py.exe' -ArgumentList '-3','%~dp0napcat_auto_login.py' -WorkingDirectory '%~dp0' -WindowStyle Hidden"
+    ) else (
+        powershell -NoProfile -Command "Start-Process -FilePath 'python.exe' -ArgumentList '%~dp0napcat_auto_login.py' -WorkingDirectory '%~dp0' -WindowStyle Hidden"
+    )
+    echo   å°å·è‡ªåŠ¨ç™»å½•ä»»åŠ¡å·²æäº¤ï¼ˆè‡ªåŠ¨ä¸Šçº¿ + è‡ªåŠ¨é…å¥½åå‘ WSï¼Œæ— éœ€æ‰«ç ï¼‰
+) else (
+    echo   [è­¦å‘Š] æ²¡æœ‰å¯ç”¨ QQï¼Œè·³è¿‡ NapCat å¯åŠ¨
+)
+echo.
+
+echo [5/5] å¯åŠ¨æœºå™¨äººï¼ˆæœ¬çª—å£ä¸èƒ½å…³ï¼Œå…³äº†æœºå™¨äººå°±ä¸‹çº¿ï¼‰...
 %PY% bot.py
 goto end
 
 :nopython
-echo [´íÎó] Ã»ÕÒµ½ Python¡£
-echo ÇëÏÈ°²×° Python 3.10+ £º https://www.python.org/downloads/
-echo °²×°Ê±Îñ±Ø¹´Ñ¡ Add python.exe to PATH £¡
+echo [é”™è¯¯] æ²¡æ‰¾åˆ° Pythonã€‚
+echo è¯·å…ˆå®‰è£… Python 3.10+ ï¼š https://www.python.org/downloads/
+echo å®‰è£…æ—¶åŠ¡å¿…å‹¾é€‰ Add python.exe to PATH ï¼
 goto end
 
 :pipfail
-echo [´íÎó] ÒÀÀµ°²×°Ê§°Ü£¬Çë¼ì²éÍøÂç£¨»ò´úÀí£©ºóÖØÊÔ¡£
+echo [é”™è¯¯] ä¾èµ–å®‰è£…å¤±è´¥ï¼Œè¯·æ£€æŸ¥ç½‘ç»œï¼ˆæˆ–ä»£ç†ï¼‰åé‡è¯•ã€‚
 goto end
 
 :end
